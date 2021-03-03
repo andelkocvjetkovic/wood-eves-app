@@ -21,7 +21,7 @@ export default {};
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 60vh; /* if you don't want it to take up the full screen,
+  height: 70vh; /* if you don't want it to take up the full screen,
 reduce this number */
   overflow: hidden;
   background-size: cover !important;
@@ -31,8 +31,7 @@ reduce this number */
       rgba(0, 0, 0, 0) 26%,
       rgba(0, 0, 0, 0.65) 100%
     ),
-    url("https://images.unsplash.com/photo-1565320690707-1d3d10541559")
-      no-repeat center center scroll;
+    url("/home-bg-2.jpg") no-repeat center center scroll;
 }
 h1 {
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);

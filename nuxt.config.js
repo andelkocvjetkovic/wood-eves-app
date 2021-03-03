@@ -25,7 +25,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ["~/plugins/gsap.client.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -49,7 +49,9 @@ export default {
   content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: ["gsap"],
+  },
   googleFonts: {
     families: {
       Raleway: true,
@@ -57,5 +59,8 @@ export default {
     },
     display: "swap",
     preconnect: true,
+  },
+  generate: {
+    fallback: true,
   },
 };
