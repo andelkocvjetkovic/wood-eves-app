@@ -13,30 +13,30 @@
       </p>
     </article>
     <article class="mt-24">
-      <h2 class="uppercase text-3xl text-center py-12">
-        #wood-elves
-      </h2>
-      <app-image>
-        <img
-          class="absolute inset-0 w-full h-full object-cover object-center"
-          src="/buddy.jpg"
-          alt="image"
-        />
-      </app-image>
-      <app-image>
-        <img
-          class="absolute inset-0 w-full h-full object-cover object-center"
-          src="/stol.jpeg"
-          alt="image"
-        />
-      </app-image>
-      <app-image>
-        <img
-          class="absolute inset-0 w-full h-full object-cover object-center"
-          src="/stol2.jpeg"
-          alt="image"
-        />
-      </app-image>
+      <h2 class="uppercase text-3xl text-center py-6">#wood-elves</h2>
+      <section class="px-3">
+        <app-image class="mt-4">
+          <img
+            class="absolute inset-0 w-full h-full object-cover object-center"
+            src="/buddy.jpg"
+            alt="image"
+          />
+        </app-image>
+        <app-image class="mt-4">
+          <img
+            class="absolute inset-0 w-full h-full object-cover object-center"
+            src="/stol.jpeg"
+            alt="image"
+          />
+        </app-image>
+        <app-image class="mt-4">
+          <img
+            class="absolute inset-0 w-full h-full object-cover object-center"
+            src="/stol2.jpeg"
+            alt="image"
+          />
+        </app-image>
+      </section>
     </article>
   </main>
 </template>
