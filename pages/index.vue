@@ -23,14 +23,18 @@
         Handgefertigte Möbel Für außergewöhnliche Häuser Lassen Sie
         sich von uns inspirieren
       </h2>
-      <section class="h-screen/33 mt-6">
+      <section class="h-auto">
         <client-only>
           <splide :options="options">
             <splide-slide
               v-for="item in $options.slideGallery"
               :key="item.img"
             >
-              <img :data-splide-lazy="item.img" :alt="item.alt" />
+              <img
+                :data-splide-lazy="item.img"
+                :alt="item.alt"
+                class="w-full h-full"
+              />
             </splide-slide>
           </splide>
         </client-only>
@@ -96,20 +100,37 @@ export default {
   data() {
     return {
       options: {
+        cover: true,
         rewind: true,
         type: "loop",
-        perPage: 1,
-        cover: true,
-        gap: "6px",
-        height: "33.3vh",
-        fixedWidth: "85vw",
-        lazyLoad: "nearby",
+        perPage: 3.5,
         arrows: false,
         pagination: false,
-        breakpoints: {
-          height: "8rem",
-        },
         preloadPages: 1,
+        gap: "1rem",
+        height: "35vh",
+        lazyLoad: "nearby",
+        width: "100vw",
+        breakpoints: {
+          1024: {
+            perPage: 2.5,
+          },
+          768: {
+            height: "45vh",
+            perPage: 1.3,
+          },
+          640: {
+            height: "40vh",
+            perPage: 1.2,
+          },
+          570: {
+            height: "40vh",
+          },
+          475: {
+            height: "50vh",
+            perPage: 1.2,
+          },
+        },
       },
     };
   },
