@@ -25,7 +25,10 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["~/plugins/gsap.client.js"],
+  plugins: [
+    "~/plugins/gsap.client.js",
+    "~/plugins/vue-splide.client.js",
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -50,7 +53,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ["gsap"],
+    transpile: ["gsap", "vue-splide"],
   },
   googleFonts: {
     families: {

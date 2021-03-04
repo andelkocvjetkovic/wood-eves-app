@@ -37,6 +37,13 @@ module.exports = {
         "5/6": "83.333333%",
         full: "100%",
       },
+      height: (theme) => ({
+        "screen/75": "75vh",
+        "screen/50": "50vh",
+        "screen/33": "calc(100vh / 3)",
+        "screen/25": "calc(100vh / 4)",
+        "screen/20": "calc(100vh / 5)",
+      }),
     },
     screens: {
       xs: "475px",
@@ -55,6 +62,7 @@ module.exports = {
   variants: {
     extend: {
       translate: ["group-hover"],
+      scale: ["group-hover"],
     },
   },
   plugins: [],

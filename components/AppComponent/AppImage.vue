@@ -1,5 +1,5 @@
 <template>
-  <div role="presentation" class="relative rounded-sm shadow-md">
+  <div role="presentation" class="relative">
     <slot></slot>
   </div>
 </template>

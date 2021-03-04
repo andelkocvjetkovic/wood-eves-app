@@ -18,26 +18,25 @@
     </article>
     <article class="py-24">
       <h2
-        class="uppercase text-xl text-center py-6 font-semibold text-app-accent xs:text-2xl xs:max-w-sm xs:mx-auto sm:py-12 sm:text-3xl"
+        class="uppercase text-xl text-center py-6 font-semibold text-app-accent xs:text-2xl xs:max-w-sm xs:mx-auto sm:py-12 sm:text-3xl md:max-w-xl"
       >
         Handgefertigte Möbel Für außergewöhnliche Häuser Lassen Sie
         sich von uns inspirieren
       </h2>
-      <section class="px-3 sm:max-w-lg sm:mx-auto">
-        <app-image
-          v-for="item in $options.coverArticle"
-          :key="item.alt"
-          class="mt-4 md:mt-6 pb-full xs:pb-3/4"
-        >
-          <img
-            :src="item.img"
-            :alt="item.alt"
-            class="absolute inset-0 w-full h-full object-cover object-center"
-          />
-        </app-image>
+      <section class="h-screen/33 mt-6">
+        <client-only>
+          <splide :options="options">
+            <splide-slide
+              v-for="item in $options.slideGallery"
+              :key="item.img"
+            >
+              <img :data-splide-lazy="item.img" :alt="item.alt" />
+            </splide-slide>
+          </splide>
+        </client-only>
       </section>
       <section
-        class="mt-36 xs:mt-40 sm:mt-48 max-w-xs mx-auto xs:max-w-sm sm:max-w-lg md:max-w-3xl md:flex md:flex-wrap md:px-6"
+        class="mt-36 xs:mt-40 sm:mt-48 max-w-xs mx-auto xs:max-w-sm sm:max-w-lg md:max-w-3xl md:flex md:flex-wrap md:px-3 lg:max-w-4xl xl:max-w-6xl"
       >
         <h2
           class="uppercase text-2xl text-center py-4 font-semibold text-app-accent xs:text-2xl sm:text-3xl md:w-full md:py-12"
@@ -45,12 +44,11 @@
           Sehen Sie sich unsere Angebote an
         </h2>
         <app-category-info
-          v-for="(cat, i) in $options.categoryItems"
+          v-for="cat in $options.categoryItems"
           :key="cat.name"
           :image-src="cat.img"
           :name="cat.name"
-          class="w-full h-full mt-8 sm:mt-12 md:mt-0 md:w-1/3 md:h-96 flex-grow-1 flex-shrink-0"
-          :class="[i > 0 ? '' : '']"
+          class="w-full h-full mt-8 sm:mt-12 md:mt-0 md:w-1/3 md:h-96 flex-grow-1 flex-shrink-0 px-1 lg:px-3 xl:px-5 xl:h-screen2/3"
         />
       </section>
     </article>
@@ -59,18 +57,26 @@
 
 <script>
 export default {
-  coverArticle: [
+  slideGallery: [
     {
-      alt: "Tischuhr ",
-      img: "/articles/sat-2.jpg",
+      alt: "Bernard",
+      img: "/articles/bernard-stolica.jpg",
     },
     {
-      alt: "Tische Buddy",
-      img: "/articles/xx-stolica.jpg",
+      alt: "Barhocker",
+      img: "/articles/barska-stolica.jpg",
     },
     {
-      alt: "Tische budy-stolica",
-      img: "/articles/buddy-stolica.jpg",
+      alt: "Tish",
+      img: "/articles/stol-1.jpg",
+    },
+    {
+      alt: "Tischuhr",
+      img: "/articles/sat-1.jpg",
+    },
+    {
+      alt: "Tish",
+      img: "/articles/stolica-bijela.jpg",
     },
   ],
   categoryItems: [
@@ -87,13 +93,26 @@ export default {
       img: "home-bg-3.jpg",
     },
   ],
+  data() {
+    return {
+      options: {
+        rewind: true,
+        type: "loop",
+        perPage: 1,
+        cover: true,
+        gap: "6px",
+        height: "33.3vh",
+        fixedWidth: "85vw",
+        lazyLoad: "nearby",
+        arrows: false,
+        pagination: false,
+        breakpoints: {
+          height: "8rem",
+        },
+        preloadPages: 1,
+      },
+    };
+  },
 };
 </script>
-
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-</style>
+<style lang="postcss" scoped></style>
