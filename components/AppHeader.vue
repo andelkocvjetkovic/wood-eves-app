@@ -1,9 +1,9 @@
 <template>
   <header
-    class="w-full px-4 py-8 flex justify-center items-center bg-app-white bg-opacity-80 relative"
+    class="w-full px-4 py-6 flex justify-center items-center bg-app-white bg-opacity-80 relative"
   >
     <nuxt-link
-      class="w-16 h-16 absolute right-1/2 top-1/2 transform translate-x-1/2 -translate-y-1/2 flex justify-items-center items-center"
+      class="w-14 h-14 absolute right-1/2 top-1/2 transform translate-x-1/2 -translate-y-1/2 flex justify-items-center items-center"
       to="/"
     >
       <app-logo class="block w-full h-full" />
@@ -39,13 +39,16 @@ export default {
       tl.to(middle, {
         x: -20,
         duration: 0.1,
-        ease: "bounce.inOut",
       })
-        .to(first, {
-          rotation: 45,
-          y: 2,
-          duration: 0.2,
-        })
+        .to(
+          first,
+          {
+            rotation: 45,
+            y: 2,
+            duration: 0.2,
+          },
+          "<0.05"
+        )
         .to(
           last,
           {

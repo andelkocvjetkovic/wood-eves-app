@@ -1,5 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-// const colors = require("tailwindcss/colors");
+const colors = require("tailwindcss/colors");
 module.exports = {
   purge: [
     "./components/**/*.{vue,js}",
@@ -38,17 +38,24 @@ module.exports = {
         full: "100%",
       },
     },
+    screens: {
+      xs: "475px",
+      ...defaultTheme.screens,
+    },
     colors: {
       transparent: "transparent",
       current: "currentColor",
       "app-dark-gray": "#1E293B",
       "app-light-gray": "#E2E8F0",
       "app-white": "#F8FAFC",
-      "app-accent": "#86626E",
+      "app-accent": "#D6AD60",
+      black: colors.black,
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      translate: ["group-hover"],
+    },
   },
   plugins: [],
 };

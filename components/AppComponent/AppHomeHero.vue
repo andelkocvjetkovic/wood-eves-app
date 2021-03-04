@@ -1,7 +1,7 @@
 <template>
   <section class="masthead" role="img" aria-label="Image Description">
     <h1
-      class="px-1 font-serif mt-12 text-center text-3xl text-app-white font-semibold"
+      class="px-1 font-serif mt-12 text-center text-3xl text-app-white font-semibold max-w-sm sm:text-4xl sm:max-w-md"
     >
       <q>Tawar faer</q><br />Die Seele des Holzes Mehr als nur Möbel
       ...
