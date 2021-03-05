@@ -1,32 +1,36 @@
 <template>
-  <aside class="mt-12 overflow-hidden rounded-sm shadow-md">
-    <client-only>
-      <figure class="relative group">
-        <app-image class="pb-full">
-          <img
-            :src="imageSrc"
-            :alt="name"
-            class="absolute inset-0 object-cover object-right w-full h-full transition-transform duration-200 lg:ease-out lg:transform lg:group-hover:scale-110"
-          />
-        </app-image>
-        <figcaption
-          class="absolute inset-0 flex flex-col items-center justify-around w-full h-full bg-black lg:transition-opacity lg:duration-300 lg:ease-out lg:transform lg:opacity-0 lg:group-hover:opacity-100 text-app-white bg-opacity-60"
+  <aside
+    class="overflow-hidden rounded-sm shadow-md md:h-screen/75 md:relative"
+  >
+    <figure class="relative group md:absolute md:inset-0">
+      <app-image class="pb-full md:pb-0 md:h-full">
+        <img
+          :src="imageSrc"
+          :alt="name"
+          class="absolute inset-0 object-cover object-right w-full h-full transition-transform duration-200 lg:ease-out lg:transform lg:group-hover:scale-110"
+        />
+      </app-image>
+      <figcaption
+        class="absolute inset-0 flex flex-col items-center justify-around w-full h-full bg-black lg:transition-opacity lg:duration-300 lg:ease-out lg:transform lg:opacity-0 lg:group-hover:opacity-100 text-app-white bg-opacity-60"
+      >
+        <h2
+          class="font-serif text-3xl font-semibold text-center xs:text-4xl sm:text-5xl md:text-3xl"
         >
-          <h2 class="font-serif text-3xl font-semibold text-center xs:text-4xl">
-            {{ name }}
-          </h2>
-          <p class="px-2 text-center xs:text-lg xs:px-4">
-            {{ description }}
-          </p>
-          <nuxt-link
-            :to="slug"
-            class="px-6 py-1 text-lg font-semibold rounded-sm xs:px-10 xs:py-2 bg-app-accent"
-          >
-            Sehen
-          </nuxt-link>
-        </figcaption>
-      </figure>
-    </client-only>
+          {{ name }}
+        </h2>
+        <p
+          class="px-2 text-center xs:text-lg xs:px-4 sm:text-2xl sm:px-6 md:px-3 md:text-lg"
+        >
+          {{ description }}
+        </p>
+        <nuxt-link
+          :to="slug"
+          class="px-6 py-1 text-lg font-semibold duration-200 border rounded-sm lg:transition-colors lg:transition-opacity xs:px-10 xs:py-2 sm:text-xl sm:px-12 sm:py-3 md:text-base border-app-accent bg-app-accent lg:hover:bg-opacity-0 lg:hover:text-app-accent"
+        >
+          Sehen
+        </nuxt-link>
+      </figcaption>
+    </figure>
   </aside>
 </template>
 <script>

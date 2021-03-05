@@ -2,9 +2,9 @@
   <main class="bg-app-white text-app-dark-gray">
     <article class="">
       <app-home-hero class="h-screen/75 md:h-screen" />
-
+      <div role="presentation" class="h-1 mt-px bg-app-dark-gray"></div>
       <p
-        class="max-w-xs mx-auto mt-8 text-lg leading-snug xs:mt-8 xs:text-xl xs:max-w-sm sm:max-w-md sm:mt-10 sm:text-2xl md:max-w-xl text-app-dark-gray"
+        class="max-w-xs mx-auto mt-8 text-lg leading-snug xs:mt-8 xs:text-xl xs:max-w-sm sm:max-w-md sm:mt-12 sm:text-2xl md:max-w-xl text-app-dark-gray"
       >
         In ganz Bosnien und Herzegowina gibt es Wälder, die an das Tolkins
         Nandor erinnern, in dem Waldelben leben. Waldelben spüren die Seele der
@@ -17,34 +17,33 @@
     <article class="">
       <section class="mt-20 sm:mt-32">
         <h2
-          class="max-w-xs mx-auto text-xl font-semibold tracking-wide text-center uppercase xs:max-w-sm xs:text-2xl sm:max-w-md sm:leading-8 text-app-accent"
+          class="max-w-xs mx-auto text-xl font-semibold tracking-wide text-center uppercase xs:max-w-sm xs:text-2xl sm:max-w-md sm:leading-8 md:max-w-2xl md:text-3xl text-app-accent"
         >
           Handgefertigte Möbel Für außergewöhnliche Häuser Lassen Sie sich von
           uns inspirieren
         </h2>
         <aside class="h-auto mt-16">
-          <h3
-            class="max-w-xs mx-auto text-base tracking-wide underline xs:max-w-sm sm:max-w-md sm:text-lg text-app-dark-gray"
-          >
-            Galerie ansehen
-          </h3>
           <app-horizontal-gallery />
         </aside>
       </section>
       <section
-        class="max-w-xs mx-auto mt-24 xs:max-w-sm xs:mt-32 sm:max-w-lg md:flex md:flex-wrap"
+        class="max-w-xs mx-auto mt-24 xs:max-w-sm xs:mt-32 sm:max-w-lg md:max-w-2xl md:mt-48"
       >
         <h2
-          class="text-4xl font-semibold text-center uppercase sm:text-3xl md:text-4xl text-app-accent"
+          class="text-3xl font-semibold text-center uppercase sm:text-4xl text-app-accent md:pb-16 md:px-6"
         >
           Sehen Sie sich unsere Angebote an
         </h2>
-        <app-category-info
-          v-for="cat in $options.categoryItems"
-          :key="cat.name"
-          :image-src="cat.img"
-          :name="cat.name"
-        />
+        <div class="md:flex md:flex-wrap">
+          <app-category-info
+            v-for="(cat, i) in $options.categoryItems"
+            :key="cat.name"
+            :image-src="cat.img"
+            :name="cat.name"
+            class="mt-12 md:w-1/4 md:flex-grow md:flex-shrink-0 md:mt-0"
+            :class="[i != 0 ? 'md:ml-1.5' : '']"
+          />
+        </div>
       </section>
     </article>
   </main>
@@ -52,78 +51,27 @@
 
 <script>
 export default {
-  slideGallery: [
-    {
-      alt: "Bernard",
-      img: "/articles/bernard-stolica.jpg",
-    },
-    {
-      alt: "Barhocker",
-      img: "/articles/barska-stolica.jpg",
-    },
-    {
-      alt: "Tish",
-      img: "/articles/stol-1.jpg",
-    },
-    {
-      alt: "Tischuhr",
-      img: "/articles/sat-1.jpg",
-    },
-    {
-      alt: "Tish",
-      img: "/articles/stolica-bijela.jpg",
-    },
-  ],
+  head() {
+    return {
+      script: [
+        { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
+      ],
+    };
+  },
   categoryItems: [
     {
       name: "Tish",
-      img: "stol2.jpeg",
+      img: "home-bg.jpg",
     },
     {
       name: "Stühle",
-      img: "buddy.jpg",
+      img: "home-bg-4.jpg",
     },
     {
       name: "Accessoires",
       img: "home-bg-3.jpg",
     },
   ],
-  data() {
-    return {
-      options: {
-        cover: true,
-        rewind: true,
-        type: "loop",
-        perPage: 3.5,
-        arrows: false,
-        pagination: false,
-        preloadPages: 1,
-        gap: "1rem",
-        height: "35vh",
-        lazyLoad: "nearby",
-        width: "100vw",
-        breakpoints: {
-          1024: {
-            perPage: 2.5,
-          },
-          768: {
-            height: "45vh",
-            perPage: 1.3,
-          },
-          640: {
-            height: "40vh",
-          },
-          570: {
-            height: "40vh",
-          },
-          475: {
-            height: "50vh",
-            perPage: 1.2,
-          },
-        },
-      },
-    };
-  },
 };
 </script>
 <style lang="postcss" scoped></style>

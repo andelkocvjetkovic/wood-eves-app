@@ -12,4 +12,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
+.splide__list {
+  will-change: auto !important;
+}
 </style>

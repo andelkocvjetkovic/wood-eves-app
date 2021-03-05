@@ -1,0 +1,53 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "accessoires"
+    label: "Accessoires"
+    folder: "content/artikli"
+    format: "frontmatter"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Price", name: "price", widget: "number" }
+      - {label: "Image", name: "image", widget: "image", required: true}
+            - { label: "UUUID", name: "uuid", widget: "ncw-id", prefix: "stuhle" , timpestamp: true }
+  - name: "stuhle"
+    label: "Stuhle"
+    folder: "content/artikli"
+    format: "frontmatter"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Name", name: "name", widget: "string", required: true }
+      - { label: "Publish Date", name: "date", widget: "datetime", required: true }
+      - { label: "Description", name: "description", widget: "string", required: true }
+      - { label: "Price", name: "price", widget: "number" }
+      - {label: "Image", name: "image", widget: "image", required: true }
+      - { label: "UUUID", name: "uuid", widget: "ncw-id", prefix: "stuhle" , timpestamp: true }
+  - name: "tish"
+    label: "Tish"
+    folder: "content/artikli"
+    format: "frontmatter"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Price", name: "price", widget: "number" }
+      - {label: "Image", name: "image", widget: "image", required: true}
+      - { label: "UUUID", name: "uuid", widget: ncw-id, prefix: "stuhle" , timpestamp: true }

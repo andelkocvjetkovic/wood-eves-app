@@ -16,19 +16,14 @@ export default {
       },
       { hid: "description", name: "description", content: "" },
     ],
-    link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-    ],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ["@splidejs/splide/dist/css/splide-core.min.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    "~/plugins/gsap.client.js",
-    "~/plugins/vue-splide.client.js",
-  ],
+  plugins: ["~/plugins/gsap.client.js", "~/plugins/vue-splide.client.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
