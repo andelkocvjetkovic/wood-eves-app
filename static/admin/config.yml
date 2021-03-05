@@ -20,7 +20,7 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Price", name: "price", widget: "number" }
       - {label: "Image", name: "image", widget: "image", required: true}
-            - { label: "UUUID", name: "uuid", widget: "ncw-id", prefix: "stuhle" , timpestamp: true }
+            - { label: "UUUID", name: "uuid", widget: ncw-id, prefix: "accessoires" , timpestamp: true }
   - name: "stuhle"
     label: "Stuhle"
     folder: "content/artikli"
@@ -35,7 +35,7 @@ collections:
       - { label: "Description", name: "description", widget: "string", required: true }
       - { label: "Price", name: "price", widget: "number" }
       - {label: "Image", name: "image", widget: "image", required: true }
-      - { label: "UUUID", name: "uuid", widget: "ncw-id", prefix: "stuhle" , timpestamp: true }
+      - { label: "UUUID", name: "uuid", widget: ncw-id, prefix: "stuhle" , timpestamp: true }
   - name: "tish"
     label: "Tish"
     folder: "content/artikli"
