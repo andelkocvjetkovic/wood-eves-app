@@ -19,8 +19,14 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Price", name: "price", widget: "number" }
-      - {label: "Image", name: "image", widget: "image", required: true}
-            - { label: "UUUID", name: "uuid", widget: ncw-id, prefix: "accessoires" , timpestamp: true }
+      - { label: "Image", name: "image", widget: "image", required: true }
+      - {
+          label: "UUUID",
+          name: "uuid",
+          widget: "ncw-id",
+          prefixgi: "accessoires",
+          timestamp: true,
+        }
   - name: "stuhle"
     label: "Stuhle"
     folder: "content/artikli"
@@ -31,11 +37,27 @@ collections:
       preview: false
     fields:
       - { label: "Name", name: "name", widget: "string", required: true }
-      - { label: "Publish Date", name: "date", widget: "datetime", required: true }
-      - { label: "Description", name: "description", widget: "string", required: true }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          required: true,
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          required: true,
+        }
       - { label: "Price", name: "price", widget: "number" }
-      - {label: "Image", name: "image", widget: "image", required: true }
-      - { label: "UUUID", name: "uuid", widget: ncw-id, prefix: "stuhle" , timpestamp: true }
+      - { label: "Image", name: "image", widget: "image", required: true }
+      - {
+          label: "UUUID",
+          name: "uuid",
+          widget: "ncw-id",
+          prefix: "stuhle",
+          timestamp: true,
+        }
   - name: "tish"
     label: "Tish"
     folder: "content/artikli"
@@ -49,5 +71,11 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Price", name: "price", widget: "number" }
-      - {label: "Image", name: "image", widget: "image", required: true}
-      - { label: "UUUID", name: "uuid", widget: ncw-id, prefix: "stuhle" , timpestamp: true }
+      - { label: "Image", name: "image", widget: "image", required: true }
+      - {
+          label: "UUUID",
+          name: "uuid",
+          widget: "ncw-id",
+          prefix: "stuhle",
+          timestamp: true,
+        }
