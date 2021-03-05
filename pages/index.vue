@@ -44,7 +44,6 @@
           :key="cat.name"
           :image-src="cat.img"
           :name="cat.name"
-          class=""
         />
       </section>
     </article>
