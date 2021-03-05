@@ -4,7 +4,7 @@
       <app-home-hero class="h-screen/75 md:h-screen" />
 
       <p
-        class="max-w-xs mx-auto mt-8 text-lg leading-snug xs:mt-8 xs:text-xl xs:max-w-sm sm:max-w-md md:max-w-xl text-app-dark-gray"
+        class="max-w-xs mx-auto mt-8 text-lg leading-snug xs:mt-8 xs:text-xl xs:max-w-sm sm:max-w-md sm:mt-10 sm:text-2xl md:max-w-xl text-app-dark-gray"
       >
         In ganz Bosnien und Herzegowina gibt es Wälder, die an das Tolkins
         Nandor erinnern, in dem Waldelben leben. Waldelben spüren die Seele der
@@ -15,16 +15,16 @@
       </p>
     </article>
     <article class="">
-      <section class="mt-20">
+      <section class="mt-20 sm:mt-32">
         <h2
-          class="max-w-xs mx-auto text-xl font-semibold tracking-wide text-center uppercase xs:max-w-sm xs:text-2xl sm:text-3xl md:max-w-2xl text-app-accent"
+          class="max-w-xs mx-auto text-xl font-semibold tracking-wide text-center uppercase xs:max-w-sm xs:text-2xl sm:max-w-md sm:leading-8 text-app-accent"
         >
           Handgefertigte Möbel Für außergewöhnliche Häuser Lassen Sie sich von
           uns inspirieren
         </h2>
         <aside class="h-auto mt-16">
           <h3
-            class="max-w-xs mx-auto text-base tracking-wide underline xs:max-w-sm text-app-dark-gray"
+            class="max-w-xs mx-auto text-base tracking-wide underline xs:max-w-sm sm:max-w-md sm:text-lg text-app-dark-gray"
           >
             Galerie ansehen
           </h3>
