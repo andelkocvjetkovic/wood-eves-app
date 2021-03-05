@@ -2,13 +2,13 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: static/img
-public_folder: /img
+media_folder: static/articles
+public_folder: /
 
 collections:
   - name: "accessoires"
     label: "Accessoires"
-    folder: "content/artikli"
+    folder: "content/articles"
     format: "frontmatter"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -29,7 +29,7 @@ collections:
         }
   - name: "stuhle"
     label: "Stuhle"
-    folder: "content/artikli"
+    folder: "content/articles"
     format: "frontmatter"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -60,7 +60,7 @@ collections:
         }
   - name: "tish"
     label: "Tish"
-    folder: "content/artikli"
+    folder: "content/articlesg"
     format: "frontmatter"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
