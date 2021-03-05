@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: maingit
 
 media_folder: static/img
 public_folder: /img
@@ -21,7 +21,7 @@ collections:
       - { label: "Price", name: "price", widget: "number" }
       - { label: "Image", name: "image", widget: "image", required: true }
       - {
-          label: "UUUID",
+          label: "UUID",
           name: "uuid",
           widget: "ncw-id",
           prefixgi: "accessoires",
@@ -52,7 +52,7 @@ collections:
       - { label: "Price", name: "price", widget: "number" }
       - { label: "Image", name: "image", widget: "image", required: true }
       - {
-          label: "UUUID",
+          label: "UUID",
           name: "uuid",
           widget: "ncw-id",
           prefix: "stuhle",
@@ -73,7 +73,7 @@ collections:
       - { label: "Price", name: "price", widget: "number" }
       - { label: "Image", name: "image", widget: "image", required: true }
       - {
-          label: "UUUID",
+          label: "UUID",
           name: "uuid",
           widget: "ncw-id",
           prefix: "stuhle",
