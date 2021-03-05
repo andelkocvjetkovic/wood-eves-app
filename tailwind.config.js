@@ -57,6 +57,7 @@ module.exports = {
       "app-white": "#F8FAFC",
       "app-accent": "#D6AD60",
       black: colors.black,
+      white: colors.white,
     },
   },
   variants: {

@@ -1,49 +1,41 @@
 <template>
-  <main class="font-sans bg-app-white text-app-dark-gray">
-    <app-home-hero />
-    <article
-      class="max-w-xs mx-auto mt-12 xs:max-w-sm sm:max-w-md md:mt-16"
-    >
+  <main class="bg-app-white text-app-dark-gray">
+    <article class="">
+      <app-home-hero class="h-screen/75 md:h-screen" />
+
       <p
-        class="text-app-dark-gray font-sans text-lg leading-snug xs:text-xl sm:text-2xl"
+        class="max-w-xs mx-auto mt-8 text-lg leading-snug xs:mt-8 xs:text-xl xs:max-w-sm sm:max-w-md md:max-w-xl text-app-dark-gray"
       >
-        In ganz Bosnien und Herzegowina gibt es Wälder, die an das
-        Tolkins Nandor erinnern, in dem Waldelben leben. Waldelben
-        spüren die Seele der Bäume sowie unser kleines Team von
-        Holzzauberer. Nur so können wir die jenige beschreiben die
-        Verantwortlich sind für die fantastische Kombination von Holz
-        mit anderen Materialien und einen Sinn für Design besitzen,
-        der unserem Zuhause Wärme und ein magisches Aussehen verleiht.
+        In ganz Bosnien und Herzegowina gibt es Wälder, die an das Tolkins
+        Nandor erinnern, in dem Waldelben leben. Waldelben spüren die Seele der
+        Bäume sowie unser kleines Team von Holzzauberer. Nur so können wir die
+        jenige beschreiben die Verantwortlich sind für die fantastische
+        Kombination von Holz mit anderen Materialien und einen Sinn für Design
+        besitzen, der unserem Zuhause Wärme und ein magisches Aussehen verleiht.
       </p>
     </article>
-    <article class="py-24">
-      <h2
-        class="uppercase text-xl text-center py-6 font-semibold text-app-accent xs:text-2xl xs:max-w-sm xs:mx-auto sm:py-12 sm:text-3xl md:max-w-xl"
-      >
-        Handgefertigte Möbel Für außergewöhnliche Häuser Lassen Sie
-        sich von uns inspirieren
-      </h2>
-      <section class="h-auto">
-        <client-only>
-          <splide :options="options">
-            <splide-slide
-              v-for="item in $options.slideGallery"
-              :key="item.img"
-            >
-              <img
-                :data-splide-lazy="item.img"
-                :alt="item.alt"
-                class="w-full h-full"
-              />
-            </splide-slide>
-          </splide>
-        </client-only>
+    <article class="">
+      <section class="mt-20">
+        <h2
+          class="max-w-xs mx-auto text-xl font-semibold tracking-wide text-center uppercase xs:max-w-sm xs:text-2xl sm:text-3xl md:max-w-2xl text-app-accent"
+        >
+          Handgefertigte Möbel Für außergewöhnliche Häuser Lassen Sie sich von
+          uns inspirieren
+        </h2>
+        <aside class="h-auto mt-16">
+          <h3
+            class="max-w-xs mx-auto text-base tracking-wide underline xs:max-w-sm text-app-dark-gray"
+          >
+            Galerie ansehen
+          </h3>
+          <app-horizontal-gallery />
+        </aside>
       </section>
       <section
-        class="mt-36 xs:mt-40 sm:mt-48 max-w-xs mx-auto xs:max-w-sm sm:max-w-lg md:max-w-3xl md:flex md:flex-wrap md:px-3 lg:max-w-4xl xl:max-w-6xl"
+        class="max-w-xs mx-auto mt-24 xs:max-w-sm xs:mt-32 sm:max-w-lg md:flex md:flex-wrap"
       >
         <h2
-          class="uppercase text-2xl text-center py-4 font-semibold text-app-accent xs:text-2xl sm:text-3xl md:w-full md:py-12"
+          class="text-4xl font-semibold text-center uppercase sm:text-3xl md:text-4xl text-app-accent"
         >
           Sehen Sie sich unsere Angebote an
         </h2>
@@ -52,7 +44,7 @@
           :key="cat.name"
           :image-src="cat.img"
           :name="cat.name"
-          class="w-full h-full mt-8 sm:mt-12 md:mt-0 md:w-1/3 md:h-96 flex-grow-1 flex-shrink-0 px-1 lg:px-3 xl:px-5 xl:h-screen2/3"
+          class=""
         />
       </section>
     </article>
@@ -121,7 +113,6 @@ export default {
           },
           640: {
             height: "40vh",
-            perPage: 1.2,
           },
           570: {
             height: "40vh",

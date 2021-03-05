@@ -1,36 +1,32 @@
-<template>
-  <aside class="rounded-lg overflow-hidden shadow-sm bg-transparent">
-    <figure
-      class="group relative min-w-full min-h-full overflow-hidden"
-    >
-      <app-image
-        class="pb-4/5 sm:pb-3/5 md:pb-0 md:min-w-full md:min-h-full md:static"
-      >
-        <img
-          :src="imageSrc"
-          alt="some alt"
-          class="absolute inset-0 w-full h-full object-cover object-right transform transition-transform ease-out duration-200 lg:group-hover:scale-110"
-        />
-      </app-image>
-      <figcaption
-        class="absolute inset-0 w-full h-full text-app-white flex flex-col items-center justify-around bg-black bg-opacity-60 transform lg:opacity-0 transition-opacity duration-300 group-hover:opacity-100 ease-out"
-      >
-        <h2
-          class="text-center font-serif text-2xl font-semibold xs:text-4xl"
+<template functional>
+  <aside class="mt-12 overflow-hidden rounded-sm shadow-md">
+    <client-only>
+      <figure class="relative group">
+        <app-image class="pb-full">
+          <img
+            :src="props.imageSrc"
+            :alt="props.name"
+            class="absolute inset-0 object-cover object-right w-full h-full transition-transform duration-200 lg:ease-out lg:transform lg:group-hover:scale-110"
+          />
+        </app-image>
+        <figcaption
+          class="absolute inset-0 flex flex-col items-center justify-around w-full h-full bg-black lg:transition-opacity lg:duration-300 lg:ease-out lg:transform lg:opacity-0 lg:group-hover:opacity-100 text-app-white bg-opacity-60"
         >
-          {{ name }}
-        </h2>
-        <p class="text-center xs:text-lg md:px-1">
-          {{ description }}
-        </p>
-        <button
-          type="button"
-          class="focus:outline-none bg-app-accent px-6 py-1 rounded-sm text-lg font-semibold"
-        >
-          Sehen
-        </button>
-      </figcaption>
-    </figure>
+          <h2 class="font-serif text-3xl font-semibold text-center xs:text-4xl">
+            {{ props.name }}
+          </h2>
+          <p class="px-2 text-center xs:text-lg xs:px-4">
+            {{ props.description }}
+          </p>
+          <nuxt-link
+            :to="props.slug"
+            class="px-6 py-1 text-lg font-semibold rounded-sm xs:px-10 xs:py-2 bg-app-accent"
+          >
+            Sehen
+          </nuxt-link>
+        </figcaption>
+      </figure>
+    </client-only>
   </aside>
 </template>
 <script>
@@ -49,6 +45,10 @@ export default {
       default: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Natus quaerat sint hic! Ipsam at distinctio qui debitis
           consequatur minima.`,
+    },
+    slug: {
+      type: String,
+      default: "/",
     },
   },
 };
