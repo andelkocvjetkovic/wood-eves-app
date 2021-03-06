@@ -1,8 +1,12 @@
 <template>
   <div>
-    <app-header />
-    <Nuxt />
+    <lazy-app-header-md v-if="$mq === 'md'" />
+    <lazy-app-header-lg v-else-if="$mq === 'lg'" />
+    <Nuxt class="pt-20 lg:pt-0" />
     <app-footer />
+    <client-only>
+      <portal-target name="navModal"> </portal-target>
+    </client-only>
   </div>
 </template>
 

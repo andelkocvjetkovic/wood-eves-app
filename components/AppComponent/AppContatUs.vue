@@ -1,6 +1,6 @@
 <template>
   <section>
-    <header class="px-3">
+    <header class="">
       <h1 class="font-serif text-3xl text-center">Ihr Kontakt zu uns</h1>
       <p class="mt-6 text-center">
         Haben Sie Fragen zu unserem Angebot? Wir sind gerne für Sie da. Füllen
@@ -36,7 +36,7 @@
         type="text"
         name="Telefon"
       />
-      <div class="flex flex-col mt-8">
+      <div class="flex flex-col w-full mt-8">
         <label class="sr-only" for="nachricht">Nachricht</label>
         <textarea
           id="nachricht"
@@ -48,7 +48,7 @@
           placeholder="Schreiben Sie ihre Nachricht hier"
         ></textarea>
       </div>
-      <app-button-accent type="submit" class="mt-12" />
+      <app-button-accent type="submit" class="mt-12 shadow-2xl" />
     </form>
   </section>
 </template>

@@ -2,11 +2,19 @@
   <aside>
     <div>
       <h3 class="text-2xl font-semibold">Hier finden Sie uns:</h3>
-      <address class="mt-6">Reifeisenstr. 36, 60386 Frankfurt, Germany</address>
-      <p class="flex justify-between mt-4">
-        <span>Rufen Sie uns an: </span>
-        <a class="underline" href="tel:+49 176 60482226"> +49 176 60482226 </a>
-      </p>
+      <address class="flex flex-col justify-between mt-6">
+        <p class="">Reifeisenstr. 36, 60386 Frankfurt, Germany</p>
+        <p class="flex justify-between mt-4">
+          <span>Rufen Sie uns an: </span>
+          <a class="underline" href="tel:+49 000 00000000">
+            +49 000 00000000
+          </a>
+        </p>
+        <p class="flex justify-between mt-4">
+          <span>Email: </span
+          ><a href="mailto:and3lko@gmail.com">and3lko@gmail.com</a>
+        </p>
+      </address>
     </div>
     <div class="mt-16">
       <h3 class="text-2xl font-semibold">Öffnungszeiten:</h3>

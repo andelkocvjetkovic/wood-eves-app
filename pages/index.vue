@@ -1,7 +1,7 @@
 <template>
   <main class="bg-app-white text-app-dark-gray">
     <article class="">
-      <app-home-hero class="h-screen/75 md:h-screen" />
+      <app-home-hero class="h-screen/75" />
       <div role="presentation" class="h-1 mt-px bg-app-dark-gray"></div>
       <p
         class="max-w-xs mx-auto mt-8 text-lg leading-snug xs:mt-8 xs:text-xl xs:max-w-sm sm:max-w-md sm:mt-12 sm:text-2xl md:max-w-xl text-app-dark-gray"

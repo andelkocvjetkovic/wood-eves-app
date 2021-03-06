@@ -3,11 +3,7 @@
     <client-only>
       <splide :options="optionsSplide">
         <splide-slide v-for="item in $options.arrayItems" :key="item.img">
-          <img
-            :data-splide-lazy="item.img"
-            :alt="item.alt"
-            class="w-full h-full"
-          />
+          <img :data-splide-lazy="item.img" :alt="item.alt" />
         </splide-slide>
       </splide>
     </client-only>
@@ -18,10 +14,6 @@
 export default {
   arrayItems: [
     {
-      alt: "Bernard",
-      img: "/articles/bernard-stolica-1.jpg",
-    },
-    {
       alt: "Barhocker",
       img: "/articles/jinx-barska-stolica.jpg",
     },
@@ -30,19 +22,27 @@ export default {
       img: "/articles/xx-stolica.jpg",
     },
     {
-      alt: "Tischuhr",
-      img: "/articles/loop-sat-2.jpg",
+      alt: "Dobby-1",
+      img: "/articles/dobby-stolica.jpg",
     },
     {
-      alt: "Tish",
-      img: "/articles/winx-stol-1.jpeg",
+      alt: "Bernard-1",
+      img: "/articles/bernard-stolica-1.jpg",
+    },
+    {
+      alt: "Zeus-1",
+      img: "/articles/zeus-daska-1.jpg",
+    },
+    {
+      alt: "Srce",
+      img: "/articles/srce-smeda.jpg",
     },
   ],
   data() {
     return {
       optionsSplide: {
-        cover: true,
         rewind: true,
+        cover: true,
         type: "loop",
         perPage: 3.5,
         arrows: false,

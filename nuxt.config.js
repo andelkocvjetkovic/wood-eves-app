@@ -23,7 +23,11 @@ export default {
   css: ["@splidejs/splide/dist/css/splide-core.min.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["~/plugins/gsap.client.js", "~/plugins/vue-splide.client.js"],
+  plugins: [
+    "~/plugins/gsap.client.js",
+    "~/plugins/vue-splide.client.js",
+    "~/plugins/portal-vue.client.js",
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -41,6 +45,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     "@nuxt/content",
+    "nuxt-mq",
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
@@ -48,7 +53,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ["gsap", "vue-splide"],
+    transpile: ["gsap", "vue-splide", "portal-vue"],
   },
   googleFonts: {
     families: {
@@ -60,5 +65,12 @@ export default {
   },
   generate: {
     fallback: true,
+  },
+  mq: {
+    defaultBreakpoint: "lg",
+    breakpoints: {
+      md: 1023,
+      lg: 1024,
+    },
   },
 };

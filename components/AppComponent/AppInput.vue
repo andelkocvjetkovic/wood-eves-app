@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-4/5 mx-auto mt-12">
+  <div class="flex flex-col w-full mt-12">
     <label class="sr-only" :for="label">{{ label }}</label>
     <input
       class="p-2 font-serif bg-transparent border-b border-app-white-gray focus-within:outline-none placeholder-app-white"
