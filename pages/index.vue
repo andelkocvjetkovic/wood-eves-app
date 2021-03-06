@@ -17,7 +17,7 @@
     <article class="">
       <section class="mt-20 sm:mt-32">
         <h2
-          class="max-w-xs mx-auto text-xl font-semibold tracking-wide text-center uppercase xs:max-w-sm xs:text-2xl sm:max-w-md sm:leading-8 md:max-w-2xl md:text-3xl text-app-accent"
+          class="max-w-xs mx-auto font-serif text-xl font-semibold tracking-wide text-center uppercase xs:max-w-sm xs:text-2xl sm:max-w-md sm:leading-8 md:max-w-2xl md:text-3xl text-app-accent"
         >
           Handgefertigte Möbel Für außergewöhnliche Häuser Lassen Sie sich von
           uns inspirieren
@@ -30,7 +30,7 @@
         class="max-w-xs mx-auto mt-24 xs:max-w-sm xs:mt-32 sm:max-w-lg md:max-w-2xl md:mt-48 lg:max-w-3xl"
       >
         <h2
-          class="text-3xl font-semibold text-center uppercase sm:text-4xl text-app-accent md:pb-16 md:px-6"
+          class="font-serif text-2xl font-semibold text-center uppercase sm:text-4xl text-app-dark-gray md:pb-16 md:px-6"
         >
           Sehen Sie sich unsere Angebote an
         </h2>
@@ -45,7 +45,7 @@
           />
         </div>
       </section>
-      <app-about-us class="pb-16 mt-24" />
+      <app-our-work class="pb-24 mt-24" />
     </article>
   </main>
 </template>

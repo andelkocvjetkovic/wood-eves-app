@@ -41,7 +41,7 @@
         <textarea
           id="nachricht"
           v-model.lazy="form.message"
-          class="p-1 mt-4 transition-colors duration-1000 border border-opacity-0 resize-none placeholder-app-dark-gray focus:outline-none focus:border-opacity-100 border-app-accent"
+          class="p-1 mt-4 transition-colors duration-1000 border border-opacity-0 resize-none text-app-dark-gray placeholder-app-dark-gray focus:outline-none focus:border-opacity-100 border-app-accent"
           name="nachricht"
           cols="30"
           rows="10"

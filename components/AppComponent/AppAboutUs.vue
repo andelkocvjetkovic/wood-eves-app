@@ -2,7 +2,7 @@
   <section
     class="flex flex-col items-center justify-start bg-app-light-gray text-app-dark-gray"
   >
-    <header class="mt-12 font-serif text-center">
+    <header class="mt-24 font-serif text-center">
       <h1 class="text-4xl">Über uns</h1>
       <h3 class="mt-6 text-xl">Wir stellen uns vor Wer sind die Woodelves?</h3>
     </header>
