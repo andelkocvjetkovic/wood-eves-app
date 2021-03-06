@@ -27,7 +27,7 @@
         </aside>
       </section>
       <section
-        class="max-w-xs mx-auto mt-24 xs:max-w-sm xs:mt-32 sm:max-w-lg md:max-w-2xl md:mt-48"
+        class="max-w-xs mx-auto mt-24 xs:max-w-sm xs:mt-32 sm:max-w-lg md:max-w-2xl md:mt-48 lg:max-w-3xl"
       >
         <h2
           class="text-3xl font-semibold text-center uppercase sm:text-4xl text-app-accent md:pb-16 md:px-6"
@@ -41,10 +41,11 @@
             :image-src="cat.img"
             :name="cat.name"
             class="mt-12 md:w-1/4 md:flex-grow md:flex-shrink-0 md:mt-0"
-            :class="[i != 0 ? 'md:ml-1.5' : '']"
+            :class="[i != 0 ? 'md:ml-1.5 lg:ml-2' : '']"
           />
         </div>
       </section>
+      <app-about-us class="pb-16 mt-24" />
     </article>
   </main>
 </template>
@@ -74,4 +75,3 @@ export default {
   ],
 };
 </script>
-<style lang="postcss" scoped></style>
