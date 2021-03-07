@@ -67,7 +67,7 @@ export default {
     fallback: true,
   },
   mq: {
-    defaultBreakpoint: "lg",
+    defaultBreakpoint: "md",
     breakpoints: {
       md: 1023,
       lg: 1024,

@@ -59,6 +59,7 @@ module.exports = {
       "app-light-gray": "#E2E8F0",
       "app-white": "#F8FAFC",
       "app-accent": "#D6AD60",
+      "app-blue-gray": "#334155",
       black: colors.black,
       white: colors.white,
     },

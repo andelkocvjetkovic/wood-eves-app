@@ -1,6 +1,6 @@
 <template>
   <header
-    class="fixed top-0 z-20 flex items-center justify-center w-full px-4 py-6 bg-app-white bg-opacity-95"
+    class="sticky top-0 z-20 flex items-center justify-center w-full px-4 py-6 bg-app-white bg-opacity-95"
   >
     <nuxt-link
       class="absolute flex items-center transform translate-x-1/2 -translate-y-1/2 w-14 h-14 right-1/2 top-1/2 justify-items-center"
@@ -68,14 +68,19 @@ export default {
       var tl = this.$gsap.timeline({ defaults: { ease: "circ.out" } });
       tl.from(parentEl, {
         xPercent: 100,
-        duration: 0.3,
+        opacity: 0,
+        duration: 0.2,
       }).from(
         children,
         {
-          xPercent: 25,
+          xPercent: 50,
           opacity: 0,
-          stagger: 0.05,
-          duration: 0.3,
+          stagger: {
+            amount: 0.2,
+            each: 0.033,
+            from: "start",
+            ease: "power2.in",
+          },
           onComplete: done(),
         },
         "<0.1"
@@ -87,13 +92,13 @@ export default {
       var tl = this.$gsap.timeline({ defaults: { ease: "circ.in" } });
       tl.to(children, {
         opacity: 0,
-        duration: 0.3,
+        duration: 0.25,
         onComplete: done,
       }).to(
         parentEl,
         {
           xPercent: 100,
-          duration: 0.3,
+          duration: 0.25,
         },
         "<"
       );
