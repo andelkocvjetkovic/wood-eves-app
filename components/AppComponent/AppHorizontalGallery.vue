@@ -14,42 +14,77 @@
 export default {
   arrayItems: [
     {
-      alt: "Barhocker",
-      img: "/articles/jinx-barska-stolica.jpg",
+      alt: "Bernard-1 Stuhl",
+      img: "/articles/bernard-stolica-smeda-1.jpg",
     },
     {
-      alt: "Tish",
-      img: "/articles/xx-stolica.jpg",
+      alt: "Bernard-2 Stuhl",
+      img: "/articles/bernard-stolica-zuta-1.jpg",
     },
     {
-      alt: "Dobby-1",
-      img: "/articles/dobby-stolica.jpg",
+      alt: "Dobby-1 Stuhl",
+      img: "/articles/dobby-stolica-1.jpg",
     },
     {
-      alt: "Bernard-1",
-      img: "/articles/bernard-stolica-1.jpg",
+      alt: "Cloud-1 Stuhl",
+      img: "/articles/cloud-stolica-1.jpg",
     },
     {
-      alt: "Zeus-1",
-      img: "/articles/zeus-daska-1.jpg",
+      alt: "Phone Holder-1 brown",
+      img: "/articles/holder-phone-smedi-1.jpg",
     },
     {
-      alt: "Srce",
-      img: "/articles/srce-smeda.jpg",
+      alt: "Phone Holder-1 yellow",
+      img: "/articles/holder-phone-zuti-1.jpg",
+    },
+    {
+      alt: "Jinx-1 Stuhl",
+      img: "/articles/jinx-barska-stolica-1.jpg",
+    },
+    {
+      alt: "Judy-1 Stuhl",
+      img: "/articles/juddy-stolica-1.jpg",
+    },
+    {
+      alt: "Leaf-1 Tish",
+      img: "/articles/leaf-stol-1.jpg",
+    },
+    {
+      alt: "Nova-1 Tish",
+      img: "/articles/nova-stol-1.jpg",
+    },
+    {
+      alt: "Pegas-1 Stuhl",
+      img: "/articles/pegas-stolica-1.jpg",
+    },
+    {
+      alt: "Rock-1 Stuhl",
+      img: "/articles/rock-stolica-1.jpg",
+    },
+    {
+      alt: "Rose-1 Stuhl",
+      img: "/articles/rose-stolica-1.jpg",
+    },
+    {
+      alt: "Sound-1 Tish",
+      img: "/articles/sound-stol-1.jpg",
+    },
+    {
+      alt: "Way-1 Tish",
+      img: "/articles/way-stol-1.jpg",
     },
   ],
   data() {
     return {
       optionsSplide: {
         rewind: true,
-        cover: true,
         type: "loop",
         perPage: 3.5,
         arrows: false,
         pagination: false,
         preloadPages: 1,
         gap: "1rem",
-        height: "35vh",
+        height: "450px",
         lazyLoad: "nearby",
         width: "100vw",
         breakpoints: {
@@ -57,20 +92,22 @@ export default {
             perPage: 2.5,
           },
           768: {
-            height: "50vh",
+            height: "600px",
             gap: "1rem",
-            perPage: 1.3,
+            perPage: 1.5,
           },
           640: {
-            height: "40vh",
+            height: "500px",
+            perPage: 1.4,
             gap: "10px",
           },
           570: {
-            height: "45vh",
+            height: "450px",
+            perPage: 1.3,
             gap: "8px",
           },
           475: {
-            height: "50vh",
+            height: "400px",
             gap: "6px",
             perPage: 1.2,
           },
