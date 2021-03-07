@@ -54,8 +54,16 @@ export default {
       img: "/articles/nova-stol-1.jpg",
     },
     {
+      alt: "Flupy-1 Schneidbrett",
+      img: "/articles/flupy-daska-1.jpg",
+    },
+    {
       alt: "Pegas-1 Stuhl",
       img: "/articles/pegas-stolica-1.jpg",
+    },
+    {
+      alt: "Freeze-1 Schneidbrett",
+      img: "/articles/freeze-daska-1.jpg",
     },
     {
       alt: "Rock-1 Stuhl",
@@ -66,6 +74,10 @@ export default {
       img: "/articles/rose-stolica-1.jpg",
     },
     {
+      alt: "Australia Schneidbrett",
+      img: "/articles/australia-daska-1.jpg",
+    },
+    {
       alt: "Sound-1 Tish",
       img: "/articles/sound-stol-1.jpg",
     },
@@ -73,41 +85,44 @@ export default {
       alt: "Way-1 Tish",
       img: "/articles/way-stol-1.jpg",
     },
+    {
+      alt: "Long-1 Schneidbrett",
+      img: "/articles/long-daska-1.jpg",
+    },
   ],
   data() {
     return {
       optionsSplide: {
         rewind: true,
         type: "loop",
-        perPage: 3.5,
+        perPage: 5,
         arrows: false,
         pagination: false,
-        preloadPages: 1,
+        preloadPages: 0,
         gap: "1rem",
-        height: "450px",
+        height: "auto",
         lazyLoad: "nearby",
         width: "100vw",
         breakpoints: {
-          1024: {
+          1280: {
+            perPage: 4,
+          },
+          1023: {
             perPage: 2.5,
           },
           768: {
-            height: "600px",
             gap: "1rem",
-            perPage: 1.5,
+            perPage: 2,
           },
           640: {
-            height: "500px",
-            perPage: 1.4,
+            perPage: 1.8,
             gap: "10px",
           },
           570: {
-            height: "450px",
             perPage: 1.3,
             gap: "8px",
           },
           475: {
-            height: "400px",
             gap: "6px",
             perPage: 1.2,
           },

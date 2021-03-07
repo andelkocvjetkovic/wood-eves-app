@@ -62,15 +62,15 @@ export default {
   categoryItems: [
     {
       name: "Tish",
-      img: "home-bg.jpg",
+      img: "home-stol-2.jpg",
     },
     {
       name: "Stühle",
-      img: "home-bg-4.jpg",
+      img: "home-stolica-3.jpg",
     },
     {
       name: "Accessoires",
-      img: "home-bg-3.jpg",
+      img: "home-ostalo-1.jpg",
     },
   ],
 };

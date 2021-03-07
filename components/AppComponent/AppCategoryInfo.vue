@@ -11,7 +11,7 @@
         />
       </app-image>
       <figcaption
-        class="absolute inset-0 flex flex-col items-center justify-around w-full h-full bg-black lg:transition-opacity lg:duration-300 lg:ease-out lg:transform lg:opacity-0 lg:group-hover:opacity-100 text-app-white bg-opacity-60"
+        class="absolute inset-0 flex flex-col items-center justify-around w-full h-full bg-black bg-opacity-50 lg:transition-opacity lg:duration-300 lg:ease-out lg:transform lg:opacity-0 lg:group-hover:opacity-100 text-app-white"
       >
         <h2
           class="font-serif text-3xl font-semibold text-center xs:text-4xl md:text-3xl"

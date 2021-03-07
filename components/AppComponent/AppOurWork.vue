@@ -16,7 +16,7 @@
           class="relative overflow-hidden rounded pb-3/4 sm:pb-4/6 md:pb-3/6"
         >
           <img
-            src="wood-work.jpg"
+            src="wood-work-2.jpg"
             class="absolute inset-0 object-cover object-center w-full h-full"
             alt="wood work"
           />
