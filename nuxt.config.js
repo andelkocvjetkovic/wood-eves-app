@@ -27,6 +27,7 @@ export default {
     "~/plugins/gsap.client.js",
     "~/plugins/vue-splide.client.js",
     "~/plugins/portal-vue.client.js",
+    "~/plugins/vue-device-queries.client.js",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -45,7 +46,6 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     "@nuxt/content",
-    "nuxt-mq",
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
@@ -53,7 +53,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ["gsap", "vue-splide", "portal-vue"],
+    transpile: ["gsap", "vue-splide", "portal-vue", "vue-device-queries"],
   },
   googleFonts: {
     families: {
@@ -66,11 +66,24 @@ export default {
   generate: {
     fallback: true,
   },
-  mq: {
-    defaultBreakpoint: "md",
-    breakpoints: {
-      md: 1023,
-      lg: 1024,
+  pageTransition: {
+    css: false,
+    mode: "out-in",
+    enter(el, done) {
+      this.$gsap.from(el, {
+        opacity: 0,
+        duration: 0.3,
+        ease: "expo.out",
+        onComplete: done,
+      });
+    },
+    leave(el, done) {
+      this.$gsap.to(el, {
+        opacity: 0,
+        duration: 0.25,
+        ease: "expo.out",
+        onComplete: done,
+      });
     },
   },
 };

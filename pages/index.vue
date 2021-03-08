@@ -1,10 +1,10 @@
 <template>
   <main class="bg-app-white text-app-dark-gray">
-    <article class="">
-      <app-home-hero class="h-screen/75" />
+    <article class="lg:max-w-4xl lg:mx-auto">
+      <app-home-hero class="h-screen/75 lg:h-screen" />
       <div role="presentation" class="h-1 mt-px bg-app-dark-gray"></div>
       <p
-        class="max-w-xs mx-auto mt-8 text-lg leading-snug xs:mt-8 xs:text-xl xs:max-w-sm sm:max-w-md sm:mt-12 sm:text-2xl md:max-w-xl text-app-dark-gray"
+        class="max-w-xs mx-auto mt-8 text-lg leading-snug xs:mt-8 xs:text-xl xs:max-w-sm sm:max-w-md sm:mt-12 sm:text-2xl md:max-w-xl text-app-dark-gray lg:max-w-md lg:text-base"
       >
         In ganz Bosnien und Herzegowina gibt es Wälder, die an das Tolkins
         Nandor erinnern, in dem Waldelben leben. Waldelben spüren die Seele der
@@ -40,12 +40,13 @@
             :key="cat.name"
             :image-src="cat.img"
             :name="cat.name"
+            :slug="cat.slug"
             class="mt-12 md:w-1/4 md:flex-grow md:flex-shrink-0 md:mt-0"
             :class="[i != 0 ? 'md:ml-1.5 lg:ml-2' : '']"
           />
         </div>
       </section>
-      <app-our-work class="pb-24 mt-24" />
+      <app-our-work class="pb-24 mt-24 md:mt-36" />
     </article>
   </main>
 </template>
@@ -63,14 +64,17 @@ export default {
     {
       name: "Tish",
       img: "home-stol-2.jpg",
+      slug: "tish",
     },
     {
       name: "Stühle",
       img: "home-stolica-3.jpg",
+      slug: "stuhle",
     },
     {
       name: "Accessoires",
       img: "home-ostalo-1.jpg",
+      slug: "accessoires",
     },
   ],
 };

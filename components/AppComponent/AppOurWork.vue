@@ -1,11 +1,11 @@
 <template>
-  <section class="bg-app-light-gray text-app-dark-gray">
+  <section class="pt-16 bg-app-light-gray text-app-dark-gray md:pt-24">
     <div class="max-w-xs mx-auto xs:max-w-sm sm:max-w-lg md:max-w-2xl">
-      <header class="pt-16 font-serif">
-        <h1 class="text-2xl xs:text-3xl md:text-4xl">
+      <header class="font-serif">
+        <h1 class="text-2xl xs:text-3xl md:text-5xl">
           Lorem ipsum dolor sit amet.
         </h1>
-        <h3 class="mt-4 text-lg leading-5 tracking-tight sm:text-xl">
+        <h3 class="mt-4 text-lg leading-5 tracking-tight sm:text-xl md:mt-6">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis,
           tempora?
         </h3>

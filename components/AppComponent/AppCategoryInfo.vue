@@ -24,7 +24,7 @@
           {{ description }}
         </p>
         <nuxt-link
-          :to="slug"
+          :to="`/shop/${slug}`"
           class="px-6 py-1 text-lg font-semibold duration-200 border rounded-sm shadow-md lg:transition-colors lg:transition-opacity xs:px-10 xs:py-2 sm:text-xl sm:px-12 sm:py-3 md:text-base border-app-white bg-app-white text-app-dark-gray lg:hover:bg-opacity-0 lg:hover:text-app-white"
         >
           Sehen

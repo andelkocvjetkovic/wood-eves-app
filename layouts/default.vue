@@ -1,15 +1,25 @@
 <template>
   <div>
-    <lazy-app-header-md v-if="$mq === 'md'" />
-    <lazy-app-header-lg v-else-if="$mq === 'lg'" />
+    <client-only>
+      <lazy-app-header-md v-if="isMobile" />
+      <lazy-app-header-lg v-else />
+    </client-only>
     <Nuxt />
     <app-footer />
     <client-only>
-      <portal-target name="navModal"> </portal-target>
+      <portal-target name="navModal" />
     </client-only>
   </div>
 </template>
-
+<script>
+export default {
+  computed: {
+    isMobile() {
+      return !this.$device?.tablet;
+    },
+  },
+};
+</script>
 <style>
 html {
   -ms-text-size-adjust: 100%;
@@ -21,3 +31,4 @@ html {
   will-change: auto !important;
 }
 </style>
+¸

@@ -1,8 +1,10 @@
 <template>
   <section>
     <header class="">
-      <h1 class="font-serif text-3xl text-center">Ihr Kontakt zu uns</h1>
-      <p class="mt-6 text-center">
+      <h1 class="font-serif text-3xl text-center lg:text-4xl">
+        Ihr Kontakt zu uns
+      </h1>
+      <p class="mt-6 text-center lg:text-lg">
         Haben Sie Fragen zu unserem Angebot? Wir sind gerne für Sie da. Füllen
         Sie einfach das Kontaktformular aus, und wir setzen uns zeitnah mit
         Ihnen in Verbindung.

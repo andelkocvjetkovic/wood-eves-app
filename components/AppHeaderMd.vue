@@ -44,20 +44,15 @@ export default {
   },
   watch: {
     isNavOpen(newValue) {
-      // if (newValue == true) {
-      //   const scrollY = window.scrollY;
-      //   document.body.style.position = "fixed";
-      //   document.body.style.top = `-${scrollY}px`;
-      // } else {
-      //   const scrollY = document.body.style.top;
-      //   document.body.style.position = "";
-      //   document.body.style.top = "";
-      //   window.scrollTo(0, parseInt(scrollY || "0") * -1);
-      // }
       if (newValue === true) {
         document.body.classList.add("overflow-hidden");
       } else {
         document.body.classList.remove("overflow-hidden");
+      }
+    },
+    $route(to, from) {
+      if (this.isNavOpen === true) {
+        this.toggleNavBar();
       }
     },
   },

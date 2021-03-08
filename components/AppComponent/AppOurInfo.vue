@@ -1,8 +1,8 @@
 <template>
   <aside>
     <div>
-      <h3 class="text-2xl font-semibold">Hier finden Sie uns:</h3>
-      <address class="flex flex-col justify-between mt-6">
+      <h3 class="text-2xl font-semibold lg:text-3xl">Hier finden Sie uns:</h3>
+      <address class="flex flex-col justify-between mt-6 lg:text-lg">
         <p class="">Reifeisenstr. 36, 60386 Frankfurt, Germany</p>
         <p class="flex justify-between mt-4">
           <span>Rufen Sie uns an: </span>
@@ -17,8 +17,8 @@
       </address>
     </div>
     <div class="mt-16">
-      <h3 class="text-2xl font-semibold">Öffnungszeiten:</h3>
-      <div class="mt-6">
+      <h3 class="text-2xl font-semibold lg:text-3xl">Öffnungszeiten:</h3>
+      <div class="mt-6 lg:text-lg">
         <p class="flex justify-between">
           <span>Mo-Fr</span><span>9:00am - 5:00pm</span>
         </p>
