@@ -20,10 +20,10 @@
       <h3 class="text-2xl font-semibold lg:text-3xl">Öffnungszeiten:</h3>
       <div class="mt-6 lg:text-lg">
         <p class="flex justify-between">
-          <span>Mo-Fr</span><span>9:00am - 5:00pm</span>
+          <span>Mo - Fr</span><span>9:00am - 5:00pm</span>
         </p>
         <p class="flex justify-between mt-4">
-          <span>Sa-So</span><span>Geschlossen</span>
+          <span>Sa - So</span><span>Geschlossen</span>
         </p>
       </div>
     </div>

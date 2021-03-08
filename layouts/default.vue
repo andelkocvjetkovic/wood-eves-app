@@ -1,8 +1,8 @@
 <template>
   <div>
     <client-only>
-      <lazy-app-header-md v-if="isMobile" />
-      <lazy-app-header-lg v-else />
+      <lazy-app-header-mobile v-if="isMobile" />
+      <lazy-app-header-large v-else />
     </client-only>
     <Nuxt />
     <app-footer />

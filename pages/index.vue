@@ -41,12 +41,12 @@
             :image-src="cat.img"
             :name="cat.name"
             :slug="cat.slug"
-            class="mt-12 md:w-1/4 md:flex-grow md:flex-shrink-0 md:mt-0"
+            class="mt-12 sm:mt-20 md:w-1/4 md:flex-grow md:flex-shrink-0 md:mt-0"
             :class="[i != 0 ? 'md:ml-1.5 lg:ml-2' : '']"
           />
         </div>
       </section>
-      <app-our-work class="pb-24 mt-24 md:mt-36" />
+      <app-our-work class="pb-24 mt-24 sm:mt-32 md:mt-36" />
     </article>
   </main>
 </template>

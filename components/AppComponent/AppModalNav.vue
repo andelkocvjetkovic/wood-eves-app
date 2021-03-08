@@ -1,23 +1,31 @@
 <template>
   <nav class="fixed inset-0 w-full h-full bg-app-white">
     <ul
-      class="flex flex-col items-start justify-start w-full h-full px-8 py-6 pt-20 text-3xl md:py-12 md:px-16 gap-y-6"
+      class="flex flex-col items-start justify-start w-full h-full px-8 py-6 pt-20 text-xl font-semibold uppercase gap-y-6"
     >
-      <li class="mt-12 md:mt-24">
+      <li class="mt-12">
+        <nuxt-link class="text-app-accent" to="/shop">Neu</nuxt-link>
+      </li>
+      <li class="">
         <nuxt-link class="" to="/shop">Shop</nuxt-link>
       </li>
       <li class=""><nuxt-link to="/uberuns">Über uns</nuxt-link></li>
       <li class=""><nuxt-link to="/">Kontakt</nuxt-link></li>
       <hr />
       <li class="self-center w-full mt-auto">
-        <div class="flex justify-around">
+        <hr />
+        <div class="flex justify-around mt-6">
           <a href="https://facebook.com/" target="_blank"
             ><span class="sr-only">Wood-Elvas Facebook</span>
-            <app-facebook-svg class="w-10 h-10 text-app-white"
+            <app-facebook-svg class="w-7 h-7 text-app-white"
           /></a>
           <a href="https://instagram.com/" target="_blank">
             <span class="sr-only">Wood-Elvas Instagram</span>
-            <app-instagram-svg class="w-10 h-10 st text-app-dark-gray" />
+            <app-instagram-svg class="w-7 h-7 text-app-dark-gray" />
+          </a>
+          <a href="https://linkedin.com/" target="_blank">
+            <span class="sr-only">Wood-Elvas Linkedin</span>
+            <app-linkedin-svg class="w-7 h-7 text-app-dark-gray" />
           </a>
         </div>
       </li>

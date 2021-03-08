@@ -1,9 +1,15 @@
 <template>
-  <section>_slug stuhle</section>
+  <section>
+    {{ item.name }}
+  </section>
 </template>
 
 <script>
-export default {};
-</script>
+export default {
+  async asyncData({ params, redirect, $content }) {
+    const item = await $content("articles/stuhle", params.slug).fetch();
 
-<style></style>
+    return { item };
+  },
+};
+</script>

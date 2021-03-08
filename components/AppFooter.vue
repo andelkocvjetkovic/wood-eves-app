@@ -1,6 +1,6 @@
 <template>
   <footer class="pb-12 bg-app-dark-gray text-app-white md:pt-6">
-    <app-social-icons class="py-6 md:hidden" />
+    <app-social-icons class="py-4 md:hidden" />
     <div
       class="max-w-xs mx-auto mt-16 xs:max-w-sm sm:max-w-lg md:max-w-3xl md:px-3 md:grid md:grid-cols-2 md:grid-rows-1 md:gap-x-6 lg:max-w-4xl lg:gap-x-8 xl:max-w-6xl xl:gap-x-10"
     >

@@ -112,7 +112,7 @@ export default {
           },
           768: {
             gap: "1rem",
-            perPage: 2,
+            perPage: 2.2,
           },
           640: {
             perPage: 1.8,
