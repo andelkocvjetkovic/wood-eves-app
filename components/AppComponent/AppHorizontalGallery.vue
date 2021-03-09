@@ -3,7 +3,7 @@
     <client-only>
       <splide :options="optionsSplide">
         <splide-slide v-for="item in $options.arrayItems" :key="item.img">
-          <img :data-splide-lazy="item.img" :alt="item.alt" />
+          <img :data-splide-lazy="item.img" :alt="item.alt" class="h-80 w-80" />
         </splide-slide>
       </splide>
     </client-only>
@@ -99,8 +99,8 @@ export default {
         arrows: false,
         pagination: false,
         preloadPages: 0,
+        heightRatio: 1,
         gap: "1rem",
-        height: "auto",
         lazyLoad: "nearby",
         width: "100vw",
         breakpoints: {
@@ -124,7 +124,7 @@ export default {
           },
           475: {
             gap: "6px",
-            perPage: 1.2,
+            perPage: 1.3,
           },
         },
       },

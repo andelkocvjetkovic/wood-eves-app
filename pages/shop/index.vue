@@ -1,17 +1,26 @@
 <template>
   <article class="mt-6">
-    <p class="text-5xl text-center">Click above me :))</p>
-    <h1 class="text-2xl text-center">I'm home page of shop :)</h1>
+    <section>
+      <app-item-list :item-list="accessoires" />
+
+      <app-item-list :item-list="tish" />
+
+      <app-item-list :item-list="stuhle" />
+    </section>
   </article>
 </template>
 
 <script>
 export default {
-  async asyncData({ $content }) {
-    const tish = await $content("articles/tish").fetch();
+  async asyncData({ $content, error }) {
+    const tish = await $content("articles/tish").limit(2).fetch();
+    const accessoires = await $content("articles/accessoires").limit(2).fetch();
+    const stuhle = await $content("articles/stuhle").limit(2).fetch();
 
     return {
       tish,
+      accessoires,
+      stuhle,
     };
   },
 };

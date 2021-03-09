@@ -1,7 +1,7 @@
 <template>
   <main class="py-16">
     <h1 class="text-3xl text-center">Welcome to our shop</h1>
-    <nav class="mt-6">
+    <nav class="sticky z-30 mt-6 top-20">
       <ul class="flex justify-around underline">
         <li>
           <nuxt-link to="/shop/accessoires">Accessoires</nuxt-link>
@@ -14,12 +14,6 @@
         </li>
       </ul>
     </nav>
-    <nuxt-child />
+    <nuxt-child class="pb-12" />
   </main>
 </template>
-
-<script>
-export default {};
-</script>
-
-<style></style>

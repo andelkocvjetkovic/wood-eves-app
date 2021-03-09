@@ -1,12 +1,12 @@
 <template>
   <header
-    class="sticky top-0 z-20 flex items-center justify-center w-full px-4 py-6 bg-app-white bg-opacity-95"
+    class="sticky top-0 z-50 flex items-center justify-center w-full px-4 py-6 bg-app-white bg-opacity-95"
   >
     <nuxt-link
-      class="absolute flex items-center transform translate-x-1/2 -translate-y-1/2 w-14 h-14 right-1/2 top-1/2 justify-items-center"
+      class="absolute flex items-center overflow-hidden transform translate-x-1/2 -translate-y-1/2 w-14 h-14 right-1/2 top-1/2 justify-items-center"
       to="/"
     >
-      <app-logo class="block w-full h-full" />
+      <app-logo class="block w-full h-full" @click.native="onLogoClick" />
     </nuxt-link>
     <button
       type="button"
@@ -22,7 +22,10 @@
           @enter="onEnterModalNav"
           @leave="leaveModalNav"
         >
-          <lazy-app-modal-nav v-if="isNavOpen" />
+          <lazy-app-modal-nav
+            v-if="isNavOpen"
+            @close-nav-modal="toggleNavBar"
+          />
         </transition>
       </portal>
     </client-only>
@@ -57,6 +60,15 @@ export default {
     },
   },
   methods: {
+    onLogoClick() {
+      if (
+        window.scrollY > 500 &&
+        !this.isNavOpen &&
+        this.$route.fullPath === "/"
+      ) {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      }
+    },
     onEnterModalNav(el, done) {
       var parentEl = el;
       var children = el.children[0].children;

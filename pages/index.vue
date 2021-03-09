@@ -22,8 +22,10 @@
           Handgefertigte Möbel Für außergewöhnliche Häuser Lassen Sie sich von
           uns inspirieren
         </h2>
-        <aside class="h-auto mt-16">
-          <app-horizontal-gallery />
+        <aside class="relative mt-16 overflow-hidden max-h-96">
+          <keep-alive>
+            <app-horizontal-gallery />
+          </keep-alive>
         </aside>
       </section>
       <section

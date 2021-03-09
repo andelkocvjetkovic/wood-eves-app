@@ -1,5 +1,8 @@
 <template>
-  <nav class="fixed inset-0 w-full h-full bg-app-white">
+  <nav
+    class="fixed inset-0 z-40 w-full h-full bg-app-white"
+    @click.stop="clickOnModal"
+  >
     <ul
       class="flex flex-col items-start justify-start w-full h-full px-8 py-6 pt-20 text-xl font-semibold uppercase gap-y-6"
     >
@@ -32,3 +35,14 @@
     </ul>
   </nav>
 </template>
+<script>
+export default {
+  methods: {
+    clickOnModal(e) {
+      if (e.target.hasAttribute("aria-current")) {
+        this.$emit("close-nav-modal");
+      }
+    },
+  },
+};
+</script>

@@ -6,8 +6,12 @@
 
 <script>
 export default {
-  async asyncData({ params, redirect, $content }) {
-    const item = await $content("articles/accessoires", params.slug).fetch();
+  async asyncData({ params, $content, error }) {
+    const item = await $content("articles/accessoires", params.slug)
+      .fetch()
+      .catch(() => {
+        error({ statusCode: 404, message: "Page not found" });
+      });
 
     return { item };
   },

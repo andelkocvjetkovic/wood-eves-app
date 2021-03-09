@@ -3,13 +3,13 @@ export default function (to, from, savedPosition) {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(savedPosition);
-      }, 350);
+      }, 310);
     });
   } else {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve({ x: 0, y: 0, behavior: "smooth" });
-      }, 350);
+      }, 560);
     });
   }
 }
