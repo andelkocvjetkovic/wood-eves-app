@@ -1,13 +1,11 @@
 <template>
-  <div class="mt-6">
-    <client-only>
-      <splide :options="optionsSplide">
-        <splide-slide v-for="item in $options.arrayItems" :key="item.img">
-          <img :data-splide-lazy="item.img" :alt="item.alt" class="h-80 w-80" />
-        </splide-slide>
-      </splide>
-    </client-only>
-  </div>
+  <client-only>
+    <splide :options="optionsSplide">
+      <splide-slide v-for="item in $options.arrayItems" :key="item.img">
+        <img :data-splide-lazy="item.img" :alt="item.alt" />
+      </splide-slide>
+    </splide>
+  </client-only>
 </template>
 
 <script>
@@ -93,38 +91,26 @@ export default {
   data() {
     return {
       optionsSplide: {
-        rewind: true,
         type: "loop",
-        perPage: 5,
+        cover: true,
         arrows: false,
         pagination: false,
-        preloadPages: 0,
-        heightRatio: 1,
-        gap: "1rem",
+        preloadPages: 1,
         lazyLoad: "nearby",
         width: "100vw",
+        fixedHeight: "24rem",
         breakpoints: {
-          1280: {
-            perPage: 4,
-          },
-          1023: {
-            perPage: 2.5,
-          },
           768: {
             gap: "1rem",
-            perPage: 2.2,
+            perPage: 1.8,
           },
           640: {
-            perPage: 1.8,
-            gap: "10px",
-          },
-          570: {
-            perPage: 1.3,
-            gap: "8px",
+            gap: "0.7rem",
+            perPage: 1.4,
           },
           475: {
-            gap: "6px",
-            perPage: 1.3,
+            gap: "0.5rem",
+            perPage: 1.2,
           },
         },
       },

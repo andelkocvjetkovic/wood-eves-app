@@ -22,7 +22,7 @@
           Handgefertigte Möbel Für außergewöhnliche Häuser Lassen Sie sich von
           uns inspirieren
         </h2>
-        <aside class="relative mt-16 overflow-hidden max-h-96">
+        <aside v-if="isMobile" class="relative mt-16 overflow-hidden h-96">
           <keep-alive>
             <app-horizontal-gallery />
           </keep-alive>
@@ -61,6 +61,11 @@ export default {
         { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
       ],
     };
+  },
+  computed: {
+    isMobile() {
+      return !this.$device?.tablet;
+    },
   },
   categoryItems: [
     {
