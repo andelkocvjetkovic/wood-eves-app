@@ -86,4 +86,7 @@ export default {
       });
     },
   },
+  router: {
+    linkExactActiveClass: "text-app-accent",
+  },
 };
