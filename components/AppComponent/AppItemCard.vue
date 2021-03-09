@@ -2,7 +2,7 @@
   <figure>
     <nuxt-link
       :to="`/shop/${path}/${item.slug}`"
-      class="block shadow-xl ring-2 ring-app-blue-gray border-app-dark-gray"
+      class="block shadow-xl ring-1 ring-app-blue-gray border-app-dark-gray"
     >
       <div role="presentation" class="relative pb-full">
         <img

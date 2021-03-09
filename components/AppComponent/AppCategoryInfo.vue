@@ -46,9 +46,8 @@ export default {
     },
     description: {
       type: String,
-      default: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Natus quaerat sint hic! Ipsam at distinctio qui debitis
-          consequatur minima.`,
+      default: `Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen,
+      gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. `,
     },
     slug: {
       type: String,

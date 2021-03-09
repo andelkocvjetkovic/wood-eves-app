@@ -1,47 +1,86 @@
 <template>
   <nav
-    class="fixed inset-0 z-40 w-full h-full bg-app-white"
+    class="fixed inset-0 z-40 flex flex-col items-center w-full h-full py-6 bg-app-white"
     @click.stop="clickOnModal"
   >
     <ul
-      class="flex flex-col items-start justify-start w-full h-full px-8 py-6 pt-20 text-xl font-semibold uppercase gap-y-6"
+      class="flex flex-col items-stretch justify-start flex-grow w-full h-full px-8 pt-20 text-xl font-semibold uppercase gap-y-6"
     >
-      <li class="mt-12">
-        <nuxt-link class="text-app-accent" to="/shop">Neu</nuxt-link>
-      </li>
-      <li class="">
-        <nuxt-link class="" to="/shop">Shop</nuxt-link>
+      <li>
+        <p class="flex items-center justify-between">
+          <span>Shop</span
+          ><span ref="arrowSvg" @click="toggleDropDown"
+            ><app-arrow-down-svg class="w-8 h-8"
+          /></span>
+        </p>
+        <transition :css="false" @enter="enterDropDown" @leave="leaveDropDown">
+          <app-drop-down-menu
+            v-if="isDropDownOpen"
+            class="px-6 text-base capitalize"
+          />
+        </transition>
       </li>
       <li class=""><nuxt-link to="/uberuns">Über uns</nuxt-link></li>
+      <li class=""><nuxt-link to="/ideas">Ideas</nuxt-link></li>
       <li class=""><nuxt-link to="/">Kontakt</nuxt-link></li>
-      <hr />
-      <li class="self-center w-full mt-auto">
-        <hr />
-        <div class="flex justify-around mt-6">
-          <a href="https://facebook.com/" target="_blank"
-            ><span class="sr-only">Wood-Elvas Facebook</span>
-            <app-facebook-svg class="w-7 h-7 text-app-white"
-          /></a>
-          <a href="https://instagram.com/" target="_blank">
-            <span class="sr-only">Wood-Elvas Instagram</span>
-            <app-instagram-svg class="w-7 h-7 text-app-dark-gray" />
-          </a>
-          <a href="https://linkedin.com/" target="_blank">
-            <span class="sr-only">Wood-Elvas Linkedin</span>
-            <app-linkedin-svg class="w-7 h-7 text-app-dark-gray" />
-          </a>
-        </div>
-      </li>
     </ul>
+    <div class="w-10/12">
+      <hr />
+      <app-social-icons class="mt-6 text-app-dark-gray" />
+    </div>
   </nav>
 </template>
 <script>
 export default {
+  data() {
+    return {
+      isDropDownOpen: false,
+    };
+  },
   methods: {
     clickOnModal(e) {
       if (e.target.hasAttribute("aria-current")) {
         this.$emit("close-nav-modal");
       }
+    },
+    toggleDropDown() {
+      this.isDropDownOpen = !this.isDropDownOpen;
+    },
+    enterDropDown(el, done) {
+      var tl = this.$gsap.timeline({
+        defaults: { transformOrigin: "50% 50%", ease: " circ.out" },
+      });
+      tl.to(this.$refs.arrowSvg, {
+        rotate: 90,
+        duration: 0.1,
+        transformOrigin: "50% 50%",
+      }).from(
+        el,
+        {
+          opacity: 0,
+          duration: 0.2,
+          onComplete: done,
+        },
+        "<"
+      );
+    },
+    leaveDropDown(el, done) {
+      var tl = this.$gsap.timeline({
+        defaults: { transformOrigin: "50% 50%", ease: " circ.in" },
+      });
+      tl.to(this.$refs.arrowSvg, {
+        rotate: 0,
+        duration: 0.1,
+        transformOrigin: "50% 50%",
+      }).to(
+        el,
+        {
+          opacity: 0,
+          duration: 0.15,
+          onComplete: done,
+        },
+        "<"
+      );
     },
   },
 };
