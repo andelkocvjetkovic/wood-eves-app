@@ -14,7 +14,7 @@
         besitzen, der unserem Zuhause Wärme und ein magisches Aussehen verleiht.
       </p>
     </article>
-    <article class="">
+    <article>
       <section class="mt-20 sm:mt-32">
         <h2
           class="max-w-xs mx-auto font-serif text-xl font-semibold tracking-wide text-center uppercase xs:max-w-sm xs:text-2xl sm:max-w-md sm:leading-8 md:max-w-2xl md:text-3xl text-app-accent"
@@ -22,11 +22,13 @@
           Handgefertigte Möbel Für außergewöhnliche Häuser Lassen Sie sich von
           uns inspirieren
         </h2>
-        <aside v-if="isMobile" class="relative mt-16 overflow-hidden h-96">
-          <keep-alive>
-            <app-horizontal-gallery />
-          </keep-alive>
-        </aside>
+        <client-only>
+          <aside v-if="isMobile" class="relative mt-16 overflow-hidden h-96">
+            <keep-alive>
+              <app-horizontal-gallery />
+            </keep-alive>
+          </aside>
+        </client-only>
       </section>
       <section
         class="max-w-xs mx-auto mt-24 xs:max-w-sm xs:mt-32 sm:max-w-lg md:max-w-2xl md:mt-48 lg:max-w-3xl"

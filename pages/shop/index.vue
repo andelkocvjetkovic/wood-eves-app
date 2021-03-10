@@ -7,10 +7,9 @@
 <script>
 export default {
   async asyncData({ $content }) {
-    const items = await $content("articles/neu").fetch();
-
+    const nueItems = await $content("articles/neu").fetch();
     return {
-      items,
+      items: nueItems,
     };
   },
 };

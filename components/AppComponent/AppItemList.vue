@@ -13,11 +13,19 @@ export default {
       type: [Object, Array],
       default: () => {},
     },
+    path: {
+      type: String,
+      default: "",
+    },
   },
   computed: {
     getPath() {
       var path = this.itemList[0].path.split("/");
-      return path[2];
+      if (path[2] === "neu") {
+        return `/shop/`;
+      } else {
+        return `/shop/${path[2]}/`;
+      }
     },
   },
 };

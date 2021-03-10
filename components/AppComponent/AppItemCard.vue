@@ -1,7 +1,7 @@
 <template>
   <figure>
     <nuxt-link
-      :to="`/shop/${path}/${item.slug}`"
+      :to="`${path}${item.slug}`"
       class="block shadow-xl ring-1 ring-app-blue-gray border-app-dark-gray"
     >
       <div role="presentation" class="relative pb-full">
@@ -16,7 +16,7 @@
       class="relative flex flex-col w-5/6 px-3 py-5 mx-auto -mt-8 rounded-md shadow-lg h-28 bg-app-dark-gray text-app-white"
     >
       <div class="flex justify-between">
-        <nuxt-link :to="`/shop/${path}/${item.slug}`"
+        <nuxt-link :to="`${path}${item.slug}`"
           ><h1 class="font-serif text-xl">{{ item.name }}</h1></nuxt-link
         >
         <p class="text-base font-bold">{{ getEuro(item.price) }}</p>

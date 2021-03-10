@@ -1,11 +1,9 @@
 <template>
-  <client-only>
-    <splide :options="optionsSplide">
-      <splide-slide v-for="item in $options.arrayItems" :key="item.img">
-        <img :data-splide-lazy="item.img" :alt="item.alt" />
-      </splide-slide>
-    </splide>
-  </client-only>
+  <splide :options="optionsSplide">
+    <splide-slide v-for="item in $options.arrayItems" :key="item.img">
+      <img :data-splide-lazy="item.img" :alt="item.alt" />
+    </splide-slide>
+  </splide>
 </template>
 
 <script>
