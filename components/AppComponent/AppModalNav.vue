@@ -26,7 +26,7 @@
       </li>
       <li class=""><nuxt-link to="/uberuns">Über uns</nuxt-link></li>
       <li class=""><nuxt-link to="/ideas">Ideas</nuxt-link></li>
-      <li class=""><nuxt-link to="/">Kontakt</nuxt-link></li>
+      <li class=""><nuxt-link to="/kontakt">Kontakt</nuxt-link></li>
     </ul>
     <div class="w-10/12">
       <hr />

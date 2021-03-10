@@ -1,16 +1,25 @@
 <template>
-  <main class="pb-12">
+  <main class="pb-16">
     <article
       v-for="item in items"
       :key="item.uuid"
-      class="max-w-xs mx-auto mt-12"
+      class="max-w-xs mx-auto mt-16"
     >
-      <section>
-        <h1 class="font-serif text-xl text-center">{{ item.title }}</h1>
+      <section class="flex flex-col items-stretch justify-start space-y-6">
+        <h1 class="font-serif text-3xl text-center">{{ item.title }}</h1>
         <figure>
-          <img :src="item.image" :alt="item.title" class="w-full h-32" />
-          <figcaption>
-            <p>{{ item.description }}</p>
+          <div
+            class="relative overflow-hidden rounded shadow pb-full"
+            role="presentation"
+          >
+            <img
+              :src="item.image"
+              :alt="item.title"
+              class="absolute inset-0 object-cover object-center w-full h-full"
+            />
+          </div>
+          <figcaption class="mt-6">
+            <p class="prose-sm prose">{{ item.description }}</p>
           </figcaption>
         </figure>
       </section>
