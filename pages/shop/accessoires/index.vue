@@ -1,5 +1,8 @@
 <template>
   <article>
+    <header class="mt-12">
+      <h1 class="text-2xl font-semibold text-center">Accessoires</h1>
+    </header>
     <app-item-list :item-list="accessoires" />
   </article>
 </template>

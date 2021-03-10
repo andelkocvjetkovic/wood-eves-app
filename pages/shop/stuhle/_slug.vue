@@ -1,6 +1,6 @@
 <template>
   <section>
-    {{ item.name }}
+    <app-item-info :item="item" />
   </section>
 </template>
 
