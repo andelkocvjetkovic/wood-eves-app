@@ -90,25 +90,25 @@ export default {
     return {
       optionsSplide: {
         type: "loop",
-        cover: true,
         arrows: false,
+        cover: true,
         pagination: false,
-        preloadPages: 1,
+        preloadPages: 1.5,
         lazyLoad: "nearby",
         width: "100vw",
-        fixedHeight: "24rem",
+        fixedHeight: "16rem",
         breakpoints: {
           768: {
-            gap: "1rem",
-            perPage: 1.7,
+            gap: "0.8rem",
+            perPage: 2.7,
           },
           640: {
-            gap: "0.7rem",
-            perPage: 1.4,
+            gap: "0.5rem",
+            perPage: 2.2,
           },
           475: {
             gap: "0.5rem",
-            perPage: 1.2,
+            perPage: 1.5,
           },
         },
       },

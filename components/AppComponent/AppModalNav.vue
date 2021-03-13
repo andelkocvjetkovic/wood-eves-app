@@ -10,7 +10,7 @@
       <app-drop-down-menu @toggleDrop="toggleDropDown"
         ><app-drop-down-list
           v-if="isDropDownOpen"
-          class="flex flex-col space-y-2 text-sm px-1/6"
+          class="flex flex-col space-y-2 text-sm ml-9"
         />
       </app-drop-down-menu>
       <li><nuxt-link to="/uberuns">Über uns</nuxt-link></li>
