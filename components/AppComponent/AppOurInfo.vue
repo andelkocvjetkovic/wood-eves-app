@@ -1,5 +1,5 @@
 <template>
-  <aside>
+  <aside class="md:grid md:grid-cols-2 md:gap-x-8 lg:gap-x-16 xl:gap-x-1/5">
     <div>
       <h3 class="text-2xl font-semibold lg:text-3xl">Hier finden Sie uns:</h3>
       <address class="flex flex-col justify-between mt-6 lg:text-lg">
@@ -16,7 +16,7 @@
         </p>
       </address>
     </div>
-    <div class="mt-16">
+    <div class="order-first mt-16 md:mt-0">
       <h3 class="text-2xl font-semibold lg:text-3xl">Öffnungszeiten:</h3>
       <div class="mt-6 lg:text-lg">
         <p class="flex justify-between">

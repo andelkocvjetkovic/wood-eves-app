@@ -4,10 +4,13 @@
   >
     <figure class="relative group md:absolute md:inset-0">
       <app-image class="pb-full sm:pb-2/3 md:pb-0 md:h-full">
-        <img
+        <nuxt-img
           :src="imageSrc"
           :alt="name"
-          class="absolute inset-0 object-cover object-right w-full h-full transition-transform duration-200 lg:ease-out lg:transform lg:group-hover:scale-110"
+          quality="80"
+          sizes="xs:320px xl:640px"
+          fit="fill"
+          class="absolute inset-0 object-cover object-center w-full h-full transition-transform duration-200 md:object-fill lg:ease-out lg:transform lg:group-hover:scale-110"
         />
       </app-image>
       <figcaption

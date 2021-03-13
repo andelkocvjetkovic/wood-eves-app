@@ -1,10 +1,13 @@
 <template>
   <main class="bg-app-white text-app-dark-gray">
-    <article class="lg:max-w-4xl lg:mx-auto">
-      <app-home-hero class="h-screen/75 lg:h-screen" />
-      <div role="presentation" class="h-1 mt-px bg-app-dark-gray"></div>
+    <article class="lg:max-w-4xl lg:mx-auto xl:max-w-5xl">
+      <app-home-hero class="h-screen/75" />
+      <div
+        role="presentation"
+        class="h-1 mt-px bg-app-dark-gray lg:hidden"
+      ></div>
       <p
-        class="max-w-xs mx-auto mt-8 text-lg leading-snug xs:mt-8 xs:text-xl xs:max-w-sm sm:max-w-md sm:mt-12 sm:text-2xl md:max-w-xl text-app-dark-gray lg:max-w-md lg:text-base"
+        class="max-w-xs mx-auto mt-8 text-lg leading-snug xs:mt-8 xs:text-xl xs:max-w-sm sm:max-w-md sm:mt-12 md:max-w-xl text-app-dark-gray lg:max-w-md lg:text-base"
       >
         In ganz Bosnien und Herzegowina gibt es Wälder, die an das Tolkins
         Nandor erinnern, in dem Waldelben leben. Waldelben spüren die Seele der
@@ -23,7 +26,7 @@
           uns inspirieren
         </h2>
         <client-only>
-          <aside v-if="isMobile" class="relative mt-16 overflow-hidden h-96">
+          <aside v-if="isMobile" class="relative mt-16 overflow-hidden">
             <keep-alive>
               <app-horizontal-gallery />
             </keep-alive>
@@ -31,22 +34,22 @@
         </client-only>
       </section>
       <section
-        class="max-w-xs mx-auto mt-24 xs:max-w-sm xs:mt-32 sm:max-w-lg md:max-w-2xl md:mt-48 lg:max-w-3xl"
+        class="max-w-xs mx-auto mt-24 xs:max-w-sm xs:mt-32 sm:max-w-lg md:max-w-2xl md:mt-48 lg:max-w-4xl xl:max-w-5xl"
       >
         <h2
           class="font-serif text-2xl font-semibold text-center uppercase sm:text-4xl text-app-dark-gray md:pb-16 md:px-6"
         >
           Sehen Sie sich unsere Angebote an
         </h2>
-        <div class="md:flex md:flex-wrap">
+        <div class="md:flex md:flex-nowrap">
           <app-category-info
             v-for="(cat, i) in $options.categoryItems"
             :key="cat.name"
             :image-src="cat.img"
             :name="cat.name"
             :slug="cat.slug"
-            class="mt-12 sm:mt-20 md:w-1/4 md:flex-grow md:flex-shrink-0 md:mt-0"
-            :class="[i != 0 ? 'md:ml-1.5 lg:ml-2' : '']"
+            class="mt-12 sm:mt-20 md:flex-basis-25 md:flex-grow md:flex-shrink-0 md:mt-0"
+            :class="[i != 0 ? 'md:ml-1.5 lg:ml-12 xl:ml-20' : '']"
           />
         </div>
       </section>

@@ -1,5 +1,6 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
+const plugin = require("tailwindcss/plugin");
 module.exports = {
   purge: {
     enabled: process.env.NODE_ENV === "production",
@@ -70,5 +71,27 @@ module.exports = {
       scale: ["group-hover"],
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    plugin(function ({ addUtilities }) {
+      const newUtilities = {
+        ".flex-basis-full": {
+          "flex-basis": "100%",
+        },
+        ".flex-basis-25": {
+          "flex-basis": "25%",
+        },
+        ".flex-basis-33": {
+          "flex-basis": "33.333%",
+        },
+        ".flex-basis-50": {
+          "flex-basis": "50%",
+        },
+        ".flex-basis-75": {
+          "flex-basis": "75%",
+        },
+      };
+      addUtilities(newUtilities, ["responsive"]);
+    }),
+  ],
 };

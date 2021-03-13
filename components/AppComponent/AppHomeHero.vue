@@ -2,7 +2,7 @@
   <section class="masthead" role="img" aria-label="Image Description">
     <transition appear :css="false" @appear="customAppearHook">
       <h1
-        class="max-w-sm px-1 mx-auto mt-12 font-serif text-3xl font-semibold text-center text-app-white sm:text-4xl sm:max-w-md md:max-w-2xl md:mt-20 xl:text-6xl xl:max-w-5xl"
+        class="max-w-sm px-1 mx-auto mt-12 font-serif text-3xl font-semibold text-center text-app-white sm:text-4xl sm:max-w-md md:max-w-2xl md:mt-20"
       >
         <q>Tawar faer</q><br />Die Seele des Holzes Mehr als nur Möbel ...
       </h1>

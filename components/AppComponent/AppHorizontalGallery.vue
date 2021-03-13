@@ -100,7 +100,7 @@ export default {
         breakpoints: {
           768: {
             gap: "1rem",
-            perPage: 1.8,
+            perPage: 1.7,
           },
           640: {
             gap: "0.7rem",

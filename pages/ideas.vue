@@ -15,7 +15,7 @@
             <img
               :src="item.image"
               :alt="item.title"
-              class="absolute inset-0 object-cover object-center w-full h-full"
+              class="absolute inset-0 flex object-cover object-center w-full h-full"
             />
           </div>
           <figcaption class="mt-6">
