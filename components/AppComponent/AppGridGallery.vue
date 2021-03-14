@@ -2,10 +2,10 @@
   <div class="grid-container">
     <div class="flex items-center justify-center item-text">
       <h1
-        class="text-base font-semibold text-center uppercase text-app-accent lg:text-6xl"
+        class="text-4xl font-semibold text-center uppercase text-app-accent lg:text-6xl"
         style="text-orientation: mixed; writing-mode: vertical-rl"
       >
-        Wood - Elvis
+        Wood - Elvas
       </h1>
     </div>
     <div class="item-slika-1">

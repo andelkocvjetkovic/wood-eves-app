@@ -2,7 +2,7 @@
   <main class="prose-sm prose md:prose-lg">
     <section>
       <header class="text-center">
-        <h1 class="font-serif">Wir stellen uns vor Wer sind die Wood-Elves?</h1>
+        <h1 class="font-serif">Wir stellen uns vor Wer sind die Wood-Elvas?</h1>
         <h3>
           Ein Team von mehreren fantastische Tischler geführt von Herr Bony
           Been. Unser Ziel sind perfekte Ergebnisse und die Zufriedenheit
