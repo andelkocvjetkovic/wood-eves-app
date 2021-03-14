@@ -2,13 +2,13 @@
   <figure class="relative overflow-hidden rounded-sm">
     <div
       role="presentation"
-      class="absolute inset-0 w-full h-full shadow-2xl bg-app-dark-gray"
+      class="absolute inset-0 w-full h-full shadow bg-app-blue-gray"
       style="clip-path: polygon(0 20%, 100% 58%, 100% 100%, 0% 100%)"
     ></div>
     <nuxt-link :to="`${path}${item.slug}`" class="relative block p-2">
       <div
         role="presentation"
-        class="relative overflow-hidden rounded-sm shadow-xl pb-full"
+        class="relative overflow-hidden rounded-sm shadow-lg pb-full"
       >
         <nuxt-img
           class="absolute inset-0 object-cover object-center w-full h-full"
@@ -24,7 +24,7 @@
     <figcaption class="relative flex flex-col w-full px-3 py-4 text-app-white">
       <div class="flex justify-between">
         <nuxt-link :to="`${path}${item.slug}`"
-          ><h1 class="font-serif text-xl md:text-base">
+          ><h1 class="font-serif text-xl font-semibold md:text-base">
             {{ item.name }}
           </h1></nuxt-link
         >

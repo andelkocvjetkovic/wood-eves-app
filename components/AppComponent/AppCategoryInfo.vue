@@ -3,7 +3,7 @@
     <aside
       v-for="item in $options.categoryItems"
       :key="item.img"
-      class="mt-8 md:flex-basis-33 md:mt-0 md:p-1 lg:p-3 xl:p-5"
+      class="mt-8 md:flex-basis-33 md:mt-0 md:p-1 lg:p-3 xl:p-4"
     >
       <figure class="relative overflow-hidden group">
         <nuxt-img
@@ -15,7 +15,7 @@
           class="absolute inset-0 object-cover object-center w-full h-full transition-transform duration-200 lg:ease-out lg:transform lg:group-hover:scale-110"
         />
         <figcaption
-          class="relative flex flex-col items-center px-8 py-6 space-y-8 bg-black bg-opacity-50 md:px-9 md:space-y-10 lg:py-8 lg:space-y-12 lg:transition-opacity lg:duration-300 lg:ease-out lg:transform lg:opacity-0 lg:group-hover:opacity-100 text-app-white"
+          class="relative flex flex-col items-center px-8 py-6 space-y-8 bg-black bg-opacity-50 md:px-9 md:space-y-10 lg:py-8 lg:space-y-12 xl:space-y-16 lg:transition-opacity lg:duration-300 lg:ease-out lg:transform lg:opacity-0 lg:group-hover:opacity-100 text-app-white"
         >
           <h2 class="font-serif text-2xl">
             {{ item.name }}

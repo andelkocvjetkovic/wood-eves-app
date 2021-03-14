@@ -32,6 +32,10 @@
               <app-horizontal-gallery />
             </keep-alive>
           </aside>
+          <app-grid-gallery
+            v-else
+            class="mt-12 md:max-w-2xl md:mx-auto lg:max-w-4xl xl:max-w-5xl"
+          />
         </client-only>
       </section>
       <section

@@ -5,7 +5,7 @@
       :key="i"
       class="mt-6 sm:flex-basis-50 sm:px-2 md:px-3"
     >
-      <header c>
+      <header>
         <h1 class="py-2 text-base text-center">{{ item.title }}</h1>
       </header>
       <div class="grid grid-cols-2 grid-rows-2 py-3 mt-2 gap-x-2 bg-app-white">
