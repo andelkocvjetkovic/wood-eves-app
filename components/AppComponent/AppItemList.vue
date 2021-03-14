@@ -1,12 +1,12 @@
 <template>
   <section
-    class="mt-6 xs:max-w-xs xs:mx-auto sm:max-w-sm md:w-full md:flex md:flex-wrap md:max-w-none lg:w-full lg:mx-0"
+    class="max-w-xs mx-auto mt-6 sm:max-w-xl md:w-full sm:flex sm:flex-wrap md:max-w-none md:mx-0"
   >
     <div
       v-for="(item, i) in itemList"
       :key="item.uuid"
-      class="py-2 md:flex-basis-50 md:px-6 lg:flex-basis-33 lg:flex-grow-0 lg:px-7 lg:py-6"
-      :class="[i !== 0 ? 'mt-12 md:mt-0' : '']"
+      class="sm:flex-basis-50 sm:p-4 md:flex-basis-33 xl:p-8"
+      :class="[i !== 0 ? 'mt-8 sm:mt-0' : '']"
     >
       <app-item-card :path="getPath" :item="item" class="mt-6" />
     </div>

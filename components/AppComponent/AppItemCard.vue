@@ -1,10 +1,15 @@
 <template>
-  <figure>
-    <nuxt-link
-      :to="`${path}${item.slug}`"
-      class="block shadow-xl ring-1 ring-app-blue-gray border-app-dark-gray lg:p-3"
-    >
-      <div role="presentation" class="relative pb-full">
+  <figure class="relative overflow-hidden rounded-sm">
+    <div
+      role="presentation"
+      class="absolute inset-0 w-full h-full shadow-2xl bg-app-dark-gray"
+      style="clip-path: polygon(0 20%, 100% 58%, 100% 100%, 0% 100%)"
+    ></div>
+    <nuxt-link :to="`${path}${item.slug}`" class="relative block p-2">
+      <div
+        role="presentation"
+        class="relative overflow-hidden rounded-sm shadow-xl pb-full"
+      >
         <nuxt-img
           class="absolute inset-0 object-cover object-center w-full h-full"
           :src="`/articles/${item.image}`"
@@ -16,17 +21,17 @@
         />
       </div>
     </nuxt-link>
-    <figcaption
-      class="relative flex flex-col w-5/6 px-3 py-5 mx-auto -mt-8 rounded-md shadow-lg lg:px-2 bg-app-dark-gray text-app-white"
-    >
+    <figcaption class="relative flex flex-col w-full px-3 py-4 text-app-white">
       <div class="flex justify-between">
         <nuxt-link :to="`${path}${item.slug}`"
-          ><h1 class="font-serif text-xl">{{ item.name }}</h1></nuxt-link
+          ><h1 class="font-serif text-xl md:text-base">
+            {{ item.name }}
+          </h1></nuxt-link
         >
-        <p class="text-base font-bold">{{ getEuro(item.price) }}</p>
+        <p class="text-base font-bold md:text-sm">{{ getEuro(item.price) }}</p>
       </div>
       <button
-        class="self-center mt-2 text-lg font-bold uppercase border-b md:mt-3 border-app-white focus:outline-none"
+        class="self-center mt-1 text-lg font-bold uppercase border-b md:mt-3 md:text-base"
       >
         Add to cart
       </button>

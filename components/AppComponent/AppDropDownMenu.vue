@@ -1,9 +1,10 @@
 <template>
-  <li aria-haspopup="true" class="relative">
+  <li class="relative">
     <button
       type="button"
-      aria-label="dropdown"
-      class="flex items-center justify-between w-full focus:outline-none md:space-x-1"
+      aria-haspopup="true"
+      aria-controls="dropdown1"
+      class="flex items-center justify-between w-full md:space-x-1"
       @click="toggleDrop"
     >
       <slot name="dropDownHeader"

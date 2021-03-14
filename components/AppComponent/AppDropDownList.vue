@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul id="dropdown1">
     <li><nuxt-link to="/shop">Nue</nuxt-link></li>
     <li><nuxt-link to="/shop/tish">Tish</nuxt-link></li>
     <li><nuxt-link to="/shop/stuhle">Stuhle</nuxt-link></li>
