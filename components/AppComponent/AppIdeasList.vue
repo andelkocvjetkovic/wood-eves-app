@@ -41,18 +41,18 @@
 export default {
   itemsIdeas: [
     {
-      title: "Living Room",
+      title: "Wohnzimmer",
       coverImg: "/ideas/ideas-3.jpg",
       items: [
         {
-          name: "Bernard Stuhle",
+          name: "Tango Tish",
           img: "/articles/tango-stol-1.jpg",
           slug: "/shop/tango",
         },
       ],
     },
     {
-      title: "Dining Room",
+      title: "Esszimmer ",
       coverImg: "/ideas/ides-first-1.jpg",
       items: [
         {
@@ -63,7 +63,7 @@ export default {
       ],
     },
     {
-      title: "Living Room",
+      title: "Esszimmer ",
       coverImg: "/ideas/ideas-4.jpg",
       items: [
         {
@@ -74,7 +74,7 @@ export default {
       ],
     },
     {
-      title: "Kitchen",
+      title: "Küche",
       coverImg: "/ideas/ideas-2.jpg",
       items: [
         {

@@ -48,7 +48,7 @@
         </h2>
         <app-category-info class="md:flex md:flex-wrap" />
       </section>
-      <app-our-work class="pb-24 mt-24 sm:mt-32 md:mt-36" />
+      <app-our-work class="py-12 mt-24 sm:mt-32 md:mt-36 lg:py-20" />
     </article>
   </main>
 </template>

@@ -1,11 +1,11 @@
 <template>
   <div class="grid-container">
-    <div class="item-text">
+    <div class="flex items-center justify-center item-text">
       <h1
-        class="text-base font-semibold uppercase break-all text-app-accent lg:text-xl xl:text-2xl"
+        class="text-base font-semibold text-center uppercase text-app-accent lg:text-6xl"
+        style="text-orientation: mixed; writing-mode: vertical-rl"
       >
-        Handgefertigte Möbel Für außergewöhnliche Häuser Lassen Sie sich von uns
-        inspirieren
+        Wood - Elvis
       </h1>
     </div>
     <div class="item-slika-1">
