@@ -1,10 +1,10 @@
 <template>
-  <section class="relative px-2 xs:px-0 bg-app-light-gray text-app-dark-gray">
+  <section class="px-2 xs:px-0 bg-app-light-gray text-app-dark-gray">
     <div
-      class="max-w-xs mx-auto prose-sm prose xs:max-w-sm sm:max-w-lg sm:prose-lg lg:max-w-4xl lg:grid lg:grid-cols-2 lg:gap-x-8 xl:max-w-5xl xl:gap-x-14"
+      class="relative max-w-xs mx-auto prose-sm prose xs:max-w-sm sm:max-w-lg sm:prose-lg lg:max-w-4xl lg:grid lg:grid-cols-2 lg:gap-x-8 xl:max-w-5xl xl:gap-x-14"
     >
       <header class="font-serif lg:col-start-1 lg:col-span-1">
-        <h1>Hat gespielt Mehmet oder gespielt Basler.</h1>
+        <h1>Hat gespielt oder gespielt Basler.</h1>
         <h4 class="">
           Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und
           Konsonantien leben die Blindtexte.
