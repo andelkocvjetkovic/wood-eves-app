@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky top-0 z-50 opacity-95 bg-app-white">
+  <header class="sticky top-0 z-50 opacity-95 bg-app-white" role="banner">
     <nav
       class="flex py-6 mx-auto xl:py-8 md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"
     >

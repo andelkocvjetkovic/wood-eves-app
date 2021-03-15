@@ -1,5 +1,6 @@
 <template>
   <header
+    role="banner"
     class="sticky top-0 z-50 flex items-center justify-center w-full px-4 py-6 bg-app-white bg-opacity-95"
   >
     <nuxt-link
@@ -11,6 +12,7 @@
     <button
       type="button"
       class="relative z-50 flex ml-auto w-9 h-7 focus:outline-none"
+      aria-haspopup="true"
       @click="toggleNavBar"
     >
       <app-ham-menu ref="hamSvg" class="relative z-20 block w-full h-full" />
