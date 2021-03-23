@@ -23,5 +23,6 @@
   },
   "files.associations": {
     "*svg": "html"
-  }
+  },
+  "files.eol": "\n"
 }

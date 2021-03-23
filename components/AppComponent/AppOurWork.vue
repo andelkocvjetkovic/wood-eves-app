@@ -32,7 +32,7 @@
             src="wood-work-2.jpg"
             class="absolute inset-0 object-cover object-center w-full h-full lg:my-0"
             alt="wood work"
-            sizes="xs:520px sm:640px lg:1280px"
+            sizes="xs:320px sm:640px lg:1280px"
             quality="80"
             fit="cover"
           />
