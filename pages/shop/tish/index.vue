@@ -9,8 +9,12 @@
 
 <script>
 export default {
-  async asyncData({ $content }) {
-    const tish = await $content("articles/tish").fetch();
+  async asyncData({ $content, error }) {
+    const tish = await $content("articles/tish")
+      .fetch()
+      .catch(() => {
+        error({ statusCode: 404, message: "Page not found" });
+      });
 
     return {
       tish,

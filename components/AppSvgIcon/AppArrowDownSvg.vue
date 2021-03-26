@@ -5,7 +5,9 @@
     viewBox="0 0 24 24"
     stroke="currentColor"
     class="text-app-dark-gray"
+    aria-labelledby="arrowDown"
   >
+    <title id="arrowDown">DropDown Menu</title>
     <path
       stroke-linecap="round"
       stroke-linejoin="round"

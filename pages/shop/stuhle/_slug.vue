@@ -12,7 +12,7 @@ export default {
       .catch(() => {
         error({ statusCode: 404, message: "Page not found" });
       });
-
+    console.log(item);
     return { item };
   },
 };

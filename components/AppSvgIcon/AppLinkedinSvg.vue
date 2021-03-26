@@ -8,7 +8,6 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     preserveAspectRatio="xMidYMid"
     class="fill-current"
-    role="presentation"
     aria-labelledby="linkedin"
   >
     <title id="linkedin">Wood-Elvas Linkedin</title>

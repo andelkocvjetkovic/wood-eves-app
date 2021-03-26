@@ -8,7 +8,6 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     preserveAspectRatio="xMidYMid"
     aria-labelledby="facebookIcon"
-    role="presentation"
   >
     <title id="facebookIcon">Facebook</title>
     <g>

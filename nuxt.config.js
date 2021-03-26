@@ -99,4 +99,7 @@ export default {
       xxl: 1536,
     },
   },
+  tailwindcss: {
+    jit: true,
+  },
 };

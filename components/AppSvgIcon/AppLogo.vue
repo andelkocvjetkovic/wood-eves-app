@@ -4,7 +4,6 @@
     data-name="Layer 1"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 348.89 310.16"
-    role="presentation"
     aria-labelledby="logo"
   >
     <title id="logo">Wood-Elvas</title>

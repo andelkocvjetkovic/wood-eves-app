@@ -32,6 +32,7 @@
         </button>
       </figcaption>
     </figure>
+    <pre>{{ item.variants }}</pre>
   </div>
 </template>
 

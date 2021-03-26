@@ -5,7 +5,6 @@
     xmlns="http://www.w3.org/2000/svg"
     preserveAspectRatio="none"
     viewBox="0 0 10 8"
-    role="presentation"
     aria-labelledby="menu"
     class="stroke-current text-app-dark-gray"
   >

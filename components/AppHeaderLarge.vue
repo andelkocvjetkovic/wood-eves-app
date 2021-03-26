@@ -20,9 +20,9 @@
             class="absolute right-0 flex flex-col mt-2 space-y-3 text-sm px-3/6 py-1/6 bg-app-white"
           />
         </app-drop-down-menu>
-        <li class=""><nuxt-link to="/uberuns">Über uns</nuxt-link></li>
-        <li class=""><nuxt-link to="/ideas">Ideas</nuxt-link></li>
-        <li class=""><nuxt-link to="/kontakt">Kontakt</nuxt-link></li>
+        <li><nuxt-link to="/uberuns">Über uns</nuxt-link></li>
+        <li><nuxt-link to="/ideas">Ideas</nuxt-link></li>
+        <li><nuxt-link to="/kontakt">Kontakt</nuxt-link></li>
       </ul>
     </nav>
   </header>
