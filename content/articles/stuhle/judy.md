@@ -10,20 +10,19 @@ date: 2021-03-03
 discount: 10
 variants:
   [
-    walnus:
-      {
-        type: walnus,
-        price: 130.00,
-        imgs:
-          [
-            judy_walnus_1.jpg,
-            judy_walnus_2.jpg,
-            judy_walnus_3.jpg,
-            judy_walnus_4.jpg,
-            judy_walnus_5.jpg,
-            judy_walnus_6.jpg,
-          ],
-        discount: 5,
-      },
+    {
+      type: walnus,
+      price: 130.00,
+      imgs:
+        [
+          judy_walnus_1.jpg,
+          judy_walnus_2.jpg,
+          judy_walnus_3.jpg,
+          judy_walnus_4.jpg,
+          judy_walnus_5.jpg,
+          judy_walnus_6.jpg,
+        ],
+      discount: 5,
+    },
   ]
 ---

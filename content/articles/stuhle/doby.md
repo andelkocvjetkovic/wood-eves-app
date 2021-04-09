@@ -8,5 +8,5 @@ deliveryTime: 6
 deliveryVariants: Week
 discount: 5
 date: 2021-03-03
-variants: [oak: { type: oak, price: 98.00, imgs: [dobby-oak_1.jpg] }]
+variants: [{ type: oak, price: 98.00, imgs: [dobby-oak_1.jpg] }]
 ---

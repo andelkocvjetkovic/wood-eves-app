@@ -3,39 +3,46 @@
     role="banner"
     class="sticky top-0 z-50 flex items-center justify-center w-full px-4 py-6 bg-app-white bg-opacity-95"
   >
-    <nuxt-link
+    <NuxtLink
       class="absolute flex items-center overflow-hidden transform translate-x-1/2 -translate-y-1/2 w-14 h-14 right-1/2 top-1/2 justify-items-center"
       to="/"
     >
-      <app-logo class="block w-full h-full" @click.native="onLogoClick" />
-    </nuxt-link>
+      <LogoIcon class="block w-full h-full" @click.native="onLogoClick" />
+    </NuxtLink>
     <button
       type="button"
       class="relative z-50 flex ml-auto w-9 h-7 focus:outline-none"
       aria-haspopup="true"
       @click="toggleNavBar"
     >
-      <app-ham-menu ref="hamSvg" class="relative z-20 block w-full h-full" />
+      <AppHamburgerIcon
+        ref="hamSvg"
+        class="relative z-20 block w-full h-full"
+      />
     </button>
-    <client-only>
-      <portal to="navModal">
-        <transition
+    <ClientOnly>
+      <Portal to="navModal">
+        <Transition
           :css="false"
           @enter="onEnterModalNav"
           @leave="leaveModalNav"
         >
-          <lazy-app-modal-nav
+          <LazyTheModalNavBar
             v-if="isNavOpen"
             @close-nav-modal="toggleNavBar"
           />
-        </transition>
-      </portal>
-    </client-only>
+        </Transition>
+      </Portal>
+    </ClientOnly>
   </header>
 </template>
 
 <script>
+import LogoIcon from "~/assets/svg/logoIcon.svg";
 export default {
+  components: {
+    LogoIcon,
+  },
   tlNavHam: null,
   data() {
     return {

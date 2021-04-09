@@ -9,13 +9,20 @@ deliveryVariants: Week
 date: 2021-03-03
 variants:
   [
-    walnus:
-      {
-        type: walnus,
-        price: 90.00,
-        imgs: [bernard_walnus_1.jpg, bernard_walnus_2.jpg],
-      },
-    oak:
-      { type: oak, price: 80.00, imgs: [bernard_oak_1.jpg, bernard_oak_1.jpg] },
+    {
+      type: walnus,
+      price: 90.58,
+      imgs:
+        [
+          bernard_walnus_1.jpg,
+          bernard_walnus_2.jpg,
+          bernard_walnus_1.jpg,
+          bernard_walnus_2.jpg,
+          bernard_walnus_1.jpg,
+          bernard_walnus_2.jpg,
+        ],
+    },
+
+    { type: oak, price: 80.00, imgs: [bernard_oak_1.jpg, bernard_oak_2.jpg] },
   ]
 ---

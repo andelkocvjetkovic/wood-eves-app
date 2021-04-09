@@ -1,6 +1,6 @@
 <template>
   <section>
-    <app-item-info :item="item" />
+    <ShopProduct :item="item" />
   </section>
 </template>
 

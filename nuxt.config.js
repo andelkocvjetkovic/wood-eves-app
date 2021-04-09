@@ -47,6 +47,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     "@nuxt/content",
+    "nuxt-svg-loader",
   ],
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},

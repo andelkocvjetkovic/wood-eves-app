@@ -10,19 +10,18 @@ date: 2021-03-03
 discount: 7
 variants:
   [
-    walnus:
-      {
-        type: walnus,
-        price: 180.00,
-        imgs:
-          [
-            pegas_walnus_1.jpg,
-            pegas_walnus_2.jpg,
-            pegas_walnus_3.jpg,
-            pegas_walnus_4.jpg,
-            pegas_walnus_5.jpg,
-          ],
-        discount: 10,
-      },
+    {
+      type: walnus,
+      price: 180.00,
+      imgs:
+        [
+          pegas_walnus_1.jpg,
+          pegas_walnus_2.jpg,
+          pegas_walnus_3.jpg,
+          pegas_walnus_4.jpg,
+          pegas_walnus_5.jpg,
+        ],
+      discount: 10,
+    },
   ]
 ---

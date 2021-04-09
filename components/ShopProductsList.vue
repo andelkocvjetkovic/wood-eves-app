@@ -8,7 +8,7 @@
       class="sm:flex-basis-50 sm:p-4 md:flex-basis-33 xl:p-8"
       :class="[i !== 0 ? 'mt-8 sm:mt-0' : '']"
     >
-      <app-item-card :path="getPath" :item="item" class="mt-6" />
+      <ShopProductCard :path="getPath" :item="item" class="mt-6" />
     </div>
   </section>
 </template>
@@ -37,5 +37,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

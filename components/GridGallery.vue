@@ -1,4 +1,4 @@
-<template>
+<template functional>
   <div class="grid-container">
     <div class="flex items-center justify-center item-text">
       <h1
@@ -9,84 +9,84 @@
       </h1>
     </div>
     <div class="item-slika-1">
-      <nuxt-img
-        src="/articles/bernard-stolica-smeda-2.jpg"
+      <NuxtImg
+        src="https://images.unsplash.com/photo-1546962339-5ff89552b8ed?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80"
         sizes="md:640px lg:720px"
         class="object-cover object-center w-full h-full"
       />
     </div>
     <div class="item-slika-2">
-      <nuxt-img
+      <NuxtImg
         src="/articles/jinx-barska-stolica-1.jpg"
         sizes="md:640px lg:720px"
         class="object-cover object-center w-full h-full"
       />
     </div>
     <div class="item-slika3">
-      <nuxt-img
+      <NuxtImg
         src="https://images.unsplash.com/photo-1554286210-86b4daa0471a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
         sizes="md:640px lg:720px"
         class="object-cover object-center w-full h-full"
       />
     </div>
     <div class="item-slika-4">
-      <nuxt-img
+      <NuxtImg
         src="https://images.unsplash.com/photo-1546962339-5ff89552b8ed?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80"
         sizes="md:640px lg:720px"
         class="object-cover object-center w-full h-full"
       />
     </div>
     <div class="item-slika-5">
-      <nuxt-img
+      <NuxtImg
         src="https://images.unsplash.com/photo-1554286210-86b4daa0471a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
         sizes="md:640px lg:720px"
         class="object-cover object-center w-full h-full"
       />
     </div>
     <div class="item-slika-6">
-      <nuxt-img
+      <NuxtImg
         src="https://images.unsplash.com/photo-1546962339-5ff89552b8ed?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80"
         sizes="md:640px lg:720px"
         class="object-cover object-center w-full h-full"
       />
     </div>
     <div class="item-slika-7">
-      <nuxt-img
+      <NuxtImg
         src="/articles/pegas-stolica-1.jpg"
         sizes="md:640px lg:720px"
         class="object-cover object-center w-full h-full"
       />
     </div>
     <div class="item-slika-8">
-      <nuxt-img
+      <NuxtImg
         src="/articles/long-daska-1.jpg"
         sizes="md:640px lg:720px"
         class="object-cover object-center w-full h-full"
       />
     </div>
     <div class="item-slika-9">
-      <nuxt-img
+      <NuxtImg
         src="/articles/leaf-stol-1.jpg"
         sizes="md:640px lg:720px"
         class="object-cover object-center w-full h-full"
       />
     </div>
     <div class="item-slika-10">
-      <nuxt-img
+      <NuxtImg
         src="/articles/way-stol-1.jpg"
         sizes="md:640px lg:720px"
         class="object-cover object-center w-full h-full"
       />
     </div>
     <div class="item-slika-11">
-      <nuxt-img
+      <NuxtImg
         src="/articles/the-blue-sat-1.jpg"
         sizes="md:640px lg:720px"
         class="object-cover object-center w-full h-full"
       />
     </div>
     <div class="item-slika-12">
-      <nuxt-img
+      <NuxtImg
         src="/articles/don-daska-1.jpg"
         sizes="md:640px lg:720px"
         class="object-cover object-center w-full h-full"
@@ -94,11 +94,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {};
-</script>
-
 <style scoped>
 .grid-container {
   display: grid;

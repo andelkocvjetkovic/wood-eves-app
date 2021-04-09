@@ -42,11 +42,11 @@ module.exports = {
         full: "100%",
       },
       height: (theme) => ({
-        "screen/75": "75vh",
-        "screen/50": "50vh",
-        "screen/33": "calc(100vh / 3)",
-        "screen/25": "calc(100vh / 4)",
-        "screen/20": "calc(100vh / 5)",
+        "screen/75vh": "75vh",
+        "screen/50vh": "50vh",
+        "screen/33vh": "calc(100vh / 3)",
+        "screen/25vh": "calc(100vh / 4)",
+        "screen/20vh": "calc(100vh / 5)",
       }),
     },
     screens: {

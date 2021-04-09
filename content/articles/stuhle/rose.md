@@ -9,18 +9,17 @@ deliveryVariants: Week
 date: 2021-03-03
 variants:
   [
-    walnus_padded:
-      {
-        type: walnus padded,
-        padded: Leather,
-        price: 190.00,
-        imgs:
-          [
-            rose_walnus_padded_1.jpg,
-            rose_walnus_padded_2.jpg,
-            rose_walnus_padded_4.jpg,
-          ],
-      },
-    oak: { type: oak, price: 125.00, imgs: [rose_oak_1.jpg] },
+    {
+      type: walnus padded,
+      padded: Leather,
+      price: 190.00,
+      imgs:
+        [
+          rose_walnus_padded_1.jpg,
+          rose_walnus_padded_2.jpg,
+          rose_walnus_padded_4.jpg,
+        ],
+    },
+    { type: oak, price: 125.00, imgs: [rose_oak_1.jpg] },
   ]
 ---

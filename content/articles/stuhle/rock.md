@@ -10,30 +10,28 @@ date: 2021-03-03
 discount: 5
 variants:
   [
-    walnus:
-      {
-        type: walnus,
-        price: 160.00,
-        imgs:
-          [
-            rock_walnus_1.jpg,
-            rock_walnus_2.jpg,
-            rock_walnus_3.jpg,
-            rock_walnus_4.jpg,
-          ],
-        discount: 0,
-      },
-    oak:
-      {
-        type: maple,
-        price: 140.00,
-        imgs:
-          [
-            rock_maple_1.jpg,
-            rock_maple_2.jpg,
-            rock_maple_3.jpg,
-            rock_maple_4.jpg,
-          ],
-      },
+    {
+      type: walnus,
+      price: 160.00,
+      imgs:
+        [
+          rock_walnus_1.jpg,
+          rock_walnus_2.jpg,
+          rock_walnus_3.jpg,
+          rock_walnus_4.jpg,
+        ],
+      discount: 0,
+    },
+    {
+      type: maple,
+      price: 140.00,
+      imgs:
+        [
+          rock_maple_1.jpg,
+          rock_maple_2.jpg,
+          rock_maple_3.jpg,
+          rock_maple_4.jpg,
+        ],
+    },
   ]
 ---

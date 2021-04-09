@@ -1,7 +1,7 @@
 <template>
   <section class="sm:flex sm:flex-wrap">
     <div
-      v-for="(item, i) in $options.itemsIdeas"
+      v-for="(item, i) in $options.ideasList"
       :key="i"
       class="mt-6 sm:flex-basis-50 sm:px-2 md:px-3"
     >
@@ -10,27 +10,29 @@
       </header>
       <div class="grid grid-cols-2 grid-rows-2 py-3 mt-2 gap-x-2 bg-app-white">
         <div class="col-span-1 col-start-1 row-span-2 row-start-1 md:px-1">
-          <nuxt-img
+          <NuxtImg
             :src="item.coverImg"
             class="object-cover object-center w-full h-full rounded"
             sizes="xs:320px lg:640px"
           />
         </div>
         <div class="col-start-2 row-span-2 row-start-1">
-          <nuxt-link
+          <NuxtLink
             v-for="it in item.items"
             :key="it.slug"
             :to="it.slug"
             class="block p-4"
           >
-            <nuxt-img
+            <NuxtImg
               :src="it.img"
               class="object-cover object-center w-full h-full mt-px rounded shadow"
               sizes="xs:320px lg:640px"
               :alt="it.name"
             />
-            <p class="mt-px font-serif text-xs text-center">{{ it.name }}</p>
-          </nuxt-link>
+            <p class="mt-px font-serif text-xs text-center">
+              {{ it.name }}
+            </p>
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -39,7 +41,7 @@
 
 <script>
 export default {
-  itemsIdeas: [
+  ideasList: [
     {
       title: "Wohnzimmer",
       coverImg: "/ideas/ideas-3.jpg",
@@ -92,5 +94,3 @@ export default {
   ],
 };
 </script>
-
-<style></style>

@@ -1,14 +1,14 @@
 <template>
   <div>
-    <client-only>
-      <lazy-app-header-mobile v-if="isMobile" />
-      <lazy-app-header-large v-else />
-    </client-only>
+    <ClientOnly>
+      <LazyTheHeaderDeviceSmall v-if="isMobile" />
+      <LazyTheHeaderDeviceLarge v-else />
+    </ClientOnly>
     <Nuxt />
-    <app-footer />
-    <client-only>
-      <portal-target name="navModal" />
-    </client-only>
+    <TheFooter />
+    <ClientOnly>
+      <PortalTarget name="navModal" />
+    </ClientOnly>
   </div>
 </template>
 <script>

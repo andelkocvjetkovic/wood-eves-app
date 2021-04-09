@@ -1,6 +1,6 @@
 <template>
   <section>
-    <app-item-info :item="item" />
+    <ShopProduct :item="item" />
   </section>
 </template>
 
@@ -12,7 +12,6 @@ export default {
       .catch(() => {
         error({ statusCode: 404, message: "Page not found" });
       });
-    console.log(item);
     return { item };
   },
 };

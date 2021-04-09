@@ -9,17 +9,22 @@
     >
       <slot name="dropDownHeader"
         ><span class="font-semibold uppercase">Shop</span></slot
-      ><span ref="arrowSvg"
-        ><app-arrow-down-svg class="w-8 h-8 md:w-6 md:h-6"
-      /></span>
+      ><span ref="arrowSvg">
+        <ArrowDown class="w-8 h-8 md:w-6 md:h-6" />
+      </span>
     </button>
     <transition :css="false" @enter="enterDropDown" @leave="leaveDropDown">
       <slot></slot>
     </transition>
   </li>
 </template>
+
 <script>
+import ArrowDown from "~/assets/svg/arrowDown.svg";
 export default {
+  components: {
+    ArrowDown,
+  },
   methods: {
     toggleDrop() {
       this.$emit("toggleDrop");

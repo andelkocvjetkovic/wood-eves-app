@@ -1,4 +1,4 @@
-<template>
+<template functional>
   <section class="px-2 xs:px-0 bg-app-light-gray text-app-dark-gray">
     <div
       class="relative max-w-xs mx-auto prose-sm prose xs:max-w-sm sm:max-w-lg sm:prose-lg lg:max-w-4xl lg:grid lg:grid-cols-2 lg:gap-x-8 xl:max-w-5xl xl:gap-x-14"

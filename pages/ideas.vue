@@ -11,7 +11,7 @@
       class="h-64 max-w-xs mx-auto mt-6 grid-container xs:max-w-md md:max-w-lg md:mt-10 lg:max-w-3xl lg:h-96"
     >
       <div class="shadow-xl item-one">
-        <nuxt-img
+        <NuxtImg
           src="/ideas/ideas-one.jpg"
           class="object-cover object-center w-full h-full rounded-sm"
           sizes="xs:320px lg:640px"
@@ -19,7 +19,7 @@
         />
       </div>
       <div class="shadow-xl item-two">
-        <nuxt-img
+        <NuxtImg
           src="/ideas/ideas-two.jpg"
           class="object-cover object-center w-full h-full rounded-sm"
           sizes="xs:320px lg:640px"
@@ -27,7 +27,7 @@
         />
       </div>
       <div class="shadow-xl item-three">
-        <nuxt-img
+        <NuxtImg
           src="/ideas/ideas-three.jpg"
           class="object-cover object-center w-full h-full rounded-sm"
           sizes="xs:320px lg:640px"
@@ -42,7 +42,7 @@
         </h1>
       </header>
 
-      <app-ideas-list
+      <IdeasList
         class="max-w-xs mx-auto mt-6 xs:max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"
       />
     </article>

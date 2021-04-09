@@ -9,12 +9,11 @@ deliveryVariants: Week
 date: 2021-03-03
 variants:
   [
-    oak:
-      {
-        type: oak,
-        price: 168.00,
-        discount: 5,
-        imgs: [jinx_oak_1.jpg, jinx_oak_2.jpg, jinx_oak_3.jpg, jinx_oak_2.jpg],
-      },
+    {
+      type: oak,
+      price: 168.00,
+      discount: 5,
+      imgs: [jinx_oak_1.jpg, jinx_oak_2.jpg, jinx_oak_3.jpg, jinx_oak_2.jpg],
+    },
   ]
 ---

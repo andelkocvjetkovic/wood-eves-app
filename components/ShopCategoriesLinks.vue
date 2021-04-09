@@ -1,12 +1,12 @@
 <template>
-  <div class="xs:max-w-xs xs:mx-auto md:max-w-none md:mx-0 md:w-full">
-    <aside
+  <article class="xs:max-w-xs xs:mx-auto md:max-w-none md:mx-0 md:w-full">
+    <div
       v-for="item in $options.categoryItems"
       :key="item.img"
       class="mt-8 md:flex-basis-33 md:mt-0 md:p-1 lg:p-3 xl:p-4"
     >
       <figure class="relative overflow-hidden group">
-        <nuxt-img
+        <NuxtImg
           :src="item.img"
           :alt="item.name"
           quality="80"
@@ -23,16 +23,16 @@
           <p class="text-center">
             {{ item.description }}
           </p>
-          <nuxt-link
+          <NuxtLink
             :to="`/shop/${item.slug}`"
-            class="px-6 py-1 text-base font-semibold uppercase duration-200 border rounded-sm shadow-md lg:transition-colors lg:transition-opacity xs:px-8 xs:py-2 md:text-base border-app-white bg-app-white text-app-dark-gray lg:hover:bg-opacity-0 lg:hover:text-app-white"
+            class="px-6 py-1 text-base font-semibold uppercase duration-200 border rounded-sm shadow-md lg:transition-colors md:transition-opacity xs:px-8 xs:py-2 md:text-base border-app-white bg-app-white text-app-dark-gray lg:hover:bg-opacity-0 lg:hover:text-app-white"
           >
             Sehen
-          </nuxt-link>
+          </NuxtLink>
         </figcaption>
       </figure>
-    </aside>
-  </div>
+    </div>
+  </article>
 </template>
 <script>
 export default {
