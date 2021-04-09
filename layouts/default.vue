@@ -21,6 +21,8 @@ export default {
 };
 </script>
 <style>
+/** Importing global style for swiper library */
+@import "~/assets/css/swiper.css";
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -31,4 +33,3 @@ html {
   will-change: auto !important;
 }
 </style>
-¸

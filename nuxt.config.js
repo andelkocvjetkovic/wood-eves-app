@@ -28,6 +28,7 @@ export default {
     "~/plugins/vue-splide.client.js",
     "~/plugins/portal-vue.client.js",
     "~/plugins/vue-device-queries.client.js",
+    "~/plugins/vue-awesome-swiper.client.js",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -54,7 +55,13 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ["gsap", "vue-splide", "portal-vue", "vue-device-queries"],
+    transpile: [
+      "gsap",
+      "vue-splide",
+      "portal-vue",
+      "vue-device-queries",
+      "vue-awesome-swiper",
+    ],
   },
   googleFonts: {
     families: {

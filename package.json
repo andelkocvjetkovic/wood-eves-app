@@ -20,6 +20,8 @@
     "nuxt": "^2.14.12",
     "nuxt-svg-loader": "^1.2.0",
     "portal-vue": "^2.1.7",
+    "swiper": "5.x",
+    "vue-awesome-swiper": "^4.1.1",
     "vue-device-queries": "^1.0.11"
   },
   "devDependencies": {
