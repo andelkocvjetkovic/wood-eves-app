@@ -3,7 +3,7 @@
     <!--Home Hero background and text with apper animation -->
     <article class="lg:max-w-4xl lg:mx-auto xl:max-w-5xl">
       <section
-        class="masthead h-screen/75"
+        class="masthead h-screen/75vh"
         role="img"
         aria-label="Image Description"
       >
