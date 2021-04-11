@@ -60,7 +60,7 @@ export default {
         {
           name: "Bernard Stuhle",
           img: "/articles/bernard-stolica-smeda-1.jpg",
-          slug: "/shop/stuhle/bernard-burn",
+          slug: "/shop/stuhle/bernard",
         },
       ],
     },

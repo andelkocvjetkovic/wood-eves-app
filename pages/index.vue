@@ -46,10 +46,7 @@
               <SpliderShowHorizontal class="h-80" />
             </KeepAlive>
           </aside>
-          <GridGallery
-            v-else
-            class="mt-12 md:max-w-2xl md:mx-auto lg:max-w-4xl xl:max-w-5xl"
-          />
+          <GridGallery v-else />
         </ClientOnly>
       </section>
       <section
@@ -63,7 +60,7 @@
         </h2>
         <ShopCategoriesLinks class="md:flex md:flex-wrap" />
       </section>
-      <OurWork class="py-12 mt-24 sm:mt-32 md:mt-36 lg:py-20" />
+      <OurWork />
     </article>
   </main>
 </template>
