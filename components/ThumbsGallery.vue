@@ -35,7 +35,7 @@
             :src="img"
             :alt="img"
             sizes="xs:56px"
-            class="object-scale-down object-center w-full h-full"
+            class="object-scale-down object-center w-full h-full cursor-pointer"
           />
         </swiper-slide>
       </swiper>

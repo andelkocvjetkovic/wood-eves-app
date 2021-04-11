@@ -1,4 +1,15 @@
-import VueAwsomeSwiper from "vue-awesome-swiper";
+import {
+  Swiper as SwiperClass,
+  Pagination,
+  Navigation,
+  Zoom,
+  Lazy,
+  A11y,
+  Thumbs,
+  Controller,
+} from "swiper/js/swiper.esm";
+import getAwesomeSwiper from "vue-awesome-swiper/dist/exporter";
 import Vue from "vue";
+SwiperClass.use([Pagination, Navigation, Zoom, Lazy, A11y, Thumbs, Controller]);
 
-Vue.use(VueAwsomeSwiper);
+Vue.use(getAwesomeSwiper(SwiperClass));
