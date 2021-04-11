@@ -1,5 +1,5 @@
 <template>
-  <article class="xs:max-w-xs xs:mx-auto md:max-w-none md:w-full">
+  <article class="xs:max-w-xs xs:mx-auto sm:max-w-md">
     <ShopProductVariants v-if="item.variants" :item="item" />
     <ShopProductVariantsNone v-else :item="item" />
   </article>

@@ -1,9 +1,20 @@
 <template>
-  <splide :options="optionsSplide">
-    <splide-slide v-for="item in $options.arrayItems" :key="item.img">
-      <img :data-splide-lazy="item.img" :alt="item.alt" />
-    </splide-slide>
-  </splide>
+  <Swiper class="swiper" :options="$options.swiperOption">
+    <SwiperSlide
+      v-for="item in $options.arrayItems"
+      :key="item.img"
+      class="w-full min-h-full"
+    >
+      <img
+        :data-src="item.img"
+        :alt="item.alt"
+        class="object-cover object-center w-full h-full min-w-full min-h-full swiper-lazy"
+      />
+      <div class="absolute inset-0 w-full min-h-full">
+        <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+      </div>
+    </SwiperSlide>
+  </Swiper>
 </template>
 
 <script>
@@ -86,33 +97,33 @@ export default {
       img: "/articles/long-daska-1.jpg",
     },
   ],
-  data() {
-    return {
-      optionsSplide: {
-        type: "loop",
-        arrows: false,
-        cover: true,
-        pagination: false,
-        preloadPages: 1.5,
-        lazyLoad: "nearby",
-        width: "100vw",
-        fixedHeight: "16rem",
-        breakpoints: {
-          768: {
-            gap: "0.8rem",
-            perPage: 2.7,
-          },
-          640: {
-            gap: "0.5rem",
-            perPage: 2.2,
-          },
-          475: {
-            gap: "0.5rem",
-            perPage: 1.5,
-          },
-        },
+  swiperOption: {
+    watchSlidesVisibility: true,
+    preloadImages: false,
+    lazy: true,
+    a11y: {
+      containerMessage: "This is our gallery",
+    },
+    loop: true,
+    breakpoints: {
+      640: {
+        slidesPerView: 2.2,
+        spaceBetween: 15,
       },
-    };
+      475: {
+        slidesPerView: 1.6,
+        spaceBetween: 20,
+      },
+      320: {
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+      },
+    },
   },
 };
 </script>
+<style scoped>
+.swiper {
+  height: 360px;
+}
+</style>

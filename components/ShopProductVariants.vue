@@ -1,29 +1,28 @@
 <template>
-  <figure class="grid-cols-2 md:grid md:gap-x-4 xl:gap-x-2/6">
+  <figure class="">
     <!-- container -->
-    <SliderShow :images="getImgs" />
+    <h2 class="mt-6 text-3xl font-semibold lg:text-4xl">
+      {{ item.name }}
+    </h2>
+    <SliderShow class="mt-6" :images="getImgs" />
     <figcaption
       class="flex flex-col items-center justify-center mt-6 space-y-5 lg:justify-around lg:space-y-0"
     >
       <div class="flex flex-col items-start w-full space-y-2">
-        <header>
-          <h2 class="text-3xl font-semibold lg:text-4xl">
-            {{ item.name }}
-          </h2>
-          <fieldset>
-            <legend>Choose a type of wood</legend>
-            <p v-for="wood in item.variants" :key="wood.type">
-              <input
-                :id="wood.type"
-                v-model="type"
-                type="radio"
-                :name="wood.type"
-                :value="wood.type"
-              />
-              <label :for="wood.type" class="capitalize">{{ wood.type }}</label>
-            </p>
-          </fieldset>
-        </header>
+        <fieldset>
+          <legend>Choose a type of wood</legend>
+          <p v-for="wood in item.variants" :key="wood.type">
+            <input
+              :id="wood.type"
+              v-model="type"
+              type="radio"
+              :name="wood.type"
+              :value="wood.type"
+            />
+            <label :for="wood.type" class="capitalize">{{ wood.type }}</label>
+          </p>
+        </fieldset>
+
         <p class="text-xl font-semibold underline lg:text-2xl">
           {{ getEuro(item.price) }}
         </p>

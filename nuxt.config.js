@@ -20,12 +20,11 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["@splidejs/splide/dist/css/splide-core.min.css"],
+  css: ["~/assets/css/swiper.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     "~/plugins/gsap.client.js",
-    "~/plugins/vue-splide.client.js",
     "~/plugins/portal-vue.client.js",
     "~/plugins/vue-device-queries.client.js",
     "~/plugins/vue-awesome-swiper.client.js",

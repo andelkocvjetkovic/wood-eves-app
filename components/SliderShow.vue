@@ -59,5 +59,5 @@ export default {
 </script>
 
 <style>
-/** Style for swiper component being globaly  imported in ~/layout/defalt */
+/** Style for swiper component being globaly  imported in  nuxt.config.js*/
 </style>
