@@ -122,8 +122,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-.swiper {
-  height: 360px;
-}
-</style>

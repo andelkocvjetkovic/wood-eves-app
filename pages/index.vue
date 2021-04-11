@@ -43,7 +43,7 @@
           <aside v-if="isMobile" class="relative mt-16 overflow-hidden">
             <h3 class="p-2 font-serif italic font-semibold">Gallery</h3>
             <KeepAlive>
-              <SpliderShowHorizontal />
+              <SpliderShowHorizontal class="h-80" />
             </KeepAlive>
           </aside>
           <GridGallery
