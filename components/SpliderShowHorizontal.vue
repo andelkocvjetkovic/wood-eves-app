@@ -1,10 +1,6 @@
 <template>
   <Swiper class="swiper" :options="$options.swiperOption">
-    <SwiperSlide
-      v-for="item in $options.arrayItems"
-      :key="item.img"
-      class="w-full min-h-full"
-    >
+    <SwiperSlide v-for="item in $options.arrayItems" :key="item.img">
       <img
         :data-src="item.img"
         :alt="item.alt"

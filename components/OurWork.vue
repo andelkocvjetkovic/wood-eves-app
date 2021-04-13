@@ -37,6 +37,7 @@
             sizes="xs:320px sm:640px lg:1280px"
             quality="80"
             fit="cover"
+            loading="lazy"
           />
         </div>
         <figcaption class="lg:hidden">
