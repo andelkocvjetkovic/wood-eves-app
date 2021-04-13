@@ -10,7 +10,7 @@
           :src="item.img"
           :alt="item.name"
           quality="80"
-          sizes="xs:320px md:640px"
+          sizes="sm:320px md:860px"
           fit="cover"
           class="absolute inset-0 object-cover object-center w-full h-full transition-transform duration-200 lg:ease-out lg:transform lg:group-hover:scale-110"
         />
