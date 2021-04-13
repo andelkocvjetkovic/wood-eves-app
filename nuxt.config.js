@@ -105,6 +105,9 @@ export default {
       xl: 1280,
       xxl: 1536,
     },
+    intersectOptions: {
+      rootMargin: "50px",
+    },
   },
   tailwindcss: {
     jit: true,
