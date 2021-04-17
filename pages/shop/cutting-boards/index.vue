@@ -10,7 +10,7 @@
 <script>
 export default {
   async asyncData({ $content, error }) {
-    const tish = await $content("articles/tish")
+    const tish = await $content("articles/cutting-boards")
       .fetch()
       .catch(() => {
         error({ statusCode: 404, message: "Page not found" });

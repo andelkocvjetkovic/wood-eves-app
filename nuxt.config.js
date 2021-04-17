@@ -56,7 +56,6 @@ export default {
   build: {
     transpile: [
       "gsap",
-      "vue-splide",
       "portal-vue",
       "vue-device-queries",
       "vue-awesome-swiper",
@@ -111,5 +110,10 @@ export default {
   },
   tailwindcss: {
     jit: true,
+  },
+  postcss: {
+    plugins: {
+      "postcss-focus-visible": {},
+    },
   },
 };

@@ -1,7 +1,5 @@
 <template>
-  <section>
-    <ShopProduct :item="item" />
-  </section>
+  <ShopProductMob :item="item" />
 </template>
 
 <script>

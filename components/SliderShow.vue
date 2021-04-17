@@ -2,26 +2,22 @@
   <ClientOnly>
     <Swiper ref="swiper" class="swiper" :options="$options.swiperOption">
       <SwiperSlide v-for="(img, i) in images" :key="i">
-        <NuxtImg
-          class="object-cover object-center w-full h-full min-w-full"
-          :alt="img"
-          sizes="xs:640px"
-          :src="img"
-          quality="80"
-          fit="cover"
-        />
+        <div class="swiper-zoom-container">
+          <div class="relative w-full overflow-hidden pb-full">
+            <NuxtImg
+              class="absolute inset-0 object-cover object-center w-full h-full"
+              :alt="img"
+              sizes="xs:640px sm:840px"
+              :src="img"
+              quality="80"
+              fit="contain"
+            />
+          </div>
+        </div>
       </SwiperSlide>
       <div
         slot="pagination"
         class="swiper-pagination swiper-pagination-black"
-      ></div>
-      <div
-        slot="button-prev"
-        class="swiper-button-prev swiper-button-black"
-      ></div>
-      <div
-        slot="button-next"
-        class="text-sm swiper-button-next swiper-button-black"
       ></div>
     </Swiper>
   </ClientOnly>
@@ -36,6 +32,7 @@ export default {
     },
   },
   swiperOption: {
+    zoom: true,
     a11y: true,
     slidesPerView: 1,
     spaceBetween: 0,

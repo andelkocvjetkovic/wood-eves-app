@@ -25,5 +25,6 @@ module.exports = {
     eqeqeq: "off",
     "vue/singleline-html-element-content-newline": ["off"],
     "no-console": process.env.NODE_ENV === "production" ? 2 : 0,
+    "vue/v-slot-style": ["error", "longform"],
   },
 };

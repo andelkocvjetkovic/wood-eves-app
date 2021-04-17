@@ -1,11 +1,19 @@
 <template>
   <main>
-    <h1>You have to create a error page :D</h1>
+    <h1>{{ error.statusCode }}</h1>
+    <h2>{{ error.message }}</h2>
   </main>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    error: {
+      type: Object,
+      default: () => {},
+    },
+  },
+};
 </script>
 
 <style></style>

@@ -10,13 +10,26 @@
 <script>
 export default {
   async asyncData({ $content, error }) {
-    const nueItems = await $content("articles/neu")
+    const boardsItems = await $content("articles/cutting-boards")
+      .where({ isNew: true })
+      .fetch()
+      .catch(() => {
+        error({ statusCode: 404, message: "Page not found" });
+      });
+    const chairItems = await $content("articles/stuhle")
+      .where({ isNew: true })
+      .fetch()
+      .catch(() => {
+        error({ statusCode: 404, message: "Page not found" });
+      });
+    const accessoiresItems = await $content("articles/accessoires")
+      .where({ isNew: true })
       .fetch()
       .catch(() => {
         error({ statusCode: 404, message: "Page not found" });
       });
     return {
-      items: nueItems,
+      items: [...boardsItems, ...chairItems, ...accessoiresItems],
     };
   },
 };

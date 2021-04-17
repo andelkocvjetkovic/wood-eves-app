@@ -69,6 +69,10 @@ module.exports = {
     extend: {
       translate: ["group-hover"],
       scale: ["group-hover"],
+      ringWidth: ["checked", "focus-visible"],
+      ringColor: ["checked", "focus-visible"],
+      textColor: ["active", "focus-visible"],
+      backgroundColor: ["focus-visible", "active"],
     },
   },
   plugins: [

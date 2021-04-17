@@ -28,11 +28,7 @@ export default {
   computed: {
     getPath() {
       var path = this.itemList[0].path.split("/");
-      if (path[2] === "neu") {
-        return `/shop/`;
-      } else {
-        return `/shop/${path[2]}/`;
-      }
+      return `/shop/${path[2]}/`;
     },
   },
 };

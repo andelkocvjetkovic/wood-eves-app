@@ -3,6 +3,9 @@
     role="banner"
     class="sticky top-0 z-50 flex items-center justify-center w-full px-4 py-6 bg-app-white bg-opacity-95"
   >
+    <transition :css="false" mode="out-in" @enter="handleApperCart">
+      <AppCart v-if="cartLength > 0" />
+    </transition>
     <NuxtLink
       class="absolute flex items-center overflow-hidden transform translate-x-1/2 -translate-y-1/2 w-14 h-14 right-1/2 top-1/2 justify-items-center"
       to="/"
@@ -38,6 +41,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import LogoIcon from "~/assets/svg/logoIcon.svg";
 export default {
   components: {
@@ -50,6 +54,7 @@ export default {
     };
   },
   computed: {
+    ...mapGetters(["cartLength"]),
     navModalOpen() {
       return this.isNavOpen;
     },
@@ -69,6 +74,13 @@ export default {
     },
   },
   methods: {
+    handleApperCart(el, done) {
+      this.$gsap.from(el, {
+        opacity: 0,
+        duration: 0.2,
+        onComplete: done,
+      });
+    },
     onLogoClick() {
       if (
         window.scrollY > 500 &&

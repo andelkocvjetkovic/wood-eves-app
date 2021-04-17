@@ -1,13 +1,15 @@
 <template>
   <Swiper class="swiper" :options="$options.swiperOption">
     <SwiperSlide v-for="item in $options.arrayItems" :key="item.img">
-      <img
-        :data-src="item.img"
-        :alt="item.alt"
-        class="object-cover object-center w-full h-full min-w-full min-h-full swiper-lazy"
-      />
-      <div class="absolute inset-0 w-full min-h-full">
-        <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+      <div class="relative overflow-hidden pb-full">
+        <img
+          :data-src="item.img"
+          :alt="item.alt"
+          class="absolute inset-0 object-cover object-center w-full h-full swiper-lazy"
+        />
+        <div class="absolute inset-0 w-full min-h-full">
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+        </div>
       </div>
     </SwiperSlide>
   </Swiper>
@@ -96,21 +98,24 @@ export default {
   swiperOption: {
     watchSlidesVisibility: true,
     preloadImages: false,
+    loadPrevNext: true,
+    checkInView: true,
     lazy: true,
     a11y: {
       containerMessage: "This is our gallery",
     },
-    loop: true,
     breakpoints: {
       640: {
         slidesPerView: 2.2,
         spaceBetween: 15,
       },
       475: {
+        loadPrevNextAmount: 3,
         slidesPerView: 1.6,
         spaceBetween: 20,
       },
       320: {
+        loadPrevNextAmount: 2,
         slidesPerView: 1.2,
         spaceBetween: 10,
       },

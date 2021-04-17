@@ -1,4 +1,4 @@
-<template functional>
+<template fuctional>
   <section
     class="px-2 py-12 mt-24 xs:px-0 bg-app-light-gray text-app-dark-gray sm:mt-32 md:mt-36 lg:py-20"
   >
@@ -29,12 +29,12 @@
           role="presentation"
           class="relative h-full overflow-hidden rounded pb-3/4 sm:pb-4/6 lg:pb-0 lg:absolute lg:w-1/2 lg:right-0 lg:top-0 lg:rounded-none"
         >
-          <nuxt-img
+          <NuxtImg
             id="workImg"
             src="wood-work-2.jpg"
             class="absolute inset-0 object-cover object-center w-full h-full lg:my-0"
             alt="wood work"
-            sizes="sm:320px lg:1280px"
+            sizes="xs:380px sm:512px lg:50vw"
             quality="80"
             fit="cover"
             loading="lazy"
