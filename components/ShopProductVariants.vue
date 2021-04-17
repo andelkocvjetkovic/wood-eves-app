@@ -1,5 +1,5 @@
 <template>
-  <figure class="md:grid md:grid-rows-1 md:grid-cols-2 md:gap-x-4 lg:gap-x-8">
+  <section class="md:grid md:grid-rows-1 md:grid-cols-2 md:gap-x-4 lg:gap-x-8">
     <!-- container -->
     <h2 class="mt-6 text-3xl font-semibold lg:text-4xl md:hidden">
       {{ item.name }}
@@ -7,11 +7,15 @@
     <div
       class="md:order-last md:flex md:flex-col md:justify-center md:items-center"
     >
-      <SliderShow v-if="isMobile" class="w-full mt-6 t" :images="getImgs" />
+      <SliderShow
+        v-if="isMobile"
+        class="w-full mt-6 h-screen/50vh"
+        :images="getImgs"
+      />
       <ThumbsGallery v-else :images="getImgs" />
     </div>
 
-    <figcaption
+    <div
       class="flex flex-col items-center justify-center mt-6 space-y-5 lg:justify-around lg:space-y-0"
     >
       <h2
@@ -45,8 +49,8 @@
       >
         Add to card
       </button>
-    </figcaption>
-  </figure>
+    </div>
+  </section>
 </template>
 
 <script>

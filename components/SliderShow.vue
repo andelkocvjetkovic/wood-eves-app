@@ -2,14 +2,14 @@
   <ClientOnly>
     <Swiper ref="swiper" class="swiper" :options="$options.swiperOption">
       <SwiperSlide v-for="(img, i) in images" :key="i">
-        <div class="swiper-zoom-container">
-          <NuxtImg
-            class="object-cover object-center w-full h-full min-w-full"
-            :alt="img"
-            sizes="xs:640px"
-            :src="img"
-          />
-        </div>
+        <NuxtImg
+          class="object-cover object-center w-full h-full min-w-full"
+          :alt="img"
+          sizes="xs:640px"
+          :src="img"
+          quality="80"
+          fit="cover"
+        />
       </SwiperSlide>
       <div
         slot="pagination"
@@ -21,7 +21,7 @@
       ></div>
       <div
         slot="button-next"
-        class="swiper-button-next swiper-button-black"
+        class="text-sm swiper-button-next swiper-button-black"
       ></div>
     </Swiper>
   </ClientOnly>
@@ -37,7 +37,6 @@ export default {
   },
   swiperOption: {
     a11y: true,
-    zoom: true,
     slidesPerView: 1,
     spaceBetween: 0,
     loop: true,
@@ -57,7 +56,3 @@ export default {
   },
 };
 </script>
-
-<style>
-/** Style for swiper component being globaly  imported in  nuxt.config.js*/
-</style>

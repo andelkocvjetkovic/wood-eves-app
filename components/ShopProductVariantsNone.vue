@@ -1,7 +1,10 @@
 <template>
-  <figure class="grid-cols-2 md:grid md:gap-x-4 xl:gap-x-1/6">
+  <section class="grid-cols-2 md:grid md:gap-x-4 xl:gap-x-1/6">
+    <h2 class="mt-6 text-3xl font-semibold lg:text-4xl md:hidden">
+      {{ item.name }}
+    </h2>
     <div
-      class="relative pb-full md:pb-0 md:order-last md:flex md:justify-center md:items-center"
+      class="relative mt-6 pb-full md:pb-0 md:order-last md:flex md:justify-center md:items-center"
       role="presentation"
     >
       <nuxt-img
@@ -13,14 +16,15 @@
         fit="contain"
       />
     </div>
-    <figcaption
+    <div
       class="flex flex-col items-center justify-center mt-6 space-y-5 lg:justify-around lg:space-y-0"
     >
+      <h2
+        class="hidden mt-6 text-3xl font-semibold lg:text-4xl md:block md:w-full"
+      >
+        {{ item.name }}
+      </h2>
       <div class="flex flex-col items-start w-full space-y-2">
-        <h2 class="text-3xl font-semibold lg:text-4xl">
-          {{ item.name }}
-        </h2>
-
         <p class="text-xl font-semibold underline lg:text-2xl">
           {{ getEuro(item.price) }}
         </p>
@@ -32,9 +36,10 @@
       >
         Add to card
       </button>
-    </figcaption>
-  </figure>
+    </div>
+  </section>
 </template>
+¸
 
 <script>
 export default {
