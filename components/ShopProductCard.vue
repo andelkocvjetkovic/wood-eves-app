@@ -5,7 +5,7 @@
       class="absolute inset-0 w-full h-full shadow bg-app-blue-gray"
       style="clip-path: polygon(0 20%, 100% 58%, 100% 100%, 0% 100%)"
     ></div>
-    <NuxtLink :to="`${path}${item.slug}`" class="relative block p-2">
+    <NuxtLink :to="`${getPath}${item.slug}`" class="relative block p-2">
       <div
         role="presentation"
         class="relative overflow-hidden rounded-sm shadow-lg pb-full"
@@ -23,10 +23,10 @@
     </NuxtLink>
     <figcaption class="relative flex flex-col w-full px-3 py-4 text-app-white">
       <div class="flex justify-between">
-        <nuxt-link :to="`${path}${item.slug}`"
+        <NuxtLink :to="`${getPath}${item.slug}`"
           ><h1 class="font-serif text-xl font-semibold capitalize md:text-base">
             {{ item.name }}
-          </h1></nuxt-link
+          </h1></NuxtLink
         >
         <p class="text-base font-bold md:text-sm">
           from {{ getEuro(item.startPrice) }}
@@ -44,16 +44,17 @@
 <script>
 export default {
   props: {
-    path: {
-      type: String,
-      required: true,
-    },
     item: {
       type: Object,
       default: () => {},
     },
   },
-
+  computed: {
+    getPath() {
+      var path = this.item.path.split("/");
+      return `/shop/${path[2]}/`;
+    },
+  },
   methods: {
     getEuro(number) {
       return `${number} $`;

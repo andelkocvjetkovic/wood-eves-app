@@ -13,9 +13,27 @@
           class="flex flex-col space-y-2 text-sm ml-9"
         />
       </DropDown>
-      <li><NuxtLink to="/uberuns">Über uns</NuxtLink></li>
-      <li><NuxtLink to="/ideas">Ideas</NuxtLink></li>
-      <li><NuxtLink to="/kontakt">Kontakt</NuxtLink></li>
+      <li>
+        <NuxtLink
+          class="focus-visible:ring-1 focus-visible:ring-app-blue-gray"
+          to="/uberuns"
+          >Über uns</NuxtLink
+        >
+      </li>
+      <li>
+        <NuxtLink
+          class="focus-visible:ring-1 focus-visible:ring-app-blue-gray"
+          to="/ideas"
+          >Ideas</NuxtLink
+        >
+      </li>
+      <li>
+        <NuxtLink
+          class="focus-visible:ring-1 focus-visible:ring-app-blue-gray"
+          to="/kontakt"
+          >Kontakt</NuxtLink
+        >
+      </li>
     </ul>
     <div class="w-10/12">
       <hr />

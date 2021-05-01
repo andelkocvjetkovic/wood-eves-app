@@ -38,14 +38,14 @@
 export default {
   categoryItems: [
     {
-      name: "Tish",
+      name: "Cutting Boards",
       img: "category-tish.jpg",
-      slug: "tish",
+      slug: "cutting-boards",
       description:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto deleniti labore accusamus est neque! Recusandae nulla voluptatum modi dicta aliquid.",
     },
     {
-      name: "Stühle",
+      name: "Chair",
       img: "category-stuhle.jpg",
       slug: "stuhle",
       description:

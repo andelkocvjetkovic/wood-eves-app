@@ -8,7 +8,7 @@
       class="sm:flex-basis-50 sm:p-4 md:flex-basis-33 xl:p-8"
       :class="[i !== 0 ? 'mt-8 sm:mt-0' : '']"
     >
-      <ShopProductCard :path="getPath" :item="item" class="mt-6" />
+      <ShopProductCard :item="item" class="mt-6" />
     </div>
   </section>
 </template>
@@ -23,12 +23,6 @@ export default {
     path: {
       type: String,
       default: "",
-    },
-  },
-  computed: {
-    getPath() {
-      var path = this.itemList[0].path.split("/");
-      return `/shop/${path[2]}/`;
     },
   },
 };
