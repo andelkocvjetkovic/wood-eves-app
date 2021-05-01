@@ -145,7 +145,7 @@
 
 <script>
 import MinusIcon from "~/assets/svg/minusIcon.svg";
-import PlusIcon from "~/assets/svg/PlusIcon.svg";
+import PlusIcon from "~/assets/svg/plusIcon.svg";
 export default {
   components: {
     MinusIcon,
