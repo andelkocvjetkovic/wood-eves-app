@@ -18,7 +18,12 @@ export default {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
-
+  publicRuntimeConfig: {
+    stripePublic: process.env.STRIPE_PUBLIC_KEY,
+  },
+  privateRuntimeConfig: {
+    stripeSecret: process.env.STRIPE_SECRET_KEY,
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~/assets/css/swiper.css"],
 
@@ -41,7 +46,6 @@ export default {
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
     "@nuxt/image",
-    "@nuxtjs/dotenv",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

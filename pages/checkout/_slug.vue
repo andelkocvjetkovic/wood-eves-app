@@ -66,7 +66,7 @@ export default {
   data() {
     return {
       isStripeLoaded: false,
-      stripeKey: process.env.STRIPE_PUBLIC_KEY,
+      stripeKey: this.$config.stripePublic,
       instanceOptions: {
         // https://stripe.com/docs/js/initializing#init_stripe_js-options
       },
