@@ -10,7 +10,7 @@ export default {
       var result = await axios.post(
         "https://heuristic-stonebraker-e3023a.netlify.app/.netlify/functions/index",
         {
-          stripeEmail: payload.stripeEmail,
+          stripeEmail: getters.userEmail,
           stripeAmt: Math.floor(getters.cartPrice * 100), // it expects the price in cents
           stripeToken: payload.token.id, // testing token, later we would use payload.data.token
           stripeIdempotency: uuid4(), // we use this library to create a unique id

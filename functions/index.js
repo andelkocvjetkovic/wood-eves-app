@@ -32,38 +32,33 @@ exports.handler = async (event, context) => {
     };
   }
   try {
-    await stripe.customers
-      .create({
-        email: data.stripeEmail,
-        source: data.stripeToken,
-      })
-      .then((customer) => {
-        console.log(
-          `starting the charges, amt: ${data.stripeAmt}, email: ${data.stripeEmail}`
-        );
-        return stripe.charges
-          .create(
-            {
-              currency: "usd",
-              amount: data.stripeAmt,
-              receipt_email: data.stripeEmail,
-              description: "Order from store",
-              customer: customer.id,
-            },
-            {
-              idempotencyKey: data.stripeIdempotency,
-            }
-          )
-          .then((result) => {
-            return {
-              statusCode: 200,
-              headers,
-              body: JSON.stringify({
-                data: result,
-              }),
-            };
-          });
-      });
+    var customer = await stripe.customers.create({
+      email: data.stripeEmail,
+      source: data.stripeToken,
+    });
+    console.log(
+      `starting the charges, amt: ${data.stripeAmt}, email: ${data.stripeEmail}`
+    );
+    var charges = await stripe.charges.create(
+      {
+        currency: "usd",
+        amount: data.stripeAmt,
+        receipt_email: data.stripeEmail,
+        description: "Order from store",
+        customer: customer.id,
+      },
+      {
+        idempotencyKey: data.stripeIdempotency,
+      }
+    );
+    console.log("New charges: ", charges);
+    return {
+      statusCode: 200,
+      headers,
+      body: JSON.stringify({
+        data: charges,
+      }),
+    };
   } catch (err) {
     console.log(err);
     return {

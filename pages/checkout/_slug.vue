@@ -128,7 +128,6 @@ export default {
       var cardComponent = this.$refs.card;
       var cardElement = cardComponent.stripeElement;
       groupComponent.instance.createToken(cardElement).then((data) => {
-        console.log(data.token.id);
         this.$store.dispatch("postStripeFunction", data);
       });
     },
