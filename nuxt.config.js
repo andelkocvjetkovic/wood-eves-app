@@ -72,6 +72,7 @@ export default {
   },
   generate: {
     fallback: true,
+    exclude: ["/checkout"],
   },
   pageTransition: {
     css: false,

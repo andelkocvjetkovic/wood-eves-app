@@ -49,7 +49,7 @@ export default {
         {
           name: "Tango Tish",
           img: "/articles/tango-stol-1.jpg",
-          slug: "/shop/tango",
+          slug: "/shop",
         },
       ],
     },
@@ -71,7 +71,7 @@ export default {
         {
           name: "The Soul",
           img: "/articles/the-soul-stol-1.jpg",
-          slug: "/shop/the-soul",
+          slug: "/shop",
         },
       ],
     },
@@ -82,12 +82,12 @@ export default {
         {
           name: "The Couple",
           img: "/articles/couple-daska-1.jpg",
-          slug: "/shop/the-couple",
+          slug: "/shop",
         },
         {
           name: "The Don",
           img: "/articles/don-daska-1.jpg",
-          slug: "/shop/the-don",
+          slug: "/shop",
         },
       ],
     },
