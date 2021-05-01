@@ -4,6 +4,12 @@ const headers = {
   "Access-Control-Allow-Headers": "Content-Type",
 };
 exports.handler = async (event, context) => {
+  if (event.httpMethod === "OPTIONS") {
+    return {
+      statusCode: 200,
+      headers,
+    };
+  }
   if (!event.body || event.httpMethod !== "POST") {
     return {
       statusCode: 400,
@@ -41,7 +47,7 @@ exports.handler = async (event, context) => {
               currency: "usd",
               amount: data.stripeAmt,
               receipt_email: data.stripeEmail,
-              description: "Simple Charge",
+              description: "Order from store",
               customer: customer.id,
             },
             {
@@ -49,7 +55,13 @@ exports.handler = async (event, context) => {
             }
           )
           .then((result) => {
-            console.log(`Charge created: ${result}`);
+            return {
+              statusCode: 200,
+              headers,
+              body: JSON.stringify({
+                data: result,
+              }),
+            };
           });
       });
   } catch (err) {
