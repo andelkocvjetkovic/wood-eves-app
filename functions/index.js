@@ -42,9 +42,10 @@ exports.handler = async (event, context) => {
               amount: data.stripeAmt,
               receipt_email: data.stripeEmail,
               description: "Simple Charge",
+              customer: customer.id,
             },
             {
-              idempotency_key: data.stripeIdempotency,
+              idempotencyKey: data.stripeIdempotency,
             }
           )
           .then((result) => {
