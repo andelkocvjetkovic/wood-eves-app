@@ -129,7 +129,7 @@ export default {
       var cardElement = cardComponent.stripeElement;
       groupComponent.instance.createToken(cardElement).then((data) => {
         console.log(data.token.id);
-        // this.$store.dispatch("postStripeFunction", data);
+        this.$store.dispatch("postStripeFunction", data);
       });
     },
   },
