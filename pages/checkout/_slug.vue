@@ -1,12 +1,8 @@
 <template>
   <main class="max-w-xs py-6 mx-auto">
-    <h1 class="text-xl text-center capitalize">checkout</h1>
-    <section class="mt-6">
-      <h2 class="text-lg">Your cart:</h2>
-      <CartTable class="min-w-full mt-2" />
-    </section>
-    <section>
-      <h2 class="text-sm">
+    <section v-if="cardStatus == 'idle'">
+      <h1 class="text-xl text-center capitalize">checkout</h1>
+      <h2 class="mt-6 text-sm">
         Your email address:
         <br />
         <span class="w-full text-lg">{{ user.email }}</span>
@@ -43,7 +39,14 @@
           </header>
         </section>
       </article>
+      <article class="mt-12">
+        <h2 class="text-lg">Your cart:</h2>
+        <CartTable class="min-w-full mt-2" />
+      </article>
     </section>
+    <section v-else-if="cardStatus == 'loading'">Loading...</section>
+    <section v-else-if="cardStatus == 'success'">Success</section>
+    <section v-else>Error occured</section>
   </main>
 </template>
 
@@ -116,6 +119,7 @@ export default {
   computed: {
     ...mapState({
       user: "order",
+      cardStatus: "cartUIStatus",
     }),
     ...mapGetters(["cartPrice"]),
     param() {

@@ -10,7 +10,7 @@ export default {
   render: (h, { data, props, listeners }) => {
     return h("input", {
       class:
-        "p-1 border-b focus:outline-none border-app-dark-gray focus:border-app-accent",
+        "w-full p-1 border-b focus:outline-none border-app-dark-gray focus:border-app-accent",
       domProps: {
         value: props.value,
       },

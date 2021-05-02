@@ -35,6 +35,8 @@ exports.handler = async (event, context) => {
     var customer = await stripe.customers.create({
       email: data.stripeEmail,
       source: data.stripeToken,
+      name: data.customerName,
+      phone: data.customerPhoneNumber,
     });
     console.log(
       `starting the charges, amt: ${data.stripeAmt}, email: ${data.stripeEmail}`

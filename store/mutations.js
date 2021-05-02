@@ -15,10 +15,8 @@ export default {
         break;
       }
     }
-    console.log(isThere);
     if (!isThere) state.cart.push(payload);
     else isThere.quantity += payload.quantity;
-    console.log(state.cart.length);
   },
   removeFromCart(state, payload) {
     var index;
@@ -41,6 +39,12 @@ export default {
   },
   clearCart(state) {
     state.cart = [];
-    state.cartUIStatus = "idle";
+  },
+  updateCartUI(state, payload) {
+    if (typeof payload == "object") {
+      state.cartUIStatus = payload.data;
+    } else {
+      state.cartUIStatus = payload;
+    }
   },
 };

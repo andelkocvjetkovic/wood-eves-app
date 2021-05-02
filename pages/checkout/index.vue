@@ -1,10 +1,19 @@
 <template>
   <main class="max-w-xs py-6 mx-auto">
-    <form class="" @submit.prevent="handleForm">
-      <fieldset>
+    <form class="" novalidate="true" @submit.prevent="handleForm">
+      <div v-if="errors.length">
+        <b>Please corrcet the following error(s)</b>
+        <ul class="text-sm list-decimal list-inside">
+          <li v-for="(err, i) in errors" :key="i">
+            {{ err }}
+          </li>
+        </ul>
+      </div>
+      <fieldset class="mt-6">
         <legend class="text-lg italic font-semibold">1. Your Email</legend>
         <AppWrapper>
           <label for="email" class="text-xs">Email:</label>
+
           <AppInput
             id="email"
             type="email"
@@ -36,29 +45,19 @@
           <AppInput
             id="lastname"
             type="text"
-            autocomplete="amily-name"
+            autocomplete="family-name"
             :value="formData.lastName"
             @item-change="(value) => (formData.lastName = value)"
           />
         </AppWrapper>
         <AppWrapper>
-          <label for="address1">Address 1:</label>
+          <label for="address1">Address:</label>
           <AppInput
             id="address1"
             :value="formData.address1"
             type="text"
             autocomplete="address-line1"
             @item-change="(value) => (formData.address1 = value)"
-          />
-        </AppWrapper>
-        <AppWrapper>
-          <label for="address2">Address 2:</label>
-          <AppInput
-            id="address2"
-            :value="formData.address2"
-            type="text"
-            autocomplete="address-line2"
-            @item-change="(value) => (formData.address2 = value)"
           />
         </AppWrapper>
         <p class="max-w-full mt-6">
@@ -118,13 +117,22 @@
           @item-change="(value) => (formData.isSubs = value)"
         />
       </p>
-      <AppButton type="submit" class="w-full mt-6">Continue</AppButton>
+      <AppButton
+        type="submit"
+        class="w-full mt-6 disabled:opacity-30"
+        :disabled="errors.length ? true : false"
+        >Continue</AppButton
+      >
+      <p v-if="errors.length" class="mt-3 text-app-red">
+        Please first correct error(s)
+      </p>
     </form>
   </main>
 </template>
 
 <script>
 import { mapMutations, mapState } from "vuex";
+import { v4 as uuidv4 } from "uuid";
 export default {
   middleware({ store, error }) {
     if (store.getters.cartLength === 0) {
@@ -137,17 +145,17 @@ export default {
   data() {
     return {
       formData: {
-        email: this.$store.state.order?.email || "",
-        firstName: this.$store.state.order?.firstName || "",
-        lastName: this.$store.state.order?.lastName || "",
-        address1: this.$store.state.order?.address1 || "",
-        address2: this.$store.state.order?.address2 || "",
-        zipCode: this.$store.state.order?.zipCode || "",
+        email: this.$store.state.order?.email || "and3lko@gmail.com",
+        firstName: this.$store.state.order?.firstName || "Andelko",
+        lastName: this.$store.state.order?.lastName || "Cvjetkovic",
+        address1: this.$store.state.order?.address1 || "Nadbare bb",
+        zipCode: this.$store.state.order?.zipCode || "71270",
         country: this.$store.state.order?.country || "",
-        city: this.$store.state.order?.city || "",
-        phoneNumber: this.$store.state.order?.phoneNumber || "",
+        city: this.$store.state.order?.city || "Fojnica",
+        phoneNumber: this.$store.state.order?.phoneNumber || "063316273",
         isSubs: this.$store.state.order?.isSubs || false,
       },
+      errors: [],
     };
   },
   computed: {
@@ -159,11 +167,13 @@ export default {
   methods: {
     ...mapMutations(["setOrder"]),
     handleForm() {
+      this.checkForm();
+      // if length is not 0 return
+      if (this.errors.length) return;
       // Create UUID for each sucess handled submit form
       // redirect to /checkout/_uuid
       // put data into store
-      var uuid = "adcb36af-77a0-44c4-97bb-1f3b2da131ce";
-      // this.$router.push(formData);
+      var uuid = uuidv4();
       if (this.order) {
         // if there is already order reset it an put new formData into it
         this.setOrder();
@@ -179,6 +189,40 @@ export default {
           this.formData.country = response.country;
         })
         .catch(console.warn);
+    },
+    checkForm() {
+      this.errors = [];
+      if (!this.formData.firstName) {
+        this.errors.push("Firstname required");
+      }
+      if (!this.formData.lastName) {
+        this.errors.push("Lastname required");
+      }
+      if (!this.formData.email) {
+        this.errors.push("Email required");
+      } else if (!this.validateEmail()) {
+        this.errors.push("Valid email required");
+      }
+      if (!this.formData.address1) {
+        this.errors.push("Address is required");
+      }
+      if (!this.formData.country) {
+        this.errors.push("Country is required");
+      }
+      if (!this.formData.city) {
+        this.errors.push("City is required");
+      }
+      if (!this.formData.phoneNumber) {
+        this.errors.push("Phone Number is required");
+      }
+      if (!this.formData.zipCode) {
+        this.errors.push("Zip code is required");
+      }
+    },
+    validateEmail() {
+      var email = this.formData.email;
+      var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
     },
   },
 

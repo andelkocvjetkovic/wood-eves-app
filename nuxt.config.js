@@ -64,6 +64,7 @@ export default {
       "portal-vue",
       "vue-device-queries",
       "vue-awesome-swiper",
+      "vee-validate/dist/rules",
     ],
   },
   googleFonts: {

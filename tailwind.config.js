@@ -63,6 +63,7 @@ module.exports = {
       "app-blue-gray": "#334155",
       black: colors.black,
       white: colors.white,
+      "app-red": colors.red[600],
     },
   },
   variants: {
@@ -73,6 +74,7 @@ module.exports = {
       ringColor: ["checked", "focus-visible"],
       textColor: ["active", "focus-visible"],
       backgroundColor: ["focus-visible", "active"],
+      opacity: ["disabled"],
     },
   },
   plugins: [
