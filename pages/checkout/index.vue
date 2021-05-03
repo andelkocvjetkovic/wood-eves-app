@@ -1,5 +1,5 @@
 <template>
-  <main class="max-w-xs py-6 mx-auto">
+  <main class="max-w-xs py-6 mx-auto sm:max-w-md">
     <form class="" novalidate="true" @submit.prevent="handleForm">
       <div v-if="errors.length">
         <b>Please corrcet the following error(s)</b>

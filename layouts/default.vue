@@ -7,7 +7,7 @@
     <Nuxt />
     <TheFooter />
     <ClientOnly>
-      <PortalTarget name="navModal" />
+      <PortalTarget name="modalWindow" />
     </ClientOnly>
   </div>
 </template>
@@ -26,8 +26,5 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-.splide__list {
-  will-change: auto !important;
 }
 </style>

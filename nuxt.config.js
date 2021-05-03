@@ -21,9 +21,7 @@ export default {
   publicRuntimeConfig: {
     stripePublic: process.env.STRIPE_PUBLIC_KEY,
   },
-  privateRuntimeConfig: {
-    stripeSecret: process.env.STRIPE_SECRET_KEY,
-  },
+  privateRuntimeConfig: {},
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~/assets/css/swiper.css"],
 
@@ -83,10 +81,10 @@ export default {
     css: false,
     mode: "out-in",
     enter(el, done) {
-      this.$gsap.from(el, {
-        opacity: 0,
+      this.$gsap.to(el, {
+        opacity: 1,
         duration: 0.3,
-        ease: "circ.out",
+        ease: "sine.out",
         onComplete: done,
       });
     },
@@ -94,7 +92,7 @@ export default {
       this.$gsap.to(el, {
         opacity: 0,
         duration: 0.25,
-        ease: "circ.in",
+        ease: "sine.in",
         onComplete: done,
       });
     },

@@ -41,10 +41,6 @@ export default {
     state.cart = [];
   },
   updateCartUI(state, payload) {
-    if (typeof payload == "object") {
-      state.cartUIStatus = payload.data;
-    } else {
-      state.cartUIStatus = payload;
-    }
+    state.cartUIStatus = payload;
   },
 };

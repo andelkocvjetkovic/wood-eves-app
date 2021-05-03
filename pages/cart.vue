@@ -14,13 +14,15 @@
       </section>
     </article>
     <article v-else>
-      <h2 class="mt-6 text-lg text-center">
+      <h2 class="mt-1 text-lg text-center">
         You have nothing in your shopping cart.
       </h2>
       <p class="mt-4">
-        <NuxtLink to="/" class="underline">Continue Shopping &#8594;</NuxtLink>
+        <NuxtLink class="inline-block w-full text-center underline" to="/"
+          >Continue Shopping &#8594;</NuxtLink
+        >
       </p>
-      <CartIsEmpty class="mt-6"></CartIsEmpty>
+      <CartIsEmpty class="py-6"></CartIsEmpty>
     </article>
   </main>
 </template>

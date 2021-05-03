@@ -4,5 +4,5 @@ export default {
   },
   cartPrice: (state) =>
     state.cart.reduce((acc, next) => acc + next.quantity * next.price, 0),
-  userEmail: (state) => state.order.email,
+  userEmail: (state) => state.order?.email,
 };

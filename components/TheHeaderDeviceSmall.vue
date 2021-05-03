@@ -24,7 +24,7 @@
       />
     </button>
     <ClientOnly>
-      <Portal to="navModal">
+      <Portal to="modalWindow">
         <Transition
           :css="false"
           @enter="onEnterModalNav"

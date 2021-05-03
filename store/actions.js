@@ -25,10 +25,14 @@ export default {
       );
       if (result.status === 200) {
         commit("updateCartUI", "success");
-        commit("clearCart");
       }
     } catch (e) {
       commit("updateCartUI", "error");
     }
+  },
+  resetOrder({ commit }) {
+    commit("setOrder");
+    commit("clearCart");
+    commit("updateCartUI", "idle");
   },
 };
