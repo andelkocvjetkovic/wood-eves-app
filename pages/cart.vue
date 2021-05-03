@@ -1,7 +1,7 @@
 <template>
   <main class="px-4 py-6 bg-app-white text-app-dark-gray">
     <h2 class="font-serif text-xl text-center uppercase">Shopping cart</h2>
-    <article v-if="cart.length > 0">
+    <article v-if="cart.length > 0" class="sm:max-w-sm sm:mx-auto">
       <CartTable class="min-w-full mt-6" />
       <section class="flex mt-6">
         <h2 class="sr-only">Go to the checkout</h2>

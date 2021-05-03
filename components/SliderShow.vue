@@ -7,10 +7,10 @@
             <NuxtImg
               class="absolute inset-0 object-cover object-center w-full h-full"
               :alt="img"
-              sizes="xs:640px sm:840px"
+              sizes="xs:340px sm:940px"
               :src="img"
               quality="80"
-              fit="contain"
+              fit="cover"
             />
           </div>
         </div>

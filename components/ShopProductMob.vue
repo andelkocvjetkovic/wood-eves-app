@@ -17,13 +17,13 @@
       }"
     >
       <section class="max-w-xs mx-auto xs:max-w-sm">
-        <h2 class="font-serif text-xl font-semibold capitalize">
+        <h2 class="font-serif text-xl font-semibold capitalize sm:text-2xl">
           {{ productName }}
         </h2>
         <!-- Slider show mobile -->
         <SliderShow
           v-if="images.length > 1"
-          class="w-full mt-2 max-h-96"
+          class="w-full mt-2"
           :images="images"
         />
         <NuxtImg v-else :src="images[0]" />

@@ -1,15 +1,23 @@
 <template>
-  <main class="max-w-xs py-6 mx-auto sm:max-w-md">
-    <form class="" novalidate="true" @submit.prevent="handleForm">
-      <div v-if="errors.length">
-        <b>Please corrcet the following error(s)</b>
+  <main class="max-w-xs py-12 mx-auto sm:max-w-md xs:max-w-sm">
+    <form
+      class=""
+      novalidate="true"
+      @submit.prevent="handleForm"
+      @change="handleChange"
+    >
+      <div
+        v-if="errors.length"
+        class="p-6 bg-opacity-50 bg-app-red text-app-white ring-2 ring-app-red"
+      >
+        <b>Please corrcet the following error(s) :</b>
         <ul class="text-sm list-decimal list-inside">
-          <li v-for="(err, i) in errors" :key="i">
+          <li v-for="(err, i) in errors" :key="i" class="font-semibold">
             {{ err }}
           </li>
         </ul>
       </div>
-      <fieldset class="mt-6">
+      <fieldset :class="[errors.length ? 'mt-6' : '']">
         <legend class="text-lg italic font-semibold">1. Your Email</legend>
         <AppWrapper>
           <label for="email" class="text-xs">Email:</label>
@@ -166,6 +174,9 @@ export default {
   },
   methods: {
     ...mapMutations(["setOrder"]),
+    handleChange(e) {
+      this.checkForm();
+    },
     handleForm() {
       this.checkForm();
       // if length is not 0 return
@@ -184,7 +195,10 @@ export default {
     },
     geoFind() {
       fetch("https://extreme-ip-lookup.com/json/")
-        .then((res) => res.json())
+        .then((res) => {
+          if (res.ok) return res.json();
+          else throw new Error(res.statusText);
+        })
         .then((response) => {
           this.formData.country = response.country;
         })

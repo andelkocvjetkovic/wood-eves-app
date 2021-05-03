@@ -1,7 +1,7 @@
 <template>
-  <main class="relative max-w-xs py-12 mx-auto sm:max-w-sm">
-    <section class="">
-      <h1 class="text-xl text-center capitalize">checkout</h1>
+  <main class="relative max-w-xs py-12 mx-auto sm:max-w-sm xs:max-w-sm">
+    <section class="mt-6 xs:mt-12">
+      <h1 class="text-xl text-center capitalize xs:text-2xl">checkout</h1>
       <h2 class="mt-6 text-sm">
         Your email address:
         <br />
