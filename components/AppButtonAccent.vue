@@ -1,7 +1,7 @@
 <template>
   <button
-    class="px-8 py-2 font-semibold rounded-md text-app-white bg-app-accent"
+    class="px-8 py-2 text-lg font-semibold rounded shadow text-app-white bg-app-accent"
   >
-    <slot>Senden</slot>
+    <slot>Send</slot>
   </button>
 </template>

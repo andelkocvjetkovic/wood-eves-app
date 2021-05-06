@@ -171,11 +171,8 @@ export default {
     },
   },
   watch: {
-    isModalOpen(newValue) {
-      // if modal is open , isModalOpen.value === true add class overflow-hidden
-
-      // is isModalOpen newValue === true
-      if (newValue === true) {
+    cardStatus(newValue) {
+      if (newValue != "idle") {
         // add class for modal
         document.body.classList.add("overflow-hidden");
       } else {

@@ -2,13 +2,13 @@
   <figure class="relative overflow-hidden rounded-sm">
     <div
       role="presentation"
-      class="absolute inset-0 w-full h-full shadow bg-app-blue-gray"
+      class="absolute inset-0 w-full h-full rounded-md shadow bg-app-dark-gray"
       style="clip-path: polygon(0 20%, 100% 58%, 100% 100%, 0% 100%)"
     ></div>
-    <NuxtLink :to="`${getPath}${item.slug}`" class="relative block p-2">
+    <NuxtLink :to="`${getPath}${item.slug}`" class="relative block p-1">
       <div
         role="presentation"
-        class="relative overflow-hidden rounded-sm shadow-lg pb-full"
+        class="relative overflow-hidden rounded-sm shadow pb-full"
       >
         <NuxtImg
           class="absolute inset-0 object-cover object-center w-full h-full"
@@ -21,22 +21,24 @@
         />
       </div>
     </NuxtLink>
-    <figcaption class="relative flex flex-col w-full px-3 py-4 text-app-white">
-      <div class="flex justify-between">
+    <figcaption class="relative flex flex-col w-full px-4 pb-5 mt-1 text-white">
+      <div class="flex items-center justify-between">
         <NuxtLink :to="`${getPath}${item.slug}`"
           ><h1 class="font-serif text-xl font-semibold capitalize md:text-base">
             {{ item.name }}
           </h1></NuxtLink
         >
-        <p class="text-base font-bold md:text-sm">
-          from {{ getEuro(item.startPrice) }}
+        <p class="text-base md:text-sm">
+          from
+          <span class="font-semibold">{{ getEuro(item.startPrice) }} </span>
         </p>
       </div>
-      <button
-        class="self-center mt-1 text-lg font-bold uppercase border-b md:mt-3 md:text-base"
+      <NuxtLink
+        :to="`${getPath}${item.slug}`"
+        class="self-center mt-1 text-lg font-bold tracking-wide capitalize border-b md:mt-3"
       >
-        Add to cart
-      </button>
+        View Item <span>&#8594;</span>
+      </NuxtLink>
     </figcaption>
   </figure>
 </template>

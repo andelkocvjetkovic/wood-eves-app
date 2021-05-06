@@ -16,13 +16,6 @@
       <li>
         <NuxtLink
           class="focus-visible:ring-1 focus-visible:ring-app-blue-gray"
-          to="/uberuns"
-          >Über uns</NuxtLink
-        >
-      </li>
-      <li>
-        <NuxtLink
-          class="focus-visible:ring-1 focus-visible:ring-app-blue-gray"
           to="/ideas"
           >Ideas</NuxtLink
         >
@@ -30,8 +23,15 @@
       <li>
         <NuxtLink
           class="focus-visible:ring-1 focus-visible:ring-app-blue-gray"
-          to="/kontakt"
-          >Kontakt</NuxtLink
+          to="/aboutus"
+          >About us</NuxtLink
+        >
+      </li>
+      <li>
+        <NuxtLink
+          class="focus-visible:ring-1 focus-visible:ring-app-blue-gray"
+          to="/contactus"
+          >Contact us</NuxtLink
         >
       </li>
     </ul>

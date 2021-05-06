@@ -19,88 +19,75 @@
 export default {
   arrayItems: [
     {
-      alt: "Bernard-1 Stuhl",
-      img: "/articles/bernard-stolica-smeda-1.jpg",
+      alt: "Bernard Chair Walnuss",
+      img: "/articles/bernard/bernard_walnus_1.jpg",
     },
     {
-      alt: "Bernard-2 Stuhl",
-      img: "/articles/bernard-stolica-zuta-1.jpg",
+      alt: "Bernard Chair Oak",
+      img: "/articles/bernard/bernard_oak_1.jpg",
     },
     {
-      alt: "Dobby-1 Stuhl",
-      img: "/articles/dobby-stolica-1.jpg",
+      alt: "Bein Wall Clock",
+      img: "/articles/bein/bein_bijela_pozadina.jpg",
     },
     {
-      alt: "Cloud-1 Stuhl",
-      img: "/articles/cloud-stolica-1.jpg",
+      alt: "Darfin Wall Light",
+      img: "/articles/darfin/darfin_bg_white.jpg",
     },
     {
-      alt: "Phone Holder-1 brown",
-      img: "/articles/holder-phone-smedi-1.jpg",
+      alt: "Jinx Chair Oak",
+      img: "/articles/jinx/jinx_oak_1.jpg",
     },
     {
-      alt: "Phone Holder-1 yellow",
-      img: "/articles/holder-phone-zuti-1.jpg",
+      alt: "Judy Chair Walnuss",
+      img: "/articles/judy/judy_walnus_1.jpg",
     },
     {
-      alt: "Jinx-1 Stuhl",
-      img: "/articles/jinx-barska-stolica-1.jpg",
+      alt: "Lakar Wall Clock",
+      img: "/articles/lakar/alkar_bijela_pozadina.jpg",
     },
     {
-      alt: "Judy-1 Stuhl",
-      img: "/articles/juddy-stolica-1.jpg",
+      alt: "Mabung Cutting Board",
+      img: "/articles/mabung/mabung_bg_white.jpg",
     },
     {
-      alt: "Leaf-1 Tish",
-      img: "/articles/leaf-stol-1.jpg",
+      alt: "Pegas Chair Wallnus",
+      img: "/articles/pegas/pegas_walnus_1.jpg",
     },
     {
-      alt: "Nova-1 Tish",
-      img: "/articles/nova-stol-1.jpg",
+      alt: "Rock Chair Black Walnuss",
+      img: "/articles/rock/rock_black_1.jpg",
     },
     {
-      alt: "Flupy-1 Schneidbrett",
-      img: "/articles/flupy-daska-1.jpg",
+      alt: "Rock Chair Walnuss",
+      img: "/articles/rock/rock_walnus_1.jpg",
     },
     {
-      alt: "Pegas-1 Stuhl",
-      img: "/articles/pegas-stolica-1.jpg",
+      alt: "Rose Chair Oak",
+      img: "/articles/rose/rose_oak_1.jpg",
     },
     {
-      alt: "Freeze-1 Schneidbrett",
-      img: "/articles/freeze-daska-1.jpg",
+      alt: "Rose Chair Walnuss",
+      img: "/articles/rose/rose_walnus_padded_1.jpg",
     },
     {
-      alt: "Rock-1 Stuhl",
-      img: "/articles/rock-stolica-1.jpg",
+      alt: "Shyina Cutting Board",
+      img: "/articles/shyina/shalna_1_bg_white.jpg",
     },
     {
-      alt: "Rose-1 Stuhl",
-      img: "/articles/rose-stolica-1.jpg",
-    },
-    {
-      alt: "Australia Schneidbrett",
-      img: "/articles/australia-daska-1.jpg",
-    },
-    {
-      alt: "Sound-1 Tish",
-      img: "/articles/sound-stol-1.jpg",
-    },
-    {
-      alt: "Way-1 Tish",
-      img: "/articles/way-stol-1.jpg",
-    },
-    {
-      alt: "Long-1 Schneidbrett",
-      img: "/articles/long-daska-1.jpg",
+      alt: "Tenya Wall Light",
+      img: "/articles/tenya/taenya_bg_white.jpg",
     },
   ],
   swiperOption: {
     watchSlidesVisibility: true,
     preloadImages: false,
-    loadPrevNext: true,
-    checkInView: true,
-    lazy: true,
+    slidesPerView: 2,
+    lazy: {
+      enabled: true,
+      loadPrevNext: true,
+      loadPrevNextAmount: 3,
+    },
     a11y: {
       containerMessage: "This is our gallery",
     },
@@ -110,12 +97,10 @@ export default {
         spaceBetween: 15,
       },
       475: {
-        loadPrevNextAmount: 3,
         slidesPerView: 1.6,
         spaceBetween: 20,
       },
       320: {
-        loadPrevNextAmount: 2,
         slidesPerView: 1.2,
         spaceBetween: 10,
       },

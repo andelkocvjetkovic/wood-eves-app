@@ -1,8 +1,10 @@
 <template>
   <main class="pb-16">
-    <header class="max-w-xs mx-auto mt-4 text-center lg:mt-12">
-      <h1 class="font-serif text-2xl lg:text-3xl">Ideas</h1>
-      <p class="lg:text-lg">
+    <header class="max-w-xs mx-auto mt-6 text-center lg:mt-12">
+      <h1 class="font-serif text-2xl capitalize lg:text-3xl">
+        Our beautiful Ideas
+      </h1>
+      <p class="mt-1 lg:text-lg">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam,
         repellat.
       </p>
@@ -14,7 +16,7 @@
         <NuxtImg
           src="/ideas/ideas-one.jpg"
           class="object-cover object-center w-full h-full rounded-sm"
-          sizes="xs:320px lg:640px"
+          sizes="xs:50vw lg:640px"
           fit="cover"
         />
       </div>
@@ -22,7 +24,7 @@
         <NuxtImg
           src="/ideas/ideas-two.jpg"
           class="object-cover object-center w-full h-full rounded-sm"
-          sizes="xs:320px lg:640px"
+          sizes="xs:50vw lg:640px"
           fit="cover"
         />
       </div>
@@ -30,21 +32,27 @@
         <NuxtImg
           src="/ideas/ideas-three.jpg"
           class="object-cover object-center w-full h-full rounded-sm"
-          sizes="xs:320px lg:640px"
+          sizes="xs:50vw lg:640px"
           fit="cover"
         />
       </div>
     </div>
-    <article class="mt-8">
-      <header>
-        <h1 class="font-serif text-xl text-center md:text-2xl">
+    <article
+      class="max-w-xs mx-auto mt-9 xs:max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"
+    >
+      <header
+        class="pl-3 mt-3 text-sm border-l-4 border-app-blue-gray sm:w-1/2 sm:mx-auto"
+      >
+        <h1 class="font-serif text-xl md:text-3xl">
           Lorem ipsum dolor sit amet.
         </h1>
+        <p class="mt-3 border-app-dark-gray">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+          dolore animi? Asperiores sed beatae tempore blanditiis.
+        </p>
       </header>
 
-      <IdeasList
-        class="max-w-xs mx-auto mt-6 xs:max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"
-      />
+      <IdeasList class="mt-8" />
     </article>
   </main>
 </template>

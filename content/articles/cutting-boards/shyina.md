@@ -19,7 +19,7 @@ typeOfWoods:
 dimensions:
   [
     {
-      data: { length: 24, width: 20, height: 2 },
+      data: { length: 2, width: 24, height: 20 },
       addPrice: 0,
       images: [shalna_size.jpg],
     },

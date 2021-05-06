@@ -7,13 +7,13 @@
         role="img"
         aria-label="Image Description"
       >
-        <transition appear :css="false" @appear="apperAnimationHomeText">
-          <h1
-            class="max-w-sm px-2 mx-auto mt-12 font-serif text-3xl font-semibold text-center text-app-white sm:text-4xl sm:max-w-md md:max-w-2xl md:mt-20"
-          >
-            Die Seele des Holzes Mehr als nur Möbel...
-          </h1>
-        </transition>
+        <h1
+          class="max-w-sm px-2 mx-auto mt-12 font-serif text-3xl font-semibold text-center text-app-white sm:text-4xl sm:max-w-md md:max-w-2xl md:mt-20"
+        >
+          The soul of wood.
+          <br />
+          More than just furniture...
+        </h1>
       </section>
       <div
         role="presentation"
@@ -22,12 +22,11 @@
       <p
         class="max-w-xs mx-auto mt-8 text-lg leading-snug xs:mt-8 xs:text-xl xs:max-w-sm sm:max-w-md sm:mt-12 md:max-w-xl md:text-center text-app-dark-gray lg:max-w-md lg:text-base"
       >
-        In ganz Bosnien und Herzegowina gibt es Wälder, die an das Tolkins
-        Nandor erinnern, in dem Waldelben leben. Waldelben spüren die Seele der
-        Bäume sowie unser kleines Team von Holzzauberer. Nur so können wir die
-        jenige beschreiben die Verantwortlich sind für die fantastische
-        Kombination von Holz mit anderen Materialien und einen Sinn für Design
-        besitzen, der unserem Zuhause Wärme und ein magisches Aussehen verleiht.
+        Fugar plum gummi bears biscuit. Wafer biscuit marzipan cookie icing
+        sesame snaps marzipan. Marshmallow sweet jelly-o pudding bear claw
+        gummies. Powder chocolate cake tiramisu topping macaroon tart pudding
+        fruitcake. Pie oat cake fruitcake oat cake. Gummi bears soufflé chupa
+        chups sugar plum danish cupcake cheesecake.
       </p>
     </article>
     <article>
@@ -36,8 +35,8 @@
         <h2
           class="max-w-xs mx-auto font-serif text-xl font-semibold tracking-wide text-center uppercase xs:max-w-sm xs:text-2xl sm:max-w-md sm:leading-8 md:max-w-2xl md:text-3xl text-app-accent"
         >
-          Handgefertigte Möbel Für außergewöhnliche Häuser Lassen Sie sich von
-          uns inspirieren
+          Handmade furniture for extraordinary houses. <br />
+          Let us inspire you
         </h2>
         <ClientOnly>
           <aside v-if="isMobile" class="relative mt-16 overflow-hidden">
@@ -56,7 +55,7 @@
         <h2
           class="font-serif text-2xl font-semibold text-center uppercase sm:text-4xl text-app-dark-gray md:pb-16 md:px-6"
         >
-          Sehen Sie sich unsere Angebote an
+          Take a look at our offers
         </h2>
         <ShopCategoriesLinks class="md:flex md:flex-wrap" />
       </section>
@@ -80,16 +79,6 @@ export default {
   computed: {
     isMobile() {
       return !this.$device?.tablet;
-    },
-  },
-  methods: {
-    apperAnimationHomeText(el, done) {
-      this.$gsap.from(el, {
-        y: 100,
-        opacity: 0,
-        duration: 1,
-        onComplete: done,
-      });
     },
   },
 };

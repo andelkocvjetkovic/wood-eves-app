@@ -1,5 +1,5 @@
 <template>
-  <main class="px-2 py-8">
+  <main class="px-2 pb-8">
     <NuxtChild />
   </main>
 </template>

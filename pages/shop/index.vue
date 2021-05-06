@@ -16,7 +16,7 @@ export default {
       .catch(() => {
         error({ statusCode: 404, message: "Page not found" });
       });
-    const chairItems = await $content("articles/stuhle")
+    const chairItems = await $content("articles/chair")
       .where({ isNew: true })
       .fetch()
       .catch(() => {

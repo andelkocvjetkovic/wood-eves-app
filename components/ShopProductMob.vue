@@ -16,8 +16,10 @@
         deliveryTime,
       }"
     >
-      <section class="max-w-xs mx-auto xs:max-w-sm">
-        <h2 class="font-serif text-xl font-semibold capitalize sm:text-2xl">
+      <section class="max-w-xs mx-auto mt-6 xs:max-w-sm">
+        <h2
+          class="font-serif text-2xl font-semibold tracking-wide capitalize sm:text-2xl"
+        >
           {{ productName }}
         </h2>
         <!-- Slider show mobile -->

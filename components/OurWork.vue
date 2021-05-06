@@ -6,22 +6,28 @@
       class="relative max-w-xs mx-auto prose-sm prose xs:max-w-sm sm:max-w-lg sm:prose-lg lg:max-w-4xl lg:grid lg:grid-cols-2 lg:gap-x-8 xl:max-w-5xl xl:gap-x-14"
     >
       <header class="font-serif lg:col-start-1 lg:col-span-1">
-        <h1>Hat gespielt oder gespielt Basler.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
         <h4 class="">
-          Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und
-          Konsonantien leben die Blindtexte.
+          Some two months before the murder of Sir Danvers, I had been out for
+          one of my adventures, had returned at a late hour, and woke the next
+          day in bed with somewhat odd sensations
         </h4>
         <p class="hidden lg:block">
-          Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich
-          den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin
-          allein und freue mich meines Lebens in dieser Gegend, die für solche
-          Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein
-          Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine
-          Kunst darunter leidet. Ich könnte jetzt nicht zeichnen, nicht einen
-          Strich, und bin nie ein größerer Maler gewesen als in diesen
-          Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an
-          der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht,
-          und nur einzelne Strahlen sich in das innere Heiligtum stehle.
+          The pleasures which I made haste to seek in my disguise were, as I
+          have said, undignified; I would scarce use a harder term. But in the
+          hands of Edward Hyde, they soon began to turn toward the monstrous.
+          When I would come back from these excursions, I was often plunged into
+          a kind of wonder at my vicarious depravity. This familiar that I
+          called out of my own soul, and sent forth alone to do his good
+          pleasure, was a being inherently malign and villainous; his every act
+          and thought centered on self; drinking pleasure with bestial avidity
+          from any degree of torture to another; relentless like a man of stone.
+          Henry Jekyll stood at times aghast before the acts of Edward Hyde; but
+          the situation was apart from ordinary laws, and insidiously relaxed
+          the grasp of conscience. It was Hyde, after all, and Hyde alone, that
+          was guilty. Jekyll was no worse; he woke again to his good qualities
+          seemingly unimpaired; he would even make haste, where it was possible,
+          to undo the evil done by Hyde. And thus his conscience slumbered.
         </p>
       </header>
       <figure class="lg:col-start-2 lg:col-span-1">
@@ -34,7 +40,7 @@
             src="wood-work-2.jpg"
             class="absolute inset-0 object-cover object-center w-full h-full lg:my-0"
             alt="wood work"
-            sizes="xs:380px sm:512px lg:50vw"
+            sizes="xs:380px sm:512px lg:50vw xl:80vw"
             quality="80"
             fit="cover"
             loading="lazy"
@@ -42,17 +48,22 @@
         </div>
         <figcaption class="lg:hidden">
           <p class="text-base">
-            Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich
-            den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich
-            bin allein und freue mich meines Lebens in dieser Gegend, die für
-            solche Seelen geschaffen ist wie die meine. Ich bin so glücklich,
-            mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken,
-            daß meine Kunst darunter leidet. Ich könnte jetzt nicht zeichnen,
-            nicht einen Strich, und bin nie ein größerer Maler gewesen als in
-            diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe
-            Sonne an der Oberfläche der undurchdringlichen Finsternis meines
-            Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum
-            stehle.
+            The pleasures which I made haste to seek in my disguise were, as I
+            have said, undignified; I would scarce use a harder term. But in the
+            hands of Edward Hyde, they soon began to turn toward the monstrous.
+            When I would come back from these excursions, I was often plunged
+            into a kind of wonder at my vicarious depravity. This familiar that
+            I called out of my own soul, and sent forth alone to do his good
+            pleasure, was a being inherently malign and villainous; his every
+            act and thought centered on self; drinking pleasure with bestial
+            avidity from any degree of torture to another; relentless like a man
+            of stone. Henry Jekyll stood at times aghast before the acts of
+            Edward Hyde; but the situation was apart from ordinary laws, and
+            insidiously relaxed the grasp of conscience. It was Hyde, after all,
+            and Hyde alone, that was guilty. Jekyll was no worse; he woke again
+            to his good qualities seemingly unimpaired; he would even make
+            haste, where it was possible, to undo the evil done by Hyde. And
+            thus his conscience slumbered.
           </p>
         </figcaption>
       </figure>

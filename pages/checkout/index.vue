@@ -175,12 +175,14 @@ export default {
   methods: {
     ...mapMutations(["setOrder"]),
     handleChange(e) {
-      this.checkForm();
+      if (this.errors.length > 0) {
+        this.checkForm();
+      }
     },
     handleForm() {
       this.checkForm();
-      // if length is not 0 return
-      if (this.errors.length) return;
+      if (this.errors.length > 0) return;
+
       // Create UUID for each sucess handled submit form
       // redirect to /checkout/_uuid
       // put data into store
@@ -204,29 +206,32 @@ export default {
         })
         .catch(console.warn);
     },
+    checkInput(input) {
+      return input.trim().length == 0;
+    },
     checkForm() {
       this.errors = [];
-      if (!this.formData.firstName) {
-        this.errors.push("Firstname required");
+      if (this.checkInput(this.formData.firstName)) {
+        this.errors.push("FirstName required");
       }
-      if (!this.formData.lastName) {
+      if (this.checkInput(this.formData.lastName)) {
         this.errors.push("Lastname required");
       }
-      if (!this.formData.email) {
+      if (this.checkInput(this.formData.email)) {
         this.errors.push("Email required");
       } else if (!this.validateEmail()) {
         this.errors.push("Valid email required");
       }
-      if (!this.formData.address1) {
+      if (this.checkInput(this.formData.address1)) {
         this.errors.push("Address is required");
       }
-      if (!this.formData.country) {
+      if (this.checkInput(this.formData.country)) {
         this.errors.push("Country is required");
       }
-      if (!this.formData.city) {
+      if (this.checkInput(this.formData.city)) {
         this.errors.push("City is required");
       }
-      if (!this.formData.phoneNumber) {
+      if (this.checkInput(this.formData.phoneNumber)) {
         this.errors.push("Phone Number is required");
       }
       if (!this.formData.zipCode) {

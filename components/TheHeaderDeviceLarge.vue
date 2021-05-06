@@ -20,9 +20,9 @@
             class="absolute right-0 flex flex-col mt-2 space-y-3 text-sm px-3/6 py-1/6 bg-app-white"
           />
         </DropDown>
-        <li><NuxtLink to="/uberuns">Über uns</NuxtLink></li>
         <li><NuxtLink to="/ideas">Ideas</NuxtLink></li>
-        <li><NuxtLink to="/kontakt">Kontakt</NuxtLink></li>
+        <li><NuxtLink to="/aboutus">About us</NuxtLink></li>
+        <li><NuxtLink to="/contactus">Contat us</NuxtLink></li>
       </ul>
     </nav>
   </header>
