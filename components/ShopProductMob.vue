@@ -28,7 +28,12 @@
           class="w-full mt-2"
           :images="images"
         />
-        <NuxtImg v-else :src="images[0]" />
+        <NuxtImg
+          v-else
+          :src="images[0]"
+          sizes="xs:100vw sm:60vw lg:50vw"
+          quality="80"
+        />
 
         <div>
           <p class="flex items-center justify-between mt-6">
@@ -126,7 +131,7 @@
         </div>
 
         <!-- Product description -->
-        <div>
+        <article>
           <p class="text-sm leading-6">{{ productDescription }}</p>
           <button
             class="mt-4 underline focus:outline-none active:text-app-dark-gray focus-visible:ring-1 ring-offset-black"
@@ -136,10 +141,11 @@
           </button>
           <NuxtContent
             v-show="readMore"
-            class="mx-auto mt-8 prose-sm prose sm:prose lg:prose-lg xl:prose-2xl"
+            class="mx-auto mt-4 prose-sm prose sm:prose lg:prose-lg xl:prose-2xl"
             :document="productMarkdown"
           />
-        </div>
+        </article>
+        <ShippingReturns class="mt-3" />
       </section>
     </template>
   </ShopProduct>

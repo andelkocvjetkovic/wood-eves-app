@@ -1,10 +1,10 @@
 <template>
   <footer class="pb-12 bg-app-dark-gray text-app-white">
-    <p class="bg-app-blue-gray">
+    <div class="bg-app-blue-gray">
       <SocialIcons
         class="max-w-xs py-4 mx-auto text-app-light-gray md:max-w-md lg:max-w-lg"
       />
-    </p>
+    </div>
     <!-- Information about company -->
     <section
       class="max-w-xs mx-auto mt-16 xs:max-w-sm sm:max-w-lg md:grid md:gap-x-8 lg:gap-x-12 md:grid-cols-2 md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"

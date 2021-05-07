@@ -6,7 +6,7 @@
           <NuxtImg
             class="absolute inset-0 object-cover object-center w-full h-full"
             :alt="img"
-            sizes="xs:340px sm:940px"
+            sizes="xs:100vw sm:70vw md:60vw"
             :src="img"
             quality="80"
             fit="cover"

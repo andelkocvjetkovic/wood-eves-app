@@ -41,7 +41,6 @@
             class="absolute inset-0 object-cover object-center w-full h-full lg:my-0"
             alt="wood work"
             sizes="xs:380px sm:512px lg:50vw xl:80vw"
-            quality="80"
             fit="cover"
             loading="lazy"
           />

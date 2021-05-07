@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-around">
+  <p class="flex justify-around">
     <a href="https://facebook.com/" target="_blank"
       ><span class="sr-only">Wood-Elvas Facebook</span>
       <FacebookIcon class="fill-current w-7 h-7"
@@ -12,7 +12,7 @@
       <span class="sr-only">Wood-Elvas Linkedin</span>
       <LinkedinIcon class="fill-current w-7 h-7" />
     </a>
-  </div>
+  </p>
 </template>
 <script>
 import FacebookIcon from "~/assets/svg/facebookIcon.svg";
