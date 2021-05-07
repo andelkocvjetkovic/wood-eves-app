@@ -10,8 +10,9 @@
             :src="item.img"
             :alt="item.alt"
             class="absolute inset-0 object-cover object-center w-full h-full"
-            sizes="xs:100vw sm:50vw"
+            sizes="xs:100vw sm:70vw"
             quality="80"
+            loading="lazy"
           />
         </div>
         <figcaption class="sr-only">{{ item.alt }}</figcaption>
@@ -85,7 +86,6 @@ export default {
     },
   ],
   slickOptions: {
-    lazyLoad: "ondemand",
     arrows: false,
     dots: false,
     accessibility: true,

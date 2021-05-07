@@ -40,7 +40,7 @@
             src="wood-work-2.jpg"
             class="absolute inset-0 object-cover object-center w-full h-full lg:my-0"
             alt="wood work"
-            sizes="xs:380px sm:512px lg:50vw xl:80vw"
+            sizes="xs:90vw sm:60vw lg:50vw xl:80vw"
             fit="cover"
             loading="lazy"
           />
