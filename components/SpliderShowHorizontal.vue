@@ -2,14 +2,16 @@
   <aside>
     <VueSlickCarousel v-bind="$options.slickOptions">
       <figure v-for="item in $options.arrayItems" :key="item.img" class="p-2">
-        <div role="presentation" class="relative overflow-hidden pb-full">
+        <div
+          role="presentation"
+          class="relative overflow-hidden bg-white pb-full"
+        >
           <NuxtImg
             :src="item.img"
             :alt="item.alt"
             class="absolute inset-0 object-cover object-center w-full h-full"
             sizes="xs:100vw sm:50vw"
             quality="80"
-            loading="lazy"
           />
         </div>
         <figcaption class="sr-only">{{ item.alt }}</figcaption>
@@ -83,6 +85,7 @@ export default {
     },
   ],
   slickOptions: {
+    lazyLoad: "ondemand",
     arrows: false,
     dots: false,
     accessibility: true,

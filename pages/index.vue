@@ -2,11 +2,7 @@
   <main class="bg-app-white text-app-dark-gray">
     <!--Home Hero background and text with apper animation -->
     <article class="lg:max-w-4xl lg:mx-auto xl:max-w-5xl">
-      <section
-        class="masthead h-screen/75vh"
-        role="img"
-        aria-label="Image Description"
-      >
+      <section class="masthead h-screen/75vh" aria-label="Image Description">
         <h1
           class="max-w-sm px-2 mx-auto mt-12 font-serif text-3xl font-semibold text-center text-app-white sm:text-4xl sm:max-w-md md:max-w-2xl md:mt-20"
         >
