@@ -1,7 +1,7 @@
 <template>
   <article>
     <button
-      class="underline focus:outline-none active:text-app-dark-gray focus-visible:ring-1 ring-offset-black"
+      class="text-xl underline focus:outline-none active:text-app-dark-gray focus-visible:ring-1 ring-offset-black"
       @click="show"
     >
       Shipping & Returns <span>&#8594;</span>

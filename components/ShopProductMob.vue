@@ -16,12 +16,12 @@
         deliveryTime,
       }"
     >
-      <section class="max-w-xs mx-auto mt-6 xs:max-w-sm">
-        <h2
+      <article class="max-w-xs mx-auto mt-6 xs:max-w-sm">
+        <h1
           class="font-serif text-2xl font-semibold tracking-wide capitalize sm:text-2xl"
         >
           {{ productName }}
-        </h2>
+        </h1>
         <!-- Slider show mobile -->
         <SliderShow
           v-if="images.length > 1"
@@ -134,7 +134,7 @@
         <article>
           <p class="text-sm leading-6">{{ productDescription }}</p>
           <button
-            class="mt-4 underline focus:outline-none active:text-app-dark-gray focus-visible:ring-1 ring-offset-black"
+            class="mt-6 text-xl underline focus:outline-none active:text-app-dark-gray focus-visible:ring-1 ring-offset-black"
             @click="readMore = !readMore"
           >
             Details <span>&#8594;</span>
@@ -146,7 +146,7 @@
           />
         </article>
         <ShippingReturns class="mt-3" />
-      </section>
+      </article>
     </template>
   </ShopProduct>
 </template>

@@ -1,18 +1,21 @@
 <template>
-  <Swiper class="swiper" :options="$options.swiperOption">
-    <SwiperSlide v-for="item in $options.arrayItems" :key="item.img">
-      <div class="relative overflow-hidden pb-full">
-        <img
-          :data-src="item.img"
-          :alt="item.alt"
-          class="absolute inset-0 object-cover object-center w-full h-full swiper-lazy"
-        />
-        <div class="absolute inset-0 w-full min-h-full">
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+  <aside>
+    <VueSlickCarousel v-bind="$options.slickOptions">
+      <figure v-for="item in $options.arrayItems" :key="item.img" class="p-2">
+        <div role="presentation" class="relative overflow-hidden pb-full">
+          <NuxtImg
+            :src="item.img"
+            :alt="item.alt"
+            class="absolute inset-0 object-cover object-center w-full h-full"
+            sizes="xs:100vw sm:50vw"
+            quality="80"
+            loading="lazy"
+          />
         </div>
-      </div>
-    </SwiperSlide>
-  </Swiper>
+        <figcaption class="sr-only">{{ item.alt }}</figcaption>
+      </figure>
+    </VueSlickCarousel>
+  </aside>
 </template>
 
 <script>
@@ -56,11 +59,11 @@ export default {
     },
     {
       alt: "Rock Chair Black Walnuss",
-      img: "/articles/rock/rock_black_1.jpg",
+      img: "/articles/rock/rock_maple_2.jpg",
     },
     {
       alt: "Rock Chair Walnuss",
-      img: "/articles/rock/rock_walnus_1.jpg",
+      img: "/articles/rock/rock_walnus_3.jpg",
     },
     {
       alt: "Rose Chair Oak",
@@ -79,32 +82,38 @@ export default {
       img: "/articles/tenya/taenya_bg_white.jpg",
     },
   ],
-  swiperOption: {
-    watchSlidesVisibility: true,
-    preloadImages: false,
-    slidesPerView: 2,
-    lazy: {
-      enabled: true,
-      loadPrevNext: true,
-      loadPrevNextAmount: 3,
-    },
-    a11y: {
-      containerMessage: "This is our gallery",
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 2.2,
-        spaceBetween: 15,
+  slickOptions: {
+    arrows: false,
+    dots: false,
+    accessibility: true,
+    edgeFriction: 0.5,
+    slidesToScroll: 1,
+    infinite: false,
+    touchThreshold: 10,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1.2,
+          slidesToScroll: 1,
+        },
       },
-      475: {
-        slidesPerView: 1.6,
-        spaceBetween: 20,
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 2.2,
+          slidesToScroll: 1,
+        },
       },
-      320: {
-        slidesPerView: 1.2,
-        spaceBetween: 10,
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2.2,
+          slidesToScroll: 1,
+          focusOnSelect: true,
+        },
       },
-    },
+    ],
   },
 };
 </script>

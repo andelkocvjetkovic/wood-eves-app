@@ -38,15 +38,11 @@
           Handmade furniture for extraordinary houses. <br />
           Let us inspire you
         </h2>
-        <ClientOnly>
-          <aside v-if="isMobile" class="relative mt-16 overflow-hidden">
-            <h3 class="p-2 font-serif italic font-semibold">Gallery</h3>
-            <KeepAlive>
-              <SpliderShowHorizontal class="h-80" />
-            </KeepAlive>
-          </aside>
-          <GridGallery v-else />
-        </ClientOnly>
+        <article v-if="isMobile" class="relative mt-16 overflow-hidden">
+          <h3 class="p-2 font-serif italic font-semibold">Gallery</h3>
+          <SpliderShowHorizontal />
+        </article>
+        <GridGallery v-else />
       </section>
       <section
         class="max-w-xs mx-auto mt-24 xs:max-w-sm xs:mt-32 sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"

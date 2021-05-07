@@ -23,14 +23,14 @@ export default {
   },
   privateRuntimeConfig: {},
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["~/assets/css/swiper.css"],
+  css: ["vue-slick-carousel/dist/vue-slick-carousel.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     "~/plugins/gsap.client.js",
     "~/plugins/portal-vue.client.js",
     "~/plugins/vue-device-queries.client.js",
-    "~/plugins/vue-awesome-swiper.client.js",
+    "~/plugins/vue-slick-carousel.js",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -57,13 +57,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: [
-      "gsap",
-      "portal-vue",
-      "vue-device-queries",
-      "vue-awesome-swiper",
-      "vee-validate/dist/rules",
-    ],
+    transpile: ["gsap", "portal-vue", "vue-device-queries"],
   },
   googleFonts: {
     families: {
