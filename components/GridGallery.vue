@@ -1,13 +1,13 @@
 <template functional>
   <div
-    class="grid-container mt-12 md:max-w-2xl md:mx-auto lg:max-w-4xl xl:max-w-5xl"
+    class="mt-12 grid-container md:max-w-2xl md:mx-auto lg:max-w-4xl xl:max-w-5xl"
   >
     <div class="flex items-center justify-center item-text">
       <h1
         class="text-4xl font-semibold text-center uppercase text-app-accent lg:text-6xl"
         style="text-orientation: mixed; writing-mode: vertical-rl"
       >
-        Wood - Elvas
+        Wood - Elf
       </h1>
     </div>
     <div class="item-slika-1">

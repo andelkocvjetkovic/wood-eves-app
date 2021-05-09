@@ -1,12 +1,15 @@
 <template>
-  <header class="sticky top-0 z-50 opacity-95 bg-app-white" role="banner">
+  <header
+    class="sticky top-0 z-50 opacity-95 bg-app-white bg-opacity-95"
+    role="banner"
+  >
     <nav
       class="flex py-6 mx-auto xl:py-8 md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"
     >
       <div
-        class="absolute z-50 flex items-center space-x-8 transform -translate-y-1/2 top-1/2"
+        class="absolute z-50 flex items-center space-x-4 transform -translate-y-1/2 top-1/2"
       >
-        <NuxtLink class="w-12 h-12 xl:w-14 xl:h-14" to="/"
+        <NuxtLink class="w-14 h-14 xl:w-16 xl:h-16" to="/"
           ><LogoIcon class="w-full h-full" @click.native="onLogoClick" />
         </NuxtLink>
         <AppCart v-if="cartLength > 0" />

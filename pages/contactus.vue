@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-6 pb-12 bg-app-dark-gray">
+  <section class="py-12 bg-app-dark-gray">
     <section class="max-w-xs mx-auto xs:max-w-sm text-app-white md:max-w-2xl">
       <header>
         <h1 class="font-serif text-3xl text-center lg:text-4xl">

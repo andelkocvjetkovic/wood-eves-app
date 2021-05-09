@@ -42,6 +42,26 @@
           <h3 class="flex justify-between">Shipping: <span>Free</span></h3>
         </header>
       </article>
+      <article class="px-4 py-1 mt-24 border border-app-dark-gray">
+        <h2 class="text-xl text-center">Stripe Test Cards</h2>
+        <ul class="space-y-4">
+          <li class="flex items-center justify-between">
+            <span>4242 4242 4242 4242 </span
+            ><span class="p-1 text-white" style="background-color: green"
+              >Valid Card</span
+            >
+          </li>
+          <li class="flex items-center justify-between">
+            4000 00000 0009 979
+            <span class="p-1 text-white bg-app-red">Decline Card</span>
+          </li>
+        </ul>
+        <ul class="mt-8 text-sm list-decimal list-inside">
+          <li>CVC any numbers</li>
+          <li>PostalCode any number</li>
+          <li>Date expiration in the feature</li>
+        </ul>
+      </article>
     </section>
     <AppButton
       class="absolute left-0 w-24 py-1 top-5 bg-app-accent text-app-white"
