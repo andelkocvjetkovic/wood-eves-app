@@ -10,7 +10,7 @@ exports.handler = async ({ body, headers }) => {
       process.env.STRIPE_WEBHOOK_SECRET
     );
     if (stripeEvent.type == "charge.succeeded") {
-      console.log(body);
+      console.log("stripeEvent", stripeEvent);
       // const msg = {
       //   to: process.env.FULFILLMENT_EMAIL_ADDRESS,
       //   from: process.env.FROM_EMAIL_ADDRESS,
