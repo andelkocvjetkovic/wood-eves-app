@@ -10,13 +10,14 @@ exports.handler = async ({ body, headers }) => {
       process.env.STRIPE_WEBHOOK_SECRET
     );
     if (stripeEvent.type == "charge.succeeded") {
-      console.log("stripeEvent", stripeEvent.data.object.receipt_email);
+      const data = stripeEvent.data.object;
       const msg = {
-        to: stripeEvent.data.object.receipt_email,
+        to: data.receipt_email,
         from: process.env.FROM_EMAIL_ADDRESS,
-        subject: `New purchase from ${stripeEvent.data.object.description}`,
+        subject: `New purchase from WoodElves SHOP`,
         text: "A order from Wood-Elves Shop",
-        html: "<strong>Thank you for order</strong>",
+        html: `<strong>Thank you for order</strong>
+              <a href=${data.receipt_url}>Receipt</a>`,
       };
 
       await sgMail.send(msg);
