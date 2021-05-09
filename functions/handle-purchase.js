@@ -1,7 +1,7 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 var sgMail = require("@sendgrid/mail");
-
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 exports.handler = async ({ body, headers }) => {
   try {
     var stripeEvent = stripe.webhooks.constructEvent(
@@ -15,17 +15,14 @@ exports.handler = async ({ body, headers }) => {
         to: stripeEvent.data.object.receipt_email,
         from: process.env.FROM_EMAIL_ADDRESS,
         subject: `New purchase from ${stripeEvent.data.object.description}`,
-        text: JSON.stringify(
-          stripeEvent.data.object.receipt_email.receipt_url,
-          null,
-          2
-        ),
+        text: "A order from Wood-Elves Shop",
+        html: "<strong>Thank you for order</strong>",
       };
 
       await sgMail.send(msg);
+      console.log("Email sent");
       return {
-        status: 200,
-        body: JSON.stringify({ recived: true }),
+        statusCode: 200,
       };
     }
   } catch (err) {
