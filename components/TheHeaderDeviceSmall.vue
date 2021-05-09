@@ -85,10 +85,10 @@ export default {
       if (
         window.scrollY > 500 &&
         !this.isNavOpen &&
-        this.$route.fullPath === "/"
+        this.$route.fullPath == "/"
       ) {
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-      } else if (this.isNavOpen && this.$route.fullPath === "/") {
+      } else if (this.isNavOpen && this.$route.fullPath == "/") {
         this.toggleNavBar();
       }
     },

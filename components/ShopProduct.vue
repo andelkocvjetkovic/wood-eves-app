@@ -106,10 +106,10 @@ export default {
       selectedProduct.quantity = this.quantity;
       selectedProduct.name = this.value.name;
       selectedProduct.price =
-        this.value.startPrice +
-        this.selectedWood.addPrice +
-        this.selectedDimension.addPrice;
-
+        Number(this.value.startPrice) +
+        Number(this.selectedWood.addPrice) +
+        Number(this.selectedDimension.addPrice);
+      selectedProduct.slug = this.value.slug;
       this.addToCart(selectedProduct);
       this.quantity = 1;
     },

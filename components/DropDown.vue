@@ -2,15 +2,16 @@
   <li class="relative">
     <button
       type="button"
-      aria-haspopup="true"
-      aria-controls="dropdown1"
-      class="flex items-center justify-between w-full focus:outline-none md:space-x-1"
+      :aria-expanded="[isOpenDropDown ? true : false]"
+      class="flex items-center justify-between w-full focus:outline-none md:space-x-1 group"
       @click="toggleDrop"
     >
       <slot name="dropDownHeader"
         ><span class="font-semibold uppercase">Shop</span></slot
       ><span ref="arrowSvg">
-        <ArrowDown class="w-8 h-8 md:w-6 md:h-6" />
+        <ArrowDown
+          class="w-8 h-8 md:w-6 md:h-6 lg:group-hover:text-app-accent"
+        />
       </span>
     </button>
     <transition :css="false" @enter="enterDropDown" @leave="leaveDropDown">
@@ -24,6 +25,11 @@ import ArrowDown from "~/assets/svg/arrowDown.svg";
 export default {
   components: {
     ArrowDown,
+  },
+  data() {
+    return {
+      isOpenDropDown: false,
+    };
   },
   methods: {
     toggleDrop() {
@@ -41,7 +47,10 @@ export default {
         {
           opacity: 0,
           duration: 0.2,
-          onComplete: done,
+          onComplete: () => {
+            done();
+            this.isOpenDropDown = true;
+          },
         },
         "<"
       );
@@ -58,7 +67,10 @@ export default {
         {
           opacity: 0,
           duration: 0.15,
-          onComplete: done,
+          onComplete: () => {
+            done();
+            this.isOpenDropDown = false;
+          },
         },
         "<"
       );

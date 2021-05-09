@@ -1,14 +1,20 @@
 <template>
-  <section class="sm:flex sm:flex-wrap">
+  <section
+    class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4 sm:gap-y-8"
+  >
     <div
       v-for="(item, i) in $options.ideasList"
       :key="i"
-      class="mt-6 sm:flex-basis-50 sm:px-2 md:px-3"
+      class="flex flex-col min-h-full rounded shadow-sm"
     >
       <header>
-        <h1 class="py-2 text-lg font-semibold text-center">{{ item.title }}</h1>
+        <h1 class="py-2 text-lg font-semibold text-center md:text-xl">
+          {{ item.title }}
+        </h1>
       </header>
-      <div class="grid grid-cols-2 grid-rows-2 py-3 mt-2 gap-x-2 bg-app-white">
+      <div
+        class="grid flex-grow grid-cols-2 grid-rows-2 p-1 mt-2 gap-x-1 sm:p-2 bg-app-white"
+      >
         <div class="col-span-1 col-start-1 row-span-2 row-start-1 md:px-1">
           <NuxtImg
             :src="item.coverImg"
@@ -47,9 +53,9 @@ export default {
       coverImg: "/ideas/ideas-cutting-1.jpg",
       items: [
         {
-          name: "Mabung",
-          img: "/articles/mabung/mabung_3.jpg",
-          slug: "/shop/cutting-boards/mabung",
+          name: "Shyina",
+          img: "/articles/shyina/shalna_1_bg_white.jpg",
+          slug: "/shop/cutting-boards/shyina",
         },
       ],
     },
@@ -80,13 +86,8 @@ export default {
       coverImg: "/ideas/ideas-2.jpg",
       items: [
         {
-          name: "Shyina",
-          img: "/articles/shyina/shalna_1.jpg",
-          slug: "/shop/cutting-boards/shyina",
-        },
-        {
           name: "Melronna",
-          img: "/articles/melronna/melronna_1.jpg",
+          img: "/articles/melronna/melronna_white_bg.jpg",
           slug: "/shop/cutting-boards/melronna",
         },
       ],

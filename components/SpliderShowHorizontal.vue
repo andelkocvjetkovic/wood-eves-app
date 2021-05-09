@@ -1,24 +1,28 @@
 <template>
-  <aside>
-    <VueSlickCarousel v-bind="$options.slickOptions">
-      <figure v-for="item in $options.arrayItems" :key="item.img" class="p-2">
-        <div
-          role="presentation"
-          class="relative overflow-hidden bg-white pb-full"
-        >
-          <NuxtImg
-            :src="item.img"
-            :alt="item.alt"
-            class="absolute inset-0 object-cover object-center w-full h-full"
-            sizes="xs:100vw sm:70vw"
-            quality="80"
-            loading="lazy"
-          />
-        </div>
-        <figcaption class="sr-only">{{ item.alt }}</figcaption>
-      </figure>
-    </VueSlickCarousel>
-  </aside>
+  <section>
+    <h3 class="p-2 font-serif italic font-semibold">Gallery</h3>
+
+    <aside>
+      <VueSlickCarousel v-bind="$options.slickOptions">
+        <figure v-for="item in $options.arrayItems" :key="item.img" class="p-2">
+          <div
+            role="presentation"
+            class="relative overflow-hidden bg-white pb-full"
+          >
+            <NuxtImg
+              :src="item.img"
+              :alt="item.alt"
+              class="absolute inset-0 object-cover object-center w-full h-full"
+              sizes="xs:100vw sm:70vw"
+              quality="80"
+              loading="lazy"
+            />
+          </div>
+          <figcaption class="sr-only">{{ item.alt }}</figcaption>
+        </figure>
+      </VueSlickCarousel>
+    </aside>
+  </section>
 </template>
 
 <script>
@@ -53,16 +57,12 @@ export default {
       img: "/articles/lakar/alkar_bijela_pozadina.jpg",
     },
     {
-      alt: "Mabung Cutting Board",
-      img: "/articles/mabung/mabung_bg_white.jpg",
-    },
-    {
       alt: "Pegas Chair Wallnus",
       img: "/articles/pegas/pegas_walnus_1.jpg",
     },
     {
       alt: "Rock Chair Black Walnuss",
-      img: "/articles/rock/rock_maple_2.jpg",
+      img: "/articles/rock/rock_black_2.jpg",
     },
     {
       alt: "Rock Chair Walnuss",
@@ -97,7 +97,7 @@ export default {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1.2,
+          slidesToShow: 1.1,
           slidesToScroll: 1,
         },
       },

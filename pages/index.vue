@@ -34,11 +34,12 @@
           Handmade furniture for extraordinary houses. <br />
           Let us inspire you
         </h2>
-        <article v-if="isMobile" class="relative mt-16 overflow-hidden">
-          <h3 class="p-2 font-serif italic font-semibold">Gallery</h3>
-          <SpliderShowHorizontal />
+        <article class="relative mt-16 overflow-hidden">
+          <ClientOnly>
+            <LazySpliderShowHorizontal v-if="isMobile" />
+            <LazyGridGallery v-else />
+          </ClientOnly>
         </article>
-        <GridGallery v-else />
       </section>
       <section
         class="max-w-xs mx-auto mt-24 xs:max-w-sm xs:mt-32 sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"
@@ -58,16 +59,6 @@
 
 <script>
 export default {
-  head() {
-    return {
-      script: [
-        {
-          src: "https://identity.netlify.com/v1/netlify-identity-widget.js",
-          async: true,
-        },
-      ],
-    };
-  },
   computed: {
     isMobile() {
       return !this.$device?.tablet;

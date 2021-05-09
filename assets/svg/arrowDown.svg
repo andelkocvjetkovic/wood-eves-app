@@ -5,6 +5,7 @@
   stroke="currentColor"
   class="text-app-dark-gray"
   aria-labelledby="arrowDown"
+  role="img"
 >
   <title id="arrowDown">DropDown Menu</title>
   <path

@@ -3,7 +3,10 @@
   fill="none"
   viewBox="0 0 24 24"
   stroke="currentColor"
+  aria-labelledby="plus"
+  role="img"
 >
+  <title id="plus">Add one</title>
   <path
     stroke-linecap="round"
     stroke-linejoin="round"

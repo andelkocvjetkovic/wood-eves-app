@@ -15,7 +15,7 @@ typeOfWoods:
       woodType: oak,
       addPrice: 0,
       images:
-        [alkar_bijela_pozadina.jpg, alkar_2.jpg, alkar_3.jpg, alkar_4.jpg],
+        [alkar_bijela_pozadina.jpg, alkar_1.jpg, alkar_2.jpg, alkar_3.jpg],
     },
   ]
 dimensions:

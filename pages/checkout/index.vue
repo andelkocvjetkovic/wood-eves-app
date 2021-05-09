@@ -1,5 +1,5 @@
 <template>
-  <main class="max-w-xs py-12 mx-auto sm:max-w-md xs:max-w-sm">
+  <main class="max-w-xs py-12 mx-auto sm:max-w-md xs:max-w-sm md:max-w-xl">
     <form
       class=""
       novalidate="true"
@@ -169,9 +169,6 @@ export default {
   computed: {
     ...mapState(["order"]),
   },
-  mounted() {
-    this.geoFind();
-  },
   methods: {
     ...mapMutations(["setOrder"]),
     handleChange(e) {
@@ -194,17 +191,6 @@ export default {
       this.formData.uuid = uuid;
       this.setOrder(this.formData);
       this.$router.push({ path: `/checkout/${uuid}` });
-    },
-    geoFind() {
-      fetch("https://extreme-ip-lookup.com/json/")
-        .then((res) => {
-          if (res.ok) return res.json();
-          else throw new Error(res.statusText);
-        })
-        .then((response) => {
-          this.formData.country = response.country;
-        })
-        .catch(console.warn);
     },
     checkInput(input) {
       return input.trim().length == 0;

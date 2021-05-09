@@ -18,9 +18,8 @@ typeOfWoods:
         [
           judy_walnus_1.jpg,
           judy_walnus_2.jpg,
+          judy_walnus_3.jpg,
           judy_walnus_4.jpg,
-          judy_walnus_5.jpg,
-          judy_walnus_6.jpg,
         ],
     },
   ]

@@ -1,7 +1,7 @@
 <template>
   <table class="divide-y table-auto divide-app-dark-gray">
     <thead>
-      <tr>
+      <tr class="lg:text-lg">
         <th class="px-6 py-4">Item</th>
         <th class="px-6 py-4">Qty</th>
         <th class="px-6 py-4">Price</th>
@@ -9,29 +9,16 @@
     </thead>
     <tbody class="divide-y divide-app-light-gray">
       <tr v-for="item in cart" :key="item.uuid" class="text-center">
-        <td class="relative px-6 py-4 text-sm capitalize">
+        <td
+          class="relative px-6 py-4 text-sm capitalize sm:flex sm:justify-between sm:items-center"
+        >
           <button
-            class="absolute left-0 transform -translate-y-1/2 top-1/2"
+            class="absolute left-0 transform -translate-y-1/2 top-1/2 sm:static sm:translate-y-0"
             @click="() => remove(item)"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              aria-labelledby="remove"
-            >
-              <title id="remove">Remove from cart</title>
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
+            <xIcon class="w-4 h-4 lg:w-5 lg:h-5" />
           </button>
-          <span class="flex flex-col text-base">
+          <span class="flex flex-col text-base lg:text-lg">
             {{ item.name }}
             <span class="text-xs">Wood: {{ item.wood.woodType }}</span>
             <span class="text-xs"
@@ -40,15 +27,23 @@
               }}x{{ item.dimension.data.height }}</span
             >
           </span>
+          <NuxtImg
+            class="hidden sm:inline-block sm:w-16 sm:h-16"
+            :src="`articles/${item.slug}/${item.wood.images[0]}`"
+            width="70"
+            height="70"
+          />
         </td>
         <td class="px-6 py-4">{{ item.quantity }}</td>
-        <td class="px-6 py-4">{{ item.price }}</td>
+        <td class="px-6 py-4">{{ item.price }} $</td>
       </tr>
     </tbody>
     <tfoot>
-      <tr>
+      <tr class="lg:text-lg lg:font-semibold">
         <td class="px-6 py-4 text-right">Total:</td>
-        <td class="px-6 py-4 text-right" colspan="2">{{ cartPrice }} $</td>
+        <td class="px-6 py-4 text-right lg:text-center" colspan="2">
+          {{ cartPrice }} $
+        </td>
       </tr>
     </tfoot>
   </table>
@@ -56,7 +51,11 @@
 
 <script>
 import { mapState, mapGetters, mapMutations } from "vuex";
+import xIcon from "~/assets/svg/xIcon.svg";
 export default {
+  components: {
+    xIcon,
+  },
   computed: {
     ...mapState(["cart"]),
     ...mapGetters(["cartPrice"]),

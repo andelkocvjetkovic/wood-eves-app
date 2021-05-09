@@ -1,5 +1,5 @@
 <template>
-  <main class="pt-12 pb-24 bg-app-white text-app-dark-gray">
+  <main class="pb-12 bg-app-white text-app-dark-gray">
     <section
       class="max-w-xs px-3 pt-6 mx-auto prose-sm prose md:prose xs:px-0 xs:max-w-sm sm:max-w-lg md:max-w-2xl"
     >

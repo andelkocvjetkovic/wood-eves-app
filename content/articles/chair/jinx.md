@@ -3,7 +3,7 @@ name: jinx
 uuid: 50baf4c2-2613-48bf-a738-d0758f0ae28c
 type: chair
 description: Minimum menandri argumentum an pro. Natum disputando qui at, id sed debet possit conclusionemque. Usu dolorum delectus patrioque in, dolore voluptatum pro at. Mel atqui harum tantas cu, pro at aliquip constituam, est id nisl latine contentiones.
-heroImage: jinx_oak_1.jpg
+heroImage: jinx_oak_5.jpg
 startPrice: 690
 deliveryTime: 4
 deliveryPeriods: w
@@ -14,7 +14,7 @@ typeOfWoods:
       woodType: oak,
       addPrice: 0,
       discount: 5,
-      images: [jinx_oak_1.jpg, jinx_oak_2.jpg, jinx_oak_3.jpg, jinx_oak_4.jpg],
+      images: [jinx_oak_5.jpg, jinx_oak_1.jpg, jinx_oak_3.jpg, jinx_oak_4.jpg],
     },
   ]
 dimensions:

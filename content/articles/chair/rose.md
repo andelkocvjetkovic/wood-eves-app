@@ -3,7 +3,7 @@ name: rose
 uuid: 360cd1de-3116-4eff-8321-1fb644829f74
 type: chair
 description: Mea eius appetere cu. Ad dicat dolore quodsi sit, an zril iudicabit quo. Ad lorem aeque vis. Tollit probatus dissentiet has ne, cum in viderer suavitate, mea ea ceteros eligendi consequat. Et mentitum vivendum comprehensam eam, in sea choro fastidii.
-heroImage: rose_walnus_padded_3.jpg
+heroImage: rose_walnus_padded_1.jpg
 startPrice: 440
 deliveryTime: 4
 deliveryPeriods: w

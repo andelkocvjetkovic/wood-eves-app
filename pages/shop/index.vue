@@ -1,9 +1,6 @@
 <template>
   <article>
-    <header class="mt-6">
-      <h1 class="font-serif text-3xl font-semibold text-center">Neu</h1>
-    </header>
-    <ShopProductsList :item-list="items" />
+    <ShopProductsList :item-list="items" :header="'New'" />
   </article>
 </template>
 

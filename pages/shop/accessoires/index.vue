@@ -1,9 +1,6 @@
 <template>
   <article>
-    <header class="mt-6">
-      <h1 class="font-serif text-3xl font-semibold text-center">Accessoires</h1>
-    </header>
-    <ShopProductsList :item-list="accessoires" />
+    <ShopProductsList :item-list="accessoires" :header="'Accessoires'" />
   </article>
 </template>
 

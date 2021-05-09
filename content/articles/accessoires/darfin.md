@@ -17,10 +17,11 @@ typeOfWoods:
       images:
         [
           darfin_bg_white.jpg,
-          darfin_1.jpg,
           darfin_2.jpg,
           darfin_3.jpg,
           darfin_4.jpg,
+          darfin_5.jpg,
+          darfin_1.jpg,
         ],
     },
   ]

@@ -3,11 +3,14 @@
     <nav
       class="flex py-6 mx-auto xl:py-8 md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"
     >
-      <NuxtLink
-        class="absolute z-50 w-12 h-12 transform -translate-y-1/2 xl:w-14 xl:h-14 top-1/2"
-        to="/"
-        ><LogoIcon class="w-full h-full" />
-      </NuxtLink>
+      <div
+        class="absolute z-50 flex items-center space-x-8 transform -translate-y-1/2 top-1/2"
+      >
+        <NuxtLink class="w-12 h-12 xl:w-14 xl:h-14" to="/"
+          ><LogoIcon class="w-full h-full" @click.native="onLogoClick" />
+        </NuxtLink>
+        <AppCart v-if="cartLength > 0" />
+      </div>
       <ul
         class="flex items-center ml-auto space-x-8 text-base font-semibold uppercase"
       >
@@ -17,18 +20,19 @@
           @toggleDrop="toggleDropDown"
           ><DropDownLinks
             v-if="isDropDownOpen"
-            class="absolute right-0 flex flex-col mt-2 space-y-3 text-sm px-3/6 py-1/6 bg-app-white"
+            class="absolute left-0 right-0 flex flex-col mt-6 space-y-4 text-sm w-52 px-2/6 py-1/6 bg-app-white"
           />
         </DropDown>
-        <li><NuxtLink to="/ideas">Ideas</NuxtLink></li>
-        <li><NuxtLink to="/aboutus">About us</NuxtLink></li>
-        <li><NuxtLink to="/contactus">Contat us</NuxtLink></li>
+        <li><AppNuxtLink to="/ideas">Ideas</AppNuxtLink></li>
+        <li><AppNuxtLink to="/aboutus">About us</AppNuxtLink></li>
+        <li><AppNuxtLink to="/contactus">Contat us</AppNuxtLink></li>
       </ul>
     </nav>
   </header>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import LogoIcon from "~/assets/svg/logoIcon.svg";
 export default {
   components: {
@@ -38,6 +42,9 @@ export default {
     return {
       isDropDownOpen: false,
     };
+  },
+  computed: {
+    ...mapGetters(["cartLength"]),
   },
   watch: {
     $route() {
@@ -52,7 +59,13 @@ export default {
   beforeDestroy() {
     window.removeEventListener("click", this.closeDropDownMenu);
   },
+
   methods: {
+    onLogoClick() {
+      if (window.scrollY > 500 && this.$route.fullPath == "/") {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      }
+    },
     toggleDropDown() {
       this.isDropDownOpen = !this.isDropDownOpen;
     },
@@ -69,5 +82,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

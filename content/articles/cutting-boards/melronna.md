@@ -14,14 +14,7 @@ typeOfWoods:
       woodType: oak,
       addPrice: 0,
       images:
-        [
-          melronna_white_bg.jpg,
-          melronna_1.jpg,
-          melronna_2.jpg,
-          melronna_3.jpg,
-          melronna_5.jpg,
-          melronna_6.jpg,
-        ],
+        [melronna_white_bg.jpg, melronna_1.jpg, melronna_2.jpg, melronna_3.jpg],
     },
   ]
 dimensions:

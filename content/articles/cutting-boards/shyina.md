@@ -13,7 +13,13 @@ typeOfWoods:
     {
       woodType: oak,
       addPrice: 0,
-      images: [shalna_2.jpg, shalna_1.jpg, shalna_3.jpg, shalna_4.jpg],
+      images:
+        [
+          shalna_1_bg_white.jpg,
+          shalna_2_bg_white.jpg,
+          shalna_1.jpg,
+          shalna_2.jpg,
+        ],
     },
   ]
 dimensions:

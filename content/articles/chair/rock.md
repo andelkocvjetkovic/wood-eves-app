@@ -13,13 +13,24 @@ typeOfWoods:
   [
     {
       woodType: walnus,
-      addPrice: 0,
+      addPrice: 70,
       images:
         [
           rock_walnus_1.jpg,
           rock_walnus_2.jpg,
           rock_walnus_3.jpg,
           rock_walnus_4.jpg,
+        ],
+    },
+    {
+      woodType: oak,
+      addPrice: 0,
+      images:
+        [
+          rock_black_1.jpg,
+          rock_black_2.jpg,
+          rock_black_3.jpg,
+          rock_black_4.jpg,
         ],
     },
   ]
@@ -34,10 +45,10 @@ colors:
       color: black,
       images:
         [
-          rock_maple_1.jpg,
-          rock_maple_2.jpg,
-          rock_maple_3.jpg,
-          rock_maple_4.jpg,
+          rock_black_1.jpg,
+          rock_black_2.jpg,
+          rock_black_3.jpg,
+          rock_black_4.jpg,
         ],
     },
   ]

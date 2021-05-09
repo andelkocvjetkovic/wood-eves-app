@@ -6,7 +6,7 @@ export default {
   head: {
     title: "wood-elves-app",
     htmlAttrs: {
-      lang: "de-DE",
+      lang: "en",
     },
     meta: [
       { charset: "utf-8" },
@@ -113,6 +113,26 @@ export default {
   postcss: {
     plugins: {
       "postcss-focus-visible": {},
+    },
+  },
+  svgLoader: {
+    svgoConfig: {
+      plugins: [
+        {
+          removeUnknownsAndDefaults: {
+            unknownContent: false,
+            unknownAttrs: false,
+            defaultAttrs: false,
+            uselessOverrides: true,
+            keepDataAttrs: true,
+            keepAriaAttrs: true,
+            keepRoleAttr: true,
+          },
+        },
+        { removeTitle: false },
+        { cleanupIDs: false },
+        { prefixIds: false },
+      ],
     },
   },
 };

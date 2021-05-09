@@ -1,9 +1,18 @@
 <template>
-  <ul id="dropdown1">
-    <li><NuxtLink to="/shop">New</NuxtLink></li>
-    <li><NuxtLink to="/shop/cutting-boards">Cutting boards</NuxtLink></li>
-    <li><NuxtLink to="/shop/chair">Chair</NuxtLink></li>
-    <li><NuxtLink to="/shop/accessoires">Accessoires</NuxtLink></li>
+  <ul role="menu">
+    <li class="">
+      <AppNuxtLink role="menuitem" to="/shop">New</AppNuxtLink>
+    </li>
+    <li>
+      <AppNuxtLink role="menuitem" to="/shop/cutting-boards"
+        >Cutting boards</AppNuxtLink
+      >
+    </li>
+    <li><AppNuxtLink role="menuitem" to="/shop/chair">Chair</AppNuxtLink></li>
+    <li>
+      <AppNuxtLink role="menuitem" to="/shop/accessoires"
+        >Accessoires</AppNuxtLink
+      >
+    </li>
   </ul>
 </template>
-¸
