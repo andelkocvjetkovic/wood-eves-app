@@ -1,6 +1,6 @@
-var stripe = require("stripe");
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-var sgMail = require("@sendgrid/mail");
+//var sgMail = require("@sendgrid/mail");
 
 exports.handler = async ({ body, headers }) => {
   try {
