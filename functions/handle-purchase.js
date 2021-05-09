@@ -9,21 +9,16 @@ exports.handler = async ({ body, headers }) => {
       headers["stripe-signature"],
       process.env.STRIPE_WEBHOOK_SECRET
     );
-    if (stripeEvent.type === "checkout.session.completed") {
-      const eventObject = stripeEvent.data.object;
-      const items = eventObject.display_items;
-      const shippingDetails = eventObject.shipping;
+    if (stripeEvent.type == "charge.succeeded") {
+      console.log(body);
+      // const msg = {
+      //   to: process.env.FULFILLMENT_EMAIL_ADDRESS,
+      //   from: process.env.FROM_EMAIL_ADDRESS,
+      //   subject: `New purchase from ${shippingDetails.name}`,
+      //   text: JSON.stringify(purchase, null, 2),
+      // };
 
-      const purchase = { items, shippingDetails };
-      console.log(purchase);
-      const msg = {
-        to: process.env.FULFILLMENT_EMAIL_ADDRESS,
-        from: process.env.FROM_EMAIL_ADDRESS,
-        subject: `New purchase from ${shippingDetails.name}`,
-        text: JSON.stringify(purchase, null, 2),
-      };
-
-      await sgMail.send(msg);
+      // await sgMail.send(msg);
       return {
         status: 200,
         body: JSON.stringify({ recived: true }),
