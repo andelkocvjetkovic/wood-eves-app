@@ -1,6 +1,6 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-//var sgMail = require("@sendgrid/mail");
+var sgMail = require("@sendgrid/mail");
 
 exports.handler = async ({ body, headers }) => {
   try {
@@ -10,15 +10,19 @@ exports.handler = async ({ body, headers }) => {
       process.env.STRIPE_WEBHOOK_SECRET
     );
     if (stripeEvent.type == "charge.succeeded") {
-      console.log("stripeEvent", stripeEvent);
-      // const msg = {
-      //   to: process.env.FULFILLMENT_EMAIL_ADDRESS,
-      //   from: process.env.FROM_EMAIL_ADDRESS,
-      //   subject: `New purchase from ${shippingDetails.name}`,
-      //   text: JSON.stringify(purchase, null, 2),
-      // };
+      console.log("stripeEvent", stripeEvent.data.object.receipt_email);
+      const msg = {
+        to: stripeEvent.data.object.receipt_email,
+        from: process.env.FROM_EMAIL_ADDRESS,
+        subject: `New purchase from ${stripeEvent.data.object.description}`,
+        text: JSON.stringify(
+          stripeEvent.data.object.receipt_email.receipt_url,
+          null,
+          2
+        ),
+      };
 
-      // await sgMail.send(msg);
+      await sgMail.send(msg);
       return {
         status: 200,
         body: JSON.stringify({ recived: true }),
