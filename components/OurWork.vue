@@ -1,6 +1,7 @@
-<template fuctional>
+<template functional>
   <section
     class="px-2 py-12 mt-24 xs:px-0 bg-app-light-gray text-app-dark-gray sm:mt-32 md:mt-36 lg:py-20"
+    :class="[data.class, data.staticClass]"
   >
     <div
       class="relative max-w-xs mx-auto prose-sm prose xs:max-w-sm sm:max-w-lg sm:prose-lg lg:max-w-4xl lg:grid lg:grid-cols-2 lg:gap-x-8 xl:max-w-5xl xl:gap-x-14"
