@@ -64,6 +64,7 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       "app-red": colors.red[600],
+      "app-green": colors.green[600],
     },
   },
   variants: {

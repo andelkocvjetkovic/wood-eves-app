@@ -42,24 +42,26 @@
           <h3 class="flex justify-between">Shipping: <span>Free</span></h3>
         </header>
       </article>
-      <article class="px-4 py-1 mt-24 border border-app-dark-gray">
-        <h2 class="text-xl text-center">Stripe Test Cards</h2>
-        <ul class="space-y-4">
-          <li class="flex items-center justify-between">
-            <span>4242 4242 4242 4242 </span
-            ><span class="p-1 text-white" style="background-color: green"
-              >Valid Card</span
+      <article
+        class="px-4 py-2 mt-12 border border-app-dark-gray md:max-w-sm md:mx-auto"
+      >
+        <h2 class="text-xl text-center md:text-2xl">Stripe Test Cards</h2>
+        <ul class="space-y-4 md:mt-2">
+          <CardCopy :card-number="validCard">
+            <span class="w-full p-1 text-white bg-app-green md:px-4"
+              >Valid</span
             >
-          </li>
-          <li class="flex items-center justify-between">
-            4000 00000 0009 979
-            <span class="p-1 text-white bg-app-red">Decline Card</span>
-          </li>
+          </CardCopy>
+          <CardCopy :card-number="errorCard">
+            <span class="w-full p-1 text-white bg-app-red md:px-4"
+              >Decline</span
+            >
+          </CardCopy>
         </ul>
-        <ul class="mt-8 text-sm list-decimal list-inside">
+        <ul class="mt-8 text-sm list-decimal list-inside md:text-base">
+          <li>MM/YY Date expiration in the feature</li>
           <li>CVC any numbers</li>
-          <li>PostalCode any number</li>
-          <li>Date expiration in the feature</li>
+          <li>ZIP code any numbers</li>
         </ul>
       </article>
     </section>
@@ -136,6 +138,8 @@ export default {
   },
   data() {
     return {
+      errorCard: "4000 0000 0000 0069",
+      validCard: "4242 4242 4242 4242",
       isStripeLoaded: false,
       stripeKey: this.$config.stripePublic,
       cardOptions: {
@@ -204,6 +208,21 @@ export default {
     },
   },
   methods: {
+    async handleCopy(cardType) {
+      if (!navigator.clipboard) {
+        return;
+      }
+      switch (cardType) {
+        case "valid":
+          await navigator.clipboard.writeText("validCard");
+          break;
+        case "decline":
+          await navigator.clipboard.writeText("declineCard");
+          break;
+        default:
+          console.warn("Wrong type of card");
+      }
+    },
     ...mapActions(["resetOrder"]),
     ...mapMutations(["updateCartUI"]),
     tryAgain() {
