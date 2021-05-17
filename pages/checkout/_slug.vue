@@ -48,17 +48,13 @@
         <h2 class="text-xl text-center md:text-2xl">Stripe Test Cards</h2>
         <ul class="space-y-4 md:mt-2">
           <CardCopy :card-number="validCard">
-            <span class="w-full p-1 text-white bg-app-green md:px-4"
-              >Valid</span
-            >
+            <span class="w-full p-1 text-white bg-app-green md:px-4">Good</span>
           </CardCopy>
           <CardCopy :card-number="errorCard">
-            <span class="w-full p-1 text-white bg-app-red md:px-4"
-              >Decline</span
-            >
+            <span class="w-full p-1 text-white bg-app-red md:px-4">Bad</span>
           </CardCopy>
         </ul>
-        <ul class="mt-8 text-sm list-decimal list-inside md:text-base">
+        <ul class="mt-8 text-sm list-decimal list-inside md:text-sm">
           <li>MM/YY Date expiration in the feature</li>
           <li>CVC any numbers</li>
           <li>ZIP code any numbers</li>
@@ -190,7 +186,7 @@ export default {
       return this.$route.params;
     },
     isModalOpen() {
-      // this return true on every cart status unless it is  "idle"
+      // this return true on every cart status unless it is "idle"
       // idle !== idle return false
       // success !== idle return true
       return this.$store.state.cartUIStatus !== "idle";
@@ -208,21 +204,6 @@ export default {
     },
   },
   methods: {
-    async handleCopy(cardType) {
-      if (!navigator.clipboard) {
-        return;
-      }
-      switch (cardType) {
-        case "valid":
-          await navigator.clipboard.writeText("validCard");
-          break;
-        case "decline":
-          await navigator.clipboard.writeText("declineCard");
-          break;
-        default:
-          console.warn("Wrong type of card");
-      }
-    },
     ...mapActions(["resetOrder"]),
     ...mapMutations(["updateCartUI"]),
     tryAgain() {
@@ -234,7 +215,6 @@ export default {
       var cardElement = cardComponent.stripeElement;
       groupComponent.instance.createToken(cardElement).then((data) => {
         if (data.error) {
-          console.log(data.error);
           this.error = data.error;
           return;
         }

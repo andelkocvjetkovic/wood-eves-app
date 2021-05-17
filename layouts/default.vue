@@ -17,9 +17,6 @@ export default {
     isMobile() {
       return !this.$device?.tablet;
     },
-    currentRoute() {
-      return this.$route;
-    },
   },
 };
 </script>

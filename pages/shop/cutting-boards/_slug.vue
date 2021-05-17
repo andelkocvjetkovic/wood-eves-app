@@ -1,5 +1,5 @@
 <template>
-  <ShopProductMob :item="item" />
+  <ShopProduct :item="item" />
 </template>
 
 <script>

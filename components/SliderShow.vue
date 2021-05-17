@@ -1,10 +1,6 @@
 <template>
   <section>
-    <VueSlickCarousel
-      v-bind="$options.slickOptions"
-      ref="carousel"
-      :key="images[0]"
-    >
+    <VueSlickCarousel v-bind="$options.slickOptions" :key="images[0]">
       <figure v-for="(img, i) in images" :key="i">
         <div
           role="presentation"
@@ -19,7 +15,6 @@
             fit="cover"
           />
         </div>
-        <figcaption class="sr-only">{{ img }}</figcaption>
       </figure>
     </VueSlickCarousel>
   </section>

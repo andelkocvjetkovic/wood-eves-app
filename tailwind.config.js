@@ -82,8 +82,8 @@ module.exports = {
     require("@tailwindcss/typography"),
     plugin(function ({ addUtilities }) {
       const newUtilities = {
-        ".flex-basis-full": {
-          "flex-basis": "100%",
+        ".flex-basis-10": {
+          "flex-basis": "10%",
         },
         ".flex-basis-25": {
           "flex-basis": "25%",
@@ -96,6 +96,12 @@ module.exports = {
         },
         ".flex-basis-75": {
           "flex-basis": "75%",
+        },
+        ".flex-basis-90": {
+          "flex-basis": "90%",
+        },
+        ".flex-basis-full": {
+          "flex-basis": "100%",
         },
       };
       addUtilities(newUtilities, ["responsive"]);

@@ -1,5 +1,5 @@
 <template>
-  <ShopProduct :value="item">
+  <ShopProductRenderless :value="item">
     <template
       v-slot:default="{
         productName,
@@ -45,10 +45,12 @@
               {{ deliveryTime }}</span
             >
           </p>
-          <form class="" @submit.prevent="eventsHandlers.formHandle.submit">
+          <form @submit.prevent="eventsHandlers.formHandle.submit">
             <fieldset class="mt-4">
               <legend class="text-sm">Material:</legend>
+              <label for="material">Select material: </label>
               <select
+                id="material"
                 class="block w-3/4 p-3 mt-2 border focus-visible:border-app-accent"
                 v-on="eventsHandlers.typeWood"
               >
@@ -72,7 +74,9 @@
                 Dimensions:
                 <span class="text-xs"> L cm x W cm x H cm </span>
               </legend>
+              <label for="dimension">Select dimension: </label>
               <select
+                id="dimension"
                 class="block w-3/4 p-3 mt-2 border focus-visible:border-app-accent"
                 v-on="eventsHandlers.dimension"
               >
@@ -132,7 +136,7 @@
 
         <!-- Product description -->
         <article>
-          <p class="text-sm leading-6">{{ productDescription }}</p>
+          <h3 class="text-sm leading-6">{{ productDescription }}</h3>
           <button
             class="mt-6 text-xl underline focus:outline-none active:text-app-dark-gray focus-visible:ring-1 ring-offset-black"
             @click="readMore = !readMore"
@@ -148,7 +152,7 @@
         <ShippingReturns class="mt-3" />
       </article>
     </template>
-  </ShopProduct>
+  </ShopProductRenderless>
 </template>
 
 <script>

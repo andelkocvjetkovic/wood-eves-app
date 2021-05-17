@@ -18,13 +18,13 @@
       <button
         v-tooltip="{
           content: `Copied!`,
-          show: isCopied,
+          show: isStatusActive,
           trigger: 'manual',
           placement: 'top',
           container: false,
         }"
-        class="relative border border-opacity-0 rounded focus:outline-none border-app-dark-gray hover:border-opacity-100"
-        :class="[isCopied ? 'text-app-green' : '']"
+        class="relative transition-colors duration-150 ease-out border-2 border-opacity-0 rounded focus:outline-none border-app-dark-gray hover:border-opacity-100"
+        :class="[isStatusActive ? 'text-app-green' : '']"
         @click="handleCopy"
       >
         <component :is="getComponent" />
@@ -54,34 +54,32 @@ export default {
   },
   data() {
     return {
-      isCopied: false,
+      isStatusActive: false,
     };
   },
   computed: {
     getComponent() {
-      return this.isCopied
+      return this.isStatusActive
         ? this.$options.components.CheckIcon
         : this.$options.components.ClipboardIcon;
     },
   },
-  created() {
-    console.log(VTooltip);
-  },
   methods: {
     async handleCopy() {
-      if (this.isCopied === true) {
+      if (this.isStatusActive === true) {
         return;
       }
       // TODO support older browsers
       if (navigator.clipboard) {
-        this.isCopied = true;
+        this.isStatusActive = true;
         try {
           await navigator.clipboard.writeText(this.cardNumber);
         } catch (e) {
+          // eslint-disable-next-line no-console
           console.log(e);
         } finally {
           setTimeout(() => {
-            this.isCopied = false;
+            this.isStatusActive = false;
           }, 2000);
         }
       }
@@ -131,6 +129,9 @@ export default {
   transition: opacity 0.15s;
 }
 /*
+
+
+
 .tooltip[x-placement^="bottom"] {
   margin-top: 5px;
 }
