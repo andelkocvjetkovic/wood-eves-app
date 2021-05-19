@@ -15,7 +15,7 @@ export default {
     try {
       commit("updateCartUI", "loading");
       var response = await fetch(
-        "https://heuristic-stonebraker-e3023a.netlify.app/.netlify/functions/index",
+        "https://wood-elf.netlify.app/.netlify/functions/index",
         {
           method: "POST",
           headers: {
