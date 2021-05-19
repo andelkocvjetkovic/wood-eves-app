@@ -1,19 +1,16 @@
 <template functional>
-  <section
-    class="px-2 py-12 mt-24 xs:px-0 bg-app-light-gray text-app-dark-gray sm:mt-32 md:mt-36 lg:py-20"
-    :class="[data.class, data.staticClass]"
-  >
+  <section :class="[data.class, data.staticClass]" class="py-px">
     <div
-      class="relative max-w-xs mx-auto prose-sm prose xs:max-w-sm sm:max-w-lg sm:prose-lg lg:max-w-4xl lg:grid lg:grid-cols-2 lg:gap-x-8 xl:max-w-5xl xl:gap-x-14"
+      class="relative mx-auto mt-12 prose-sm prose lg:prose-lg md:grid md:grid-cols-2 md:gap-x-6 lg:gap-x-8 xl:gap-x-14 xs:mx-auto xs:max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"
     >
       <header class="font-serif lg:col-start-1 lg:col-span-1">
         <h1>Lorem ipsum dolor sit amet.</h1>
-        <h4 class="">
+        <h3>
           Some two months before the murder of Sir Danvers, I had been out for
           one of my adventures, had returned at a late hour, and woke the next
           day in bed with somewhat odd sensations
-        </h4>
-        <p class="hidden lg:block">
+        </h3>
+        <p class="hidden md:block">
           The pleasures which I made haste to seek in my disguise were, as I
           have said, undignified; I would scarce use a harder term. But in the
           hands of Edward Hyde, they soon began to turn toward the monstrous.
@@ -31,23 +28,24 @@
           to undo the evil done by Hyde. And thus his conscience slumbered.
         </p>
       </header>
-      <figure class="lg:col-start-2 lg:col-span-1">
+      <figure
+        class="px-2 overflow-hidden lg:col-start-2 lg:col-span-1 unsetMargin"
+      >
         <div
           role="presentation"
-          class="relative h-full overflow-hidden rounded pb-3/4 sm:pb-4/6 lg:pb-0 lg:absolute lg:w-1/2 lg:right-0 lg:top-0 lg:rounded-none"
+          class="relative h-full overflow-hidden rounded-sm pb-3/4 sm:pb-4/6 md:pb-0 md:w-full md:right-0 md:top-0 md:rounded-none"
         >
           <NuxtImg
-            id="workImg"
             src="wood-work-2.jpg"
-            class="absolute inset-0 object-cover object-center w-full h-full lg:my-0"
+            class="absolute inset-0 object-cover object-center w-full h-full unsetMargin"
             alt="wood work"
-            sizes="xs:90vw sm:60vw lg:50vw xl:80vw"
+            sizes="xs:90vw sm:60vw md:100vw"
             fit="cover"
             loading="lazy"
           />
         </div>
-        <figcaption class="lg:hidden">
-          <p class="text-base">
+        <figcaption class="md:hidden">
+          <p class="text-base text-app-dark-gray">
             The pleasures which I made haste to seek in my disguise were, as I
             have said, undignified; I would scarce use a harder term. But in the
             hands of Edward Hyde, they soon began to turn toward the monstrous.
@@ -60,10 +58,7 @@
             of stone. Henry Jekyll stood at times aghast before the acts of
             Edward Hyde; but the situation was apart from ordinary laws, and
             insidiously relaxed the grasp of conscience. It was Hyde, after all,
-            and Hyde alone, that was guilty. Jekyll was no worse; he woke again
-            to his good qualities seemingly unimpaired; he would even make
-            haste, where it was possible, to undo the evil done by Hyde. And
-            thus his conscience slumbered.
+            and Hyde alone, that was guilty.
           </p>
         </figcaption>
       </figure>
@@ -72,7 +67,7 @@
 </template>
 
 <style lang="postcss" scoped>
-#workImg {
-  @apply lg:my-0  !important;
+::v-deep .unsetMargin {
+  @apply md:mt-0 !important;
 }
 </style>

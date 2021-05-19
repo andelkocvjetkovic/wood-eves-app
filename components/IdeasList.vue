@@ -5,7 +5,7 @@
     <div
       v-for="(item, i) in $options.ideasList"
       :key="i"
-      class="flex flex-col min-h-full rounded shadow-sm"
+      class="flex flex-col min-h-full"
     >
       <header>
         <h1 class="py-2 text-lg font-semibold text-center md:text-xl">
@@ -13,12 +13,12 @@
         </h1>
       </header>
       <div
-        class="grid flex-grow grid-cols-2 grid-rows-2 p-1 mt-2 gap-x-1 sm:p-2 bg-app-white"
+        class="grid flex-grow grid-cols-2 grid-rows-2 p-1 mt-2 gap-x-1 sm:p-2"
       >
         <div class="col-span-1 col-start-1 row-span-2 row-start-1 md:px-1">
           <NuxtImg
             :src="item.coverImg"
-            class="object-cover object-center w-full h-full rounded"
+            class="object-cover object-center w-full h-full"
             sizes="xs:50vw sm:40vw lg:30vw"
           />
         </div>
@@ -31,11 +31,11 @@
           >
             <NuxtImg
               :src="it.img"
-              class="object-cover object-center w-full h-full mt-px rounded shadow"
+              class="object-cover object-center w-full h-full mt-px"
               sizes="xs:40vw sm:40vw lg:30vw"
               :alt="it.name"
             />
-            <p class="mt-2 font-serif text-xs text-center">
+            <p class="mt-2 font-serif text-xs text-center lg:text-base">
               {{ it.name }}
             </p>
           </NuxtLink>

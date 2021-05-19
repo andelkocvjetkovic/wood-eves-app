@@ -10,7 +10,7 @@ export default {
   render: (h, { data, props, listeners }) => {
     return h("input", {
       class:
-        "w-full p-1 border-b focus:outline-none border-app-dark-gray focus:border-app-accent",
+        "w-full p-1 text-sm transition-colors duration-150 ease-out bg-transparent border-b-2 focus:outline-none border-app-dark-gray focus:border-app-accent md:text-base",
       domProps: {
         value: props.value,
       },
@@ -19,7 +19,7 @@ export default {
       },
       on: {
         input: (e) => {
-          var onItemChange = listeners["item-change"];
+          var onItemChange = listeners.input;
           if (onItemChange) onItemChange(e.target.value);
         },
       },
@@ -28,14 +28,15 @@ export default {
 };
 </script>
 
-<!-- <template functional>
+<!--<template functional>
   <input
     v-bind="data.attrs"
     :class="[
       data.class,
       data.staticClass,
-      'p-1 border-b focus:outline-none border-app-dark-gray focus:border-app-accent',
+      'w-full p-1 transition-colors duration-150 ease-out bg-transparent border-b-2 focus:outline-none border-app-dark-gray focus:border-app-accent',
     ]"
-    @input="(e) => listeners['item-change'](e.target.value)"
+    @input="(e) => listeners['input'](e.target.value)"
   />
-</template> -->
+</template>
+-->

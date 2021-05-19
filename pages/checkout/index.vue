@@ -1,140 +1,139 @@
 <template>
-  <main class="max-w-xs py-12 mx-auto sm:max-w-md xs:max-w-sm md:max-w-xl">
-    <form
-      class=""
-      novalidate="true"
-      @submit.prevent="handleForm"
-      @change="handleChange"
+  <main class="py-6">
+    <section
+      class="px-4 xs:mx-auto xs:max-w-sm xs:px-0 sm:max-w-lg md:max-w-2xl"
     >
-      <div
-        v-if="errors.length"
-        class="p-6 bg-opacity-50 bg-app-red text-app-white ring-2 ring-app-red"
+      <h1 class="text-2xl font-semibold text-center md:text-3xl">
+        Lorem ipsum dolor sit amet.
+      </h1>
+      <p class="mt-4 leading-snug text-center md:text-xl">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, aliquid.
+      </p>
+      <form
+        class="mt-6"
+        novalidate="true"
+        @submit.prevent="handleForm"
+        @change="handleChange"
       >
-        <b>Please corrcet the following error(s) :</b>
-        <ul class="text-sm list-decimal list-inside">
-          <li v-for="(err, i) in errors" :key="i" class="font-semibold">
-            {{ err }}
-          </li>
-        </ul>
-      </div>
-      <fieldset :class="[errors.length ? 'mt-6' : '']">
-        <legend class="text-lg italic font-semibold">1. Your Email</legend>
-        <AppWrapper>
-          <label for="email" class="text-xs">Email:</label>
-
-          <AppInput
-            id="email"
-            type="email"
-            name="email"
-            autocomplete="email"
-            :value="formData.email"
-            @item-change="(value) => (formData.email = value)"
-          />
-          <span class="text-xs text-app-blue-gray"
-            >You'll recive recepits and notifications at this email
-            address</span
-          >
-        </AppWrapper>
-      </fieldset>
-      <fieldset class="mt-6">
-        <legend class="text-lg italic font-semibold">2. Shipping:</legend>
-        <AppWrapper>
-          <label for="name" class="">First name:</label>
-          <AppInput
-            id="name"
-            type="text"
-            autocomplete="given-name"
-            :value="formData.firstName"
-            @item-change="(value) => (formData.firstName = value)"
-          />
-        </AppWrapper>
-        <AppWrapper>
-          <label for="lastname">Last name:</label>
-          <AppInput
-            id="lastname"
-            type="text"
-            autocomplete="family-name"
-            :value="formData.lastName"
-            @item-change="(value) => (formData.lastName = value)"
-          />
-        </AppWrapper>
-        <AppWrapper>
-          <label for="address1">Address:</label>
-          <AppInput
-            id="address1"
-            :value="formData.address1"
-            type="text"
-            autocomplete="address-line1"
-            @item-change="(value) => (formData.address1 = value)"
-          />
-        </AppWrapper>
-        <p class="max-w-full mt-6">
-          <label for="country">Country:</label>
-          <select
-            id="country"
-            v-model="formData.country"
-            name="country"
-            class="w-full p-2 mt-1 border border-app-blue-gray"
-          >
-            <option
-              v-for="country in $options.countryList"
-              :key="country"
-              :value="country"
+        <div
+          v-if="errors.length"
+          class="p-6 bg-opacity-50 bg-app-red text-app-white ring-2 ring-app-red"
+        >
+          <b>Please corrcet the following error(s) :</b>
+          <ul class="text-sm list-decimal list-inside">
+            <li v-for="(err, i) in errors" :key="i" class="font-semibold">
+              {{ err }}
+            </li>
+          </ul>
+        </div>
+        <fieldset :class="[errors.length ? 'mt-6' : '']">
+          <legend class="text-lg italic font-semibold">1. Your Email</legend>
+          <AppInputWrapper lab-for="email">
+            <AppInput
+              id="email"
+              v-model="formData.email"
+              type="email"
+              name="email"
+              autocomplete="email"
+            />
+            <span class="text-xs text-app-blue-gray"
+              >You'll recive recepits and notifications at this email
+              address</span
             >
-              {{ country }}
-            </option>
-          </select>
+          </AppInputWrapper>
+        </fieldset>
+        <fieldset class="mt-6">
+          <legend class="text-lg italic font-semibold">2. Shipping:</legend>
+          <AppInputWrapper lab-for="first-name">
+            <AppInput
+              id="first-name"
+              v-model="formData.firstName"
+              type="text"
+              name="first-name"
+              autocomplete="given-name"
+            />
+          </AppInputWrapper>
+          <AppInputWrapper lab-for="last-name">
+            <AppInput
+              id="last-name"
+              v-model="formData.lastName"
+              type="text"
+              name="last-name"
+              autocomplete="family-name"
+            />
+          </AppInputWrapper>
+          <AppInputWrapper lab-for="address">
+            <AppInput
+              id="address"
+              v-model="formData.address1"
+              type="text"
+              name="address1"
+              autocomplete="address-line1"
+            />
+          </AppInputWrapper>
+          <p class="max-w-full mt-6">
+            <label for="country">Country:</label>
+            <select
+              id="country"
+              v-model="formData.country"
+              name="country"
+              class="w-full p-2 mt-1 border border-app-blue-gray"
+            >
+              <option
+                v-for="country in $options.countryList"
+                :key="country"
+                :value="country"
+              >
+                {{ country }}
+              </option>
+            </select>
+          </p>
+          <AppInputWrapper lab-for="zip-code">
+            <AppInput
+              id="zip-code"
+              v-model="formData.zipCode"
+              type="text"
+              name="zip-code"
+              autocomplete="postal-code"
+            />
+          </AppInputWrapper>
+          <AppInputWrapper lab-for="city">
+            <AppInput
+              id="city"
+              v-model="formData.city"
+              type="text"
+              name="city"
+            />
+          </AppInputWrapper>
+          <AppInputWrapper lab-for="phone-number">
+            <AppInput
+              id="phone-number"
+              v-model="formData.phoneNumber"
+              type="text"
+              autocomplete="tel"
+            />
+          </AppInputWrapper>
+        </fieldset>
+        <p class="flex justify-between mt-6">
+          <label for="subs">Subscribe to our mailing list</label>
+          <input
+            id="subs"
+            v-model="formData.isSubs"
+            type="checkbox"
+            name="toppings"
+          />
         </p>
-        <AppWrapper>
-          <label for="zipCode">ZIP Code: </label>
-          <AppInput
-            id="zipCode"
-            :value="formData.zipCode"
-            type="text"
-            autocomplete="postal-code"
-            @item-change="(value) => (formData.zipCode = value)"
-          />
-        </AppWrapper>
-        <AppWrapper>
-          <label for="city">City: </label>
-          <AppInput
-            id="city"
-            :value="formData.city"
-            type="text"
-            @item-change="(value) => (formData.city = value)"
-          />
-        </AppWrapper>
-        <AppWrapper>
-          <label for="phoneNumber">Phone Number: </label>
-          <AppInput
-            id="phoneNumber"
-            :value="formData.phoneNumber"
-            type="text"
-            autocomplete="tel"
-            @item-change="(value) => (formData.phoneNumber = value)"
-          />
-        </AppWrapper>
-      </fieldset>
-      <p class="flex justify-between mt-6">
-        <label for="subs">Subscribe to our mailing list</label>
-        <input
-          id="subs"
-          :value="formData.isSubs"
-          type="checkbox"
-          name="toppings"
-          @item-change="(value) => (formData.isSubs = value)"
-        />
-      </p>
-      <AppButton
-        type="submit"
-        class="w-full mt-6 disabled:opacity-30"
-        :disabled="errors.length ? true : false"
-        >Continue</AppButton
-      >
-      <p v-if="errors.length" class="mt-3 text-app-red">
-        Please first correct error(s)
-      </p>
-    </form>
+        <AppButton
+          type="submit"
+          class="block w-full mt-6 disabled:opacity-30 md:w-1/2 md:mx-auto"
+          :disabled="errors.length ? true : false"
+          >Continue</AppButton
+        >
+        <p v-if="errors.length" class="mt-3 text-app-red">
+          Please first correct error(s)
+        </p>
+      </form>
+    </section>
   </main>
 </template>
 
@@ -146,7 +145,7 @@ export default {
     if (store.getters.cartLength === 0) {
       return error({
         statusCode: 403,
-        message: "You  have to first make a to make access on this page",
+        message: "You have to first make a order to get access on this page",
       });
     }
   },
@@ -178,14 +177,17 @@ export default {
     },
     handleForm() {
       this.checkForm();
-      if (this.errors.length > 0) return;
+      if (this.errors.length > 0) {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        return;
+      }
 
       // Create UUID for each sucess handled submit form
-      // redirect to /checkout/_uuid
       // put data into store
       var uuid = uuidv4();
       if (this.order) {
         // if there is already order reset it an put new formData into it
+        // call without params reset state.order
         this.setOrder();
       }
       this.formData.uuid = uuid;

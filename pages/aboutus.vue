@@ -1,9 +1,9 @@
-<template>
-  <main class="pb-12 bg-app-white text-app-dark-gray">
-    <section
-      class="max-w-xs px-3 pt-6 mx-auto prose-sm prose md:prose xs:px-0 xs:max-w-sm sm:max-w-lg md:max-w-2xl"
+<template functional>
+  <main class="py-6" :class="[data.class, data.staticClass]">
+    <article
+      class="px-4 prose-sm prose xs:mx-auto xs:max-w-sm xs:px-0 sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"
     >
-      <article>
+      <article class="">
         <header class="text-center">
           <h1 class="font-serif">Lorem ipsum dolor sit amet?</h1>
           <h3>
@@ -16,10 +16,10 @@
         </header>
         <figure>
           <NuxtImg
-            class="object-cover object-center w-full rounded-sm shadow-md h-screen/75 sm:object-top"
+            class="object-cover object-top w-full rounded-sm shadow-md h-screen/75vh"
             src="jony-deep.jpg"
             alt="Bony Been"
-            sizes="xs:90vw sm:90vw md:90vw lg:60vw xl:50vw"
+            sizes="xs:90vw sm:90vw md:90vw lg:90vw xl:90vw"
           />
           <p class="sr-only">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
@@ -29,8 +29,8 @@
         </figure>
       </article>
       <hr />
-      <article class="">
-        <div>
+      <article class="md:grid md:grid-cols-3 md:gap-x-8">
+        <section>
           <h2 class="font-serif text-2xl">Our mission</h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
@@ -38,8 +38,8 @@
             magnam quibusdam accusantium similique debitis harum. Libero
             voluptatem hic voluptate dolores modi inventore?
           </p>
-        </div>
-        <div>
+        </section>
+        <section>
           <h2 class="font-serif text-2xl">Our product</h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
@@ -47,8 +47,8 @@
             magnam quibusdam accusantium similique debitis harum. Libero
             voluptatem hic voluptate dolores modi inventore?
           </p>
-        </div>
-        <div>
+        </section>
+        <section>
           <h2 class="font-serif text-2xl">How to buy our products</h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
@@ -56,14 +56,8 @@
             magnam quibusdam accusantium similique debitis harum. Libero
             voluptatem hic voluptate dolores modi inventore?
           </p>
-        </div>
+        </section>
       </article>
-    </section>
+    </article>
   </main>
 </template>
-
-<script>
-export default {};
-</script>
-
-<style></style>

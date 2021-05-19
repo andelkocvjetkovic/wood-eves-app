@@ -7,7 +7,7 @@
     </div>
     <!-- Information about company -->
     <section
-      class="max-w-xs mx-auto mt-16 xs:max-w-sm sm:max-w-lg md:grid md:gap-x-8 lg:gap-x-12 md:grid-cols-2 md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"
+      class="px-4 mt-16 xs:mx-auto xs:max-w-sm sm:max-w-lg md:grid md:gap-x-8 lg:gap-x-12 md:grid-cols-2 md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"
     >
       <article class="md:space-y-4">
         <h3 class="text-2xl font-semibold xl:text-3xl">You'll find us here:</h3>

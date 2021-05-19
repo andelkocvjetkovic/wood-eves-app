@@ -76,10 +76,12 @@ module.exports = {
       textColor: ["active", "focus-visible"],
       backgroundColor: ["focus-visible", "active"],
       opacity: ["disabled"],
+      backgroundOpacity: ["active"],
     },
   },
   plugins: [
     require("@tailwindcss/typography"),
+    require("tailwindcss-textshadow"),
     plugin(function ({ addUtilities }) {
       const newUtilities = {
         ".flex-basis-10": {

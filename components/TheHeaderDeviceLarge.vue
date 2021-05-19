@@ -1,6 +1,6 @@
 <template>
   <header
-    class="sticky top-0 z-50 opacity-95 bg-app-white bg-opacity-95"
+    class="sticky top-0 z-50 shadow-sm opacity-95 bg-app-white bg-opacity-95"
     role="banner"
   >
     <nav

@@ -2,7 +2,7 @@
   <figure class="relative overflow-hidden rounded-sm">
     <div
       role="presentation"
-      class="absolute inset-0 w-full h-full rounded-md shadow bg-app-dark-gray"
+      class="absolute inset-0 w-full h-full rounded-md shadow bg-app-blue-gray"
       style="clip-path: polygon(0 20%, 100% 58%, 100% 100%, 0% 100%)"
     ></div>
     <NuxtLink :to="`${getPath}${item.slug}`" class="relative block p-1">

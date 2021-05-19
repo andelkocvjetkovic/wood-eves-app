@@ -1,23 +1,18 @@
 <template>
-  <section>
-    <VueSlickCarousel v-bind="$options.slickOptions" :key="images[0]">
-      <figure v-for="(img, i) in images" :key="i">
-        <div
-          role="presentation"
-          class="relative w-full overflow-hidden pb-full"
-        >
-          <NuxtImg
-            class="absolute inset-0 object-cover object-center w-full h-full"
-            :alt="img"
-            sizes="xs:100vw sm:70vw md:60vw"
-            :src="img"
-            quality="80"
-            fit="cover"
-          />
-        </div>
-      </figure>
-    </VueSlickCarousel>
-  </section>
+  <VueSlickCarousel v-bind="$options.slickOptions" :key="images[0]">
+    <figure v-for="(img, i) in images" :key="i">
+      <div role="presentation" class="relative w-full overflow-hidden pb-full">
+        <NuxtImg
+          class="absolute inset-0 object-cover object-center w-full h-full"
+          :alt="img"
+          sizes="xs:100vw sm:70vw md:60vw lg:70vw"
+          :src="img"
+          quality="80"
+          fit="cover"
+        />
+      </div>
+    </figure>
+  </VueSlickCarousel>
 </template>
 
 <script>
@@ -32,13 +27,33 @@ export default {
     accessibility: true,
     dots: true,
     infinite: true,
-    arrows: false,
     dotsClass: "slick-dots",
     speed: 300,
     draggable: false,
     touchThreshold: 10,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    touchMove: false,
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: {
+          arrows: true,
+          fade: false,
+          touchMove: true,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          fade: false,
+          arrows: false,
+          touchMove: true,
+        },
+      },
+    ],
   },
 };
 </script>
@@ -87,5 +102,64 @@ style
 .slick-dots li button:hover,
 .slick-dots li button:focus {
   @apply focus-visible:ring-1 focus-visible:ring-app-accent;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  @apply absolute top-1/2 block w-6 h-6 p-0 transform  -translate-y-1/2;
+  @apply cursor-pointer text-transparent border-none outline-none bg-transparent;
+  font-size: 0;
+  line-height: 0;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  @apply text-transparent outline-none bg-transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  @apply opacity-100;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  @apply opacity-25;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  @apply text-app-dark-gray opacity-60 leading-none text-2xl;
+}
+
+.slick-prev {
+  left: -25px;
+}
+[dir="rtl"] .slick-prev {
+  right: -25px;
+  left: auto;
+}
+.slick-prev:before {
+  content: "←";
+}
+[dir="rtl"] .slick-prev:before {
+  content: "→";
+}
+
+.slick-next {
+  right: -25px;
+}
+[dir="rtl"] .slick-next {
+  right: auto;
+  left: -25px;
+}
+.slick-next:before {
+  content: "→";
+}
+[dir="rtl"] .slick-next:before {
+  content: "←";
 }
 </style>

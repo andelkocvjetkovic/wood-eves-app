@@ -4,7 +4,7 @@
       <LazyTheHeaderDeviceSmall v-if="isMobile" />
       <LazyTheHeaderDeviceLarge v-else />
     </ClientOnly>
-    <Nuxt />
+    <Nuxt class="bg-app-white text-app-dark-gray" />
     <TheFooter />
     <ClientOnly>
       <PortalTarget name="modalWindow" />

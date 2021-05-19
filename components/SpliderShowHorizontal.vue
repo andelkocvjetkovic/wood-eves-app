@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h3 class="p-2 font-serif italic font-semibold">Gallery</h3>
+    <h3 class="px-4 py-2 font-serif italic font-semibold">Gallery</h3>
 
     <aside>
       <VueSlickCarousel v-bind="$options.slickOptions">

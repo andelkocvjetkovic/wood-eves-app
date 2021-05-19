@@ -1,7 +1,7 @@
 <template>
   <header
     role="banner"
-    class="sticky top-0 z-50 flex items-center justify-center w-full px-4 py-6 bg-app-white bg-opacity-95"
+    class="sticky top-0 z-50 flex items-center justify-center w-full px-4 py-6 shadow-sm bg-app-white bg-opacity-95"
   >
     <transition :css="false" mode="out-in" @enter="handleApperCart">
       <AppCart v-if="cartLength > 0" />
