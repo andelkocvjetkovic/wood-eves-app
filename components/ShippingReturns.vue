@@ -1,6 +1,9 @@
 <template>
   <article>
-    <NuxtContent class="prose-sm prose" :document="shippingReturn" />
+    <NuxtContent
+      class="prose-sm prose xl:prose-lg"
+      :document="shippingReturn"
+    />
   </article>
 </template>
 

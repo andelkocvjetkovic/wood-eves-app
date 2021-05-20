@@ -26,26 +26,22 @@
       </p>
     </article>
     <article>
-      <section class="mt-16 sm:mt-24">
+      <section
+        class="mt-16 sm:mt-24 md:mx-auto md:max-w-2xl xl:max-w-5xl lg:max-w-4xl"
+      >
         <!-- The Gallery -->
         <h2
-          class="px-4 font-serif text-3xl font-semibold tracking-tight text-center capitalize xs:px-0 text-shadow xs:mx-auto xs:max-w-sm sm:max-w-md sm:text-4xl sm:leading-none lg:max-w-4xl text-app-accent"
+          class="px-4 font-serif text-3xl font-semibold tracking-tight text-center capitalize xs:px-0 text-shadow xs:mx-auto xs:max-w-sm sm:max-w-md sm:text-4xl lg:w-full lg:max-w-none sm:leading-none text-app-accent"
         >
           Handmade furniture for extraordinary houses. <br />
           Let us inspire you!
         </h2>
-        <article class="mt-6 overflow-hidden">
-          <ClientOnly>
-            <LazySpliderShowHorizontal v-if="isMobile" />
-            <LazyGridGallery
-              v-else
-              class="md:max-w-2xl md:mx-auto lg:max-w-4xl xl:max-w-5xl"
-            />
-          </ClientOnly>
+        <article class="mt-6">
+          <SpliderShowHorizontal />
         </article>
       </section>
       <section
-        class="px-4 mx-auto mt-24 xs:px-0 xs:mx-auto xs:max-w-sm xs:mt-28 sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"
+        class="px-4 mx-auto mt-12 xs:px-0 xs:mx-auto xs:max-w-sm xs:mt-16 sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"
       >
         <!-- The links to shops -->
         <h2

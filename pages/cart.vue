@@ -3,7 +3,7 @@
     <article
       class="px-4 xs:max-w-sm xs:mx-auto sm:max-w-lg md:max-w-2xl lg:max-w-4xl"
     >
-      <h1 class="mt-6 font-serif text-2xl text-center uppercase">
+      <h1 class="mt-6 font-serif text-2xl text-center uppercase lg:text-3xl">
         Shopping cart
       </h1>
       <article v-if="cart.length > 0" class="">

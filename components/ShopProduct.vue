@@ -117,10 +117,11 @@
               >
                 <AppButtonQty
                   class="flex-shrink-0 flex-basis-25"
-                  @click.native="decrease"
+                  @click="decrease"
                 >
                   <MinusIcon class="w-6 h-6" />
                 </AppButtonQty>
+
                 <p class="flex-shrink-0 flex-basis-50">
                   <label for="amount" class="sr-only">Quantity</label>
                   <input
@@ -132,9 +133,10 @@
                     class="w-full text-center appearance-none select-none focus:outline-none bg-app-light-gray lg:text-lg"
                   />
                 </p>
+
                 <AppButtonQty
                   class="flex-shrink-0 flex-basis-25"
-                  @click.native="increase"
+                  @click="increase"
                 >
                   <PlusIcon class="w-6 h-6" />
                 </AppButtonQty>
@@ -146,7 +148,7 @@
         <!-- Product description -->
         <article>
           <NuxtContent
-            class="mt-4 prose-sm prose"
+            class="mt-4 prose-sm prose xl:prose-lg"
             :document="productMarkdown"
           />
         </article>

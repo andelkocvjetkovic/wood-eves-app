@@ -35,7 +35,7 @@ dimensions:
   ]
 ---
 
-## Tenya
+## Darfin
 
 Ferunt mota modo [luce vellem](http://www.colebat.com/pharetras-nulla.html),
 mortale, perspexerat navigat fuit, odium. Pronaque gratia, suspicit dextraque

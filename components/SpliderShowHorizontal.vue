@@ -1,10 +1,9 @@
 <template>
   <section>
     <h3 class="px-4 py-2 font-serif italic font-semibold">Gallery</h3>
-
     <aside>
-      <VueSlickCarousel v-bind="$options.slickOptions">
-        <figure v-for="item in $options.arrayItems" :key="item.img" class="p-2">
+      <VueSlickCarousel v-bind="settings" @init="initHandler">
+        <div v-for="item in $options.arrayItems" :key="item.img" class="p-1">
           <div
             role="presentation"
             class="relative overflow-hidden bg-white pb-full"
@@ -13,13 +12,12 @@
               :src="item.img"
               :alt="item.alt"
               class="absolute inset-0 object-cover object-center w-full h-full"
-              sizes="xs:100vw sm:70vw"
+              sizes="xs:100vw sm:100vw md:33vw lg:33vw xl:33vw"
               quality="80"
               loading="lazy"
             />
           </div>
-          <figcaption class="sr-only">{{ item.alt }}</figcaption>
-        </figure>
+        </div>
       </VueSlickCarousel>
     </aside>
   </section>
@@ -84,39 +82,78 @@ export default {
       alt: "Tenya Wall Light",
       img: "/articles/tenya/taenya_bg_white.jpg",
     },
+    {
+      alt: "XX Chair Oak",
+      img: "/articles/xx/xx_1.jpg",
+    },
   ],
-  slickOptions: {
-    arrows: false,
-    dots: false,
-    accessibility: true,
-    edgeFriction: 0.5,
-    slidesToScroll: 1,
-    infinite: false,
-    touchThreshold: 10,
-    responsive: [
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1.1,
-          slidesToScroll: 1,
-        },
+
+  data() {
+    return {
+      settings: {
+        arrows: true,
+        accessibility: true,
+        slidesToScroll: 1,
+        touchThreshold: 10,
+        draggable: false,
+        slidesToShow: 1,
+        infinite: false,
+        responsive: [],
+
+        speed: 600,
       },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 2.2,
-          slidesToScroll: 1,
+      responsiveSettings: [
+        {
+          breakpoint: 1201,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2,
+          },
         },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2.2,
-          slidesToScroll: 1,
-          focusOnSelect: true,
+        {
+          breakpoint: 993,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2,
+          },
         },
-      },
-    ],
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2,
+          },
+        },
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 1.2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 475,
+          settings: {
+            slidesToShow: 1.1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+      responsiveAplied: false,
+    };
+  },
+  methods: {
+    initHandler() {
+      if (this.responsiveAplied == false) {
+        this.applyResponsiveSettings();
+      }
+    },
+    applyResponsiveSettings() {
+      this.settings.responsive = this.responsiveSettings;
+      this.settings.slidesToShow = 3;
+      this.settings.slidesToScroll = 2;
+      this.responsiveAplied = true;
+    },
   },
 };
 </script>

@@ -12,7 +12,7 @@
         <NuxtLink class="w-14 h-14 xl:w-16 xl:h-16" to="/"
           ><LogoIcon class="w-full h-full" @click.native="onLogoClick" />
         </NuxtLink>
-        <AppCart v-if="cartLength > 0" />
+        <CartStatus v-if="cartLength > 0" />
       </div>
       <ul
         class="flex items-center ml-auto space-x-8 text-base font-semibold uppercase"

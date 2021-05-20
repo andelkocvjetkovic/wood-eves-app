@@ -4,7 +4,7 @@
     class="sticky top-0 z-50 flex items-center justify-center w-full px-4 py-6 shadow-sm bg-app-white bg-opacity-95"
   >
     <transition :css="false" mode="out-in" @enter="handleApperCart">
-      <AppCart v-if="cartLength > 0" />
+      <CartStatus v-if="cartLength > 0" />
     </transition>
     <NuxtLink
       class="absolute flex items-center overflow-hidden transform translate-x-1/2 -translate-y-1/2 w-14 h-14 right-1/2 top-1/2 justify-items-center"

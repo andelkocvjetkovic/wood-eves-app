@@ -23,7 +23,10 @@ export default {
   },
   privateRuntimeConfig: {},
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["vue-slick-carousel/dist/vue-slick-carousel.css"],
+  css: [
+    "vue-slick-carousel/dist/vue-slick-carousel.css",
+    "~/assets/css/vue-slick.css",
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [

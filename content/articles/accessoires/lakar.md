@@ -22,7 +22,7 @@ dimensions:
   [{ data: { length: 5, width: 40, height: 45 }, addPrice: 0, images: [] }]
 ---
 
-## Tenya
+## Lakar
 
 Ferunt mota modo [luce vellem](http://www.colebat.com/pharetras-nulla.html),
 mortale, perspexerat navigat fuit, odium. Pronaque gratia, suspicit dextraque

@@ -28,7 +28,7 @@ dimensions:
   [{ data: { length: 5, width: 45, height: 50 }, addPrice: 0, images: [] }]
 ---
 
-## Tenya
+## Bein
 
 Ferunt mota modo [luce vellem](http://www.colebat.com/pharetras-nulla.html),
 mortale, perspexerat navigat fuit, odium. Pronaque gratia, suspicit dextraque

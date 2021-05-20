@@ -129,7 +129,7 @@
           :disabled="errors.length ? true : false"
           >Continue</AppButton
         >
-        <p v-if="errors.length" class="mt-3 text-app-red">
+        <p v-if="errors.length" class="mt-3 text-center text-app-red">
           Please first correct error(s)
         </p>
       </form>
