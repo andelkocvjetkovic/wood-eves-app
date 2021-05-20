@@ -31,7 +31,7 @@
           <AppButton
             type="button"
             class="w-full mt-3 disabled:opacity-40"
-            @click.native="pay"
+            @click="pay"
             >Pay with credit card</AppButton
           >
         </div>
