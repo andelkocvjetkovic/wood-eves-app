@@ -98,7 +98,7 @@ export default {
       var tl = this.$gsap.timeline({ defaults: { ease: "circ.out" } });
       tl.from(parentEl, {
         xPercent: 100,
-        opacity: 0,
+        opacity: 0.5,
         duration: 0.2,
       }).from(
         children,
@@ -111,7 +111,7 @@ export default {
             from: "start",
             ease: "power2.in",
           },
-          onComplete: done(),
+          onComplete: done,
         },
         "<0.1"
       );
