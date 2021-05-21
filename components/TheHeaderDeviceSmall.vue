@@ -95,7 +95,10 @@ export default {
     onEnterModalNav(el, done) {
       var parentEl = el;
       var children = el.children[0].children;
-      var tl = this.$gsap.timeline({ defaults: { ease: "circ.out" } });
+      var tl = this.$gsap.timeline({
+        defaults: { ease: "circ.out" },
+        onComplete: done,
+      });
       tl.from(parentEl, {
         xPercent: 100,
         opacity: 0.5,
@@ -111,7 +114,6 @@ export default {
             from: "start",
             ease: "power2.in",
           },
-          onComplete: done,
         },
         "<0.1"
       );
@@ -119,11 +121,13 @@ export default {
     leaveModalNav(el, done) {
       var parentEl = el;
       var children = el.children[0].children;
-      var tl = this.$gsap.timeline({ defaults: { ease: "circ.in" } });
+      var tl = this.$gsap.timeline({
+        defaults: { ease: "circ.in" },
+        onComplete: done,
+      });
       tl.to(children, {
         opacity: 0,
         duration: 0.25,
-        onComplete: done,
       }).to(
         parentEl,
         {
