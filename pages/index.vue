@@ -36,8 +36,11 @@
           Handmade furniture for extraordinary houses. <br />
           Let us inspire you!
         </h2>
+
         <article class="mt-6">
-          <SpliderShowHorizontal />
+          <LazyHydrate when-idle>
+            <LazySpliderShowHorizontal />
+          </LazyHydrate>
         </article>
       </section>
       <section
@@ -49,19 +52,27 @@
         >
           Take a look at our offers
         </h2>
-        <ShopCategoriesLinks
-          class="flex flex-col mt-12 gap-y-10 md:flex-row md:flex-wrap sm:mt-16 md:gap-y-0 sm:max-w-sm sm:mx-auto sm:gap-y-12 md:max-w-none md:w-full md:gap-x-1 lg:gap-x-4"
-        />
+        <LazyHydrate when-visible>
+          <LazyShopCategoriesLinks
+            class="flex flex-col mt-12 gap-y-10 md:flex-row md:flex-wrap sm:mt-16 md:gap-y-0 sm:max-w-sm sm:mx-auto sm:gap-y-12 md:max-w-none md:w-full md:gap-x-1 lg:gap-x-4"
+          />
+        </LazyHydrate>
       </section>
-      <OurWork
-        class="px-4 pb-6 mt-16 xs:px-0 md:pb-10 bg-app-light-gray text-app-dark-gray"
-      />
+      <LazyHydrate never>
+        <LazyOurWork
+          class="px-4 pb-6 mt-16 xs:px-0 md:pb-10 bg-app-light-gray text-app-dark-gray"
+        />
+      </LazyHydrate>
     </article>
   </main>
 </template>
 
 <script>
+import LazyHydrate from "vue-lazy-hydration";
 export default {
+  components: {
+    LazyHydrate,
+  },
   computed: {
     isMobile() {
       return !this.$device?.tablet;
