@@ -96,7 +96,7 @@
             <div v-else-if="cardStatus === 'error'" class="text-center">
               <p class="text-app-red">
                 Oops, something went wrong.
-                <AppButton class="w-full mt-6 text-xs" @click.native="tryAgain"
+                <AppButton class="w-full mt-6 text-xs" @click="tryAgain"
                   >Please try again</AppButton
                 >
               </p>
