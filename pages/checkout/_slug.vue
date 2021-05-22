@@ -63,7 +63,7 @@
     </section>
     <AppButton
       class="absolute left-0 w-24 py-1 top-5 bg-app-accent text-app-white"
-      @click.native="goBack"
+      @click="goBack"
     >
       Go back
     </AppButton>
