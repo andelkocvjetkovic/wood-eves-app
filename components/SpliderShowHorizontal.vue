@@ -11,10 +11,9 @@
             <NuxtImg
               :src="item.img"
               :alt="item.alt"
-              class="absolute inset-0 object-cover object-center w-full h-full"
+              class="absolute inset-0 object-center w-full h-full object- cover"
               sizes="xs:100vw sm:100vw md:33vw lg:33vw xl:33vw"
               quality="80"
-              loading="lazy"
             />
           </div>
         </div>
@@ -99,7 +98,6 @@ export default {
         slidesToShow: 1,
         infinite: false,
         responsive: [],
-
         speed: 600,
       },
       responsiveSettings: [
@@ -143,6 +141,7 @@ export default {
     };
   },
   methods: {
+    // FIXING BUG https://github.com/gs-shop/vue-slick-carousel/issues/94#issuecomment-658221491
     initHandler() {
       if (this.responsiveAplied == false) {
         this.applyResponsiveSettings();
