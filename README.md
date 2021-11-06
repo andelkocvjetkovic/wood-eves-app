@@ -1,7 +1,7 @@
 
 # Wood-elf e-commerce shop
 
-Furniture ecommerce build with Nuxt.js & Tailwind.css, integrated with Stripe for online paying via Netlify serverless functions.
+Furniture ecommerce build with (JAMStack)Nuxt.js(NuxtContext, Static Site Generation) & Tailwind.css, integrated with Stripe for online paying via Netlify serverless functions.
 
 
 
